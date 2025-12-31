@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exemplos de Formatação CSS</title>
+</head>
+<body>
+    <h1>Exemplos de Formatação CSS</h1>
+    
+    <h2>Width (Largura)</h2>
+    <div class="example-row">
+        <div class="width-px">width: 200px</div>
+        <p class="explanation">Largura fixa de 200 pixels. Não muda independente do tamanho da tela.</p>
+    </div>
+    <div class="example-row">
+        <div class="width-percent">width: 50%</div>
+        <p class="explanation">Largura de 50% do elemento pai. Responsivo ao tamanho do container.</p>
+    </div>
+    <div class="example-row">
+        <div class="width-vw">width: 80vw</div>
+        <p class="explanation">80% da largura da viewport (janela do navegador). Sempre relativo à tela.</p>
+    </div>
+    
+    <h2>Height (Altura)</h2>
+    <div class="example-row">
+        <div class="height-px">height: 100px</div>
+        <p class="explanation">Altura fixa de 100 pixels.</p>
+    </div>
+    <div class="example-row">
+        <div class="height-vh">height: 20vh</div>
+        <p class="explanation">20% da altura da viewport (tela).</p>
+    </div>
+    
+    <h2>Border (Bordas)</h2>
+    <div class="example-row">
+        <div class="border-solid">border: 2px solid black</div>
+        <p class="explanation">Borda sólida de 2px preta. A mais comum.</p>
+    </div>
+    <div class="example-row">
+        <div class="border-dashed">border: 3px dashed blue</div>
+        <p class="explanation">Borda tracejada azul de 3px.</p>
+    </div>
+    <div class="example-row">
+        <div class="border-dotted">border: 4px dotted red</div>
+        <p class="explanation">Borda pontilhada vermelha de 4px.</p>
+    </div>
+    <div class="example-row">
+        <div class="border-radius">border-radius: 15px</div>
+        <p class="explanation">Cantos arredondados com raio de 15px.</p>
+    </div>
+    <div class="example-row">
+        <div class="border-circle">border-radius: 50%</div>
+        <p class="explanation">50% cria um círculo perfeito (elemento quadrado).</p>
+    </div>
+    
+    <h2>Box Shadow (Sombra)</h2>
+    <div class="example-row">
+        <div class="shadow-basic">box-shadow básica</div>
+        <p class="explanation">Sombra simples: 5px horizontal, 5px vertical.</p>
+    </div>
+    <div class="example-row">
+        <div class="shadow-blur">box-shadow com blur</div>
+        <p class="explanation">Adiciona 15px de desfoque para sombra suave.</p>
+    </div>
+    <div class="example-row">
+        <div class="shadow-spread">box-shadow com spread</div>
+        <p class="explanation">Spread de 5px expande a sombra em todas direções.</p>
+    </div>
+    <div class="example-row">
+        <div class="shadow-inset">box-shadow inset</div>
+        <p class="explanation">Inset cria sombra interna, dando efeito de profundidade.</p>
+    </div>
+    <div class="example-row">
+        <div class="shadow-multiple">múltiplas sombras</div>
+        <p class="explanation">Combina várias sombras separadas por vírgula.</p>
+    </div>
+    
+    <h2>Margin (Margem Externa)</h2>
+    <div class="container-margin">
+        <div class="example-row">
+            <div class="margin-all">margin: 20px</div>
+            <p class="explanation">20px de margem em todos os lados (top, right, bottom, left).</p>
+        </div>
+        <div class="example-row">
+            <div class="margin-individual">margin: 10px 20px 30px 40px</div>
+            <p class="explanation">Valores individuais: top=10px, right=20px, bottom=30px, left=40px.</p>
+        </div>
+        <div class="example-row">
+            <div class="margin-auto">margin: 0 auto</div>
+            <p class="explanation">Auto nas laterais centraliza o elemento horizontalmente.</p>
+        </div>
+        <div class="example-row">
+            <div class="margin-negative">margin: -10px</div>
+            <p class="explanation">Margem negativa puxa o elemento para cima/lado.</p>
+        </div>
+    </div>
+    
+    <h2>Padding (Espaço Interno)</h2>
+    <div class="example-row">
+        <div class="padding-all">padding: 30px</div>
+        <p class="explanation">Espaço interno de 30px entre borda e conteúdo em todos os lados.</p>
+    </div>
+    <div class="example-row">
+        <div class="padding-individual">padding: 10px 20px 30px 40px</div>
+        <p class="explanation">Padding individual: top, right, bottom, left (sentido horário).</p>
+    </div>
+    <div class="example-row">
+        <div class="padding-shorthand">padding: 20px 40px</div>
+        <p class="explanation">Primeiro valor = vertical (top/bottom), segundo = horizontal (left/right).</p>
+    </div>
+    
+    <h2>Margin + Padding Combinados</h2>
+    <div class="example-row">
+        <div class="combo-spacing">margin + padding</div>
+        <p class="explanation">Margin afasta de outros elementos, padding cria espaço interno.</p>
+    </div>
+    
+    <h2>Background (Fundo)</h2>
+    <div class="example-row">
+        <div class="bg-color">background-color</div>
+        <p class="explanation">Cor sólida de fundo usando nome de cor (coral).</p>
+    </div>
+    <div class="example-row">
+        <div class="bg-gradient">linear-gradient</div>
+        <p class="explanation">Gradiente linear da esquerda para direita.</p>
+    </div>
+    <div class="example-row">
+        <div class="bg-radial">radial-gradient</div>
+        <p class="explanation">Gradiente radial do centro para fora.</p>
+    </div>
+    
+    <h2>Color e Font (Texto)</h2>
+    <div class="example-row">
+        <div class="text-color">color: #e74c3c</div>
+        <p class="explanation">Define a cor do texto usando código hexadecimal.</p>
+    </div>
+    <div class="example-row">
+        <div class="text-font-size">font-size: 24px</div>
+        <p class="explanation">Tamanho da fonte em pixels.</p>
+    </div>
+    <div class="example-row">
+        <div class="text-font-weight">font-weight: bold</div>
+        <p class="explanation">Peso da fonte (normal, bold, 100-900).</p>
+    </div>
+    <div class="example-row">
+        <div class="text-font-family">font-family</div>
+        <p class="explanation">Define a família de fonte (Arial, Times, etc).</p>
+    </div>
+    
+    <h2>Text Align (Alinhamento)</h2>
+    <div class="example-row">
+        <div class="text-left">text-align: left</div>
+        <p class="explanation">Alinha o texto à esquerda (padrão).</p>
+    </div>
+    <div class="example-row">
+        <div class="text-center">text-align: center</div>
+        <p class="explanation">Centraliza o texto horizontalmente.</p>
+    </div>
+    <div class="example-row">
+        <div class="text-right">text-align: right</div>
+        <p class="explanation">Alinha o texto à direita.</p>
+    </div>
+    
+    <h2>Display</h2>
+    <div class="example-row">
+        <div class="display-block">display: block</div>
+        <p class="explanation">Ocupa toda largura disponível, quebra linha.</p>
+    </div>
+    <div class="example-row">
+        <span class="display-inline-block">inline-block 1</span>
+        <span class="display-inline-block">inline-block 2</span>
+        <p class="explanation">Permite elementos lado a lado com width/height.</p>
+    </div>
+    
+    <h2>Opacity (Transparência)</h2>
+    <div class="example-row">
+        <div class="opacity-full">opacity: 1</div>
+        <p class="explanation">100% opaco (totalmente visível).</p>
+    </div>
+    <div class="example-row">
+        <div class="opacity-half">opacity: 0.5</div>
+        <p class="explanation">50% transparente.</p>
+    </div>
+    <div class="example-row">
+        <div class="opacity-low">opacity: 0.3</div>
+        <p class="explanation">30% de opacidade (70% transparente).</p>
+    </div>
+    
+    <h2>Transform (Transformação)</h2>
+    <div class="example-row">
+        <div class="transform-rotate">rotate(15deg)</div>
+        <p class="explanation">Rotaciona o elemento 15 graus no sentido horário.</p>
+    </div>
+    <div class="example-row">
+        <div class="transform-scale">scale(1.2)</div>
+        <p class="explanation">Aumenta o elemento em 20% (1.2x o tamanho original).</p>
+    </div>
+    <div class="example-row">
+        <div class="transform-translate">translate(20px, 10px)</div>
+        <p class="explanation">Move 20px para direita e 10px para baixo.</p>
+    </div>
+    <div class="example-row">
+        <div class="transform-skew">skew(10deg)</div>
+        <p class="explanation">Inclina o elemento em 10 graus.</p>
+    </div>
+    
+    <h2>Position (Posicionamento)</h2>
+    <div class="position-container">
+        <div class="position-relative">relative</div>
+        <div class="position-absolute">absolute</div>
+    </div>
+    <p class="explanation">Relative: posicionado relativo à posição original. Absolute: posicionado relativo ao pai.</p>
+    
+    <br><br>
+    <a href="index.html">
+        <button>Voltar para a primeira página</button>
+    </a>
+</body>
+</html>

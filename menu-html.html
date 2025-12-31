@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Menu de Guias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-menu">
+        <header class="menu-header">
+            <a href="index.html" class="btn-voltar">← Voltar</a>
+            <h1>📝 HTML - Estrutura da Web</h1>
+            <p class="menu-subtitulo">HyperText Markup Language</p>
+        </header>
+
+        <div class="menu-explicacao">
+            <section class="secao-intro">
+                <h2>O que é HTML?</h2>
+                <p>HTML é a <strong>linguagem de marcação</strong> que estrutura todo o conteúdo da web. Cada elemento HTML é uma "caixa" que organiza diferentes tipos de conteúdo (texto, imagens, vídeos, formulários, etc). Sem HTML, não há web!</p>
+            </section>
+
+            <section class="secao-componentes">
+                <div class="componente">
+                    <div class="comp-icone">🏗️</div>
+                    <h3>Estrutura</h3>
+                    <p>Tags que definem a estrutura de uma página: html, head, body, header, main, footer, etc.</p>
+                </div>
+
+                <div class="componente">
+                    <div class="comp-icone">📝</div>
+                    <h3>Conteúdo</h3>
+                    <p>Elementos para organizar texto: headings (h1-h6), parágrafos (p), listas (ul, ol), tabelas.</p>
+                </div>
+
+                <div class="componente">
+                    <div class="comp-icone">🔗</div>
+                    <h3>Interatividade</h3>
+                    <p>Links, formulários, imagens, vídeos e inputs que permitem a interação com o usuário.</p>
+                </div>
+            </section>
+
+            <section class="secao-topicos">
+                <h2>Tópicos Principais</h2>
+                <div class="topicos-grid">
+                    <a href="guias-html/tags-basicas.html" class="topico-card">
+                        <h4>📝 Tags Básicas</h4>
+                        <p>Headings, parágrafos, formatação e quebras</p>
+                    </a>
+
+                    <a href="guias-html/links.html" class="topico-card">
+                        <h4>🔗 Links e Imagens</h4>
+                        <p>Navegação, âncoras e conteúdo visual</p>
+                    </a>
+
+                    <a href="guias-html/listas.html" class="topico-card">
+                        <h4>📋 Listas</h4>
+                        <p>Listas ordenadas, desordenadas e definições</p>
+                    </a>
+
+                    <a href="guias-html/tabelas.html" class="topico-card">
+                        <h4>📊 Tabelas</h4>
+                        <p>Organização de dados tabulares</p>
+                    </a>
+
+                    <a href="guias-html/formularios.html" class="topico-card">
+                        <h4>📝 Formulários</h4>
+                        <p>Inputs, selects, textareas e validação</p>
+                    </a>
+
+                    <a href="guias-html/semantica.html" class="topico-card">
+                        <h4>🏗️ HTML Semântico</h4>
+                        <p>Estrutura com significado (SEO e acessibilidade)</p>
+                    </a>
+                </div>
+            </section>
+
+            <section class="secao-resumo">
+                <h2>Resumo</h2>
+                <p><strong>HTML é a base de toda página web.</strong> Define a estrutura e o conteúdo. Quando combinado com CSS (estilo) e JavaScript (interatividade), você consegue criar qualquer coisa na web!</p>
+                <p class="destaque">💡 HTML sozinho cria a estrutura, mas é o CSS que deixa bonito e o JavaScript que deixa interativo.</p>
+            </section>
+        </div>
+
+        <footer class="menu-footer">
+            <p><a href="index.html" class="link-voltar">← Voltar ao Menu Principal</a></p>
+        </footer>
+    </div>
+
+    <style>
+        .container-menu {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+        }
+
+        .menu-header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .btn-voltar {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            padding: 8px 16px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .btn-voltar:hover {
+            background: #555;
+        }
+
+        .menu-header h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        .menu-subtitulo {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        /* Seções */
+        .menu-explicacao {
+            margin-bottom: 40px;
+        }
+
+        .menu-explicacao section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .menu-explicacao h2 {
+            font-size: 1.8em;
+            color: #222;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #ff6b35;
+            padding-bottom: 10px;
+        }
+
+        .secao-intro p {
+            font-size: 1.05em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Componentes */
+        .secao-componentes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 0 !important;
+            background: transparent !important;
+            box-shadow: none !important;
+        }
+
+        .componente {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .componente:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .comp-icone {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .componente h3 {
+            font-size: 1.5em;
+            color: #222;
+            margin-bottom: 15px;
+        }
+
+        .componente p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Tópicos Grid */
+        .topicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0 !important;
+            background: transparent !important;
+            box-shadow: none !important;
+        }
+
+        .topico-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+            border-left: 4px solid #ff6b35;
+        }
+
+        .topico-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            border-left-color: #0066cc;
+        }
+
+        .topico-card h4 {
+            color: #222;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .topico-card p {
+            color: #666;
+            font-size: 0.95em;
+            margin: 0;
+        }
+
+        /* Resumo */
+        .secao-resumo p {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .destaque {
+            background: #fff3e0;
+            padding: 15px;
+            border-radius: 4px;
+            border-left: 4px solid #ff6b35;
+            font-size: 1em;
+        }
+
+        /* Footer */
+        .menu-footer {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            color: #666;
+        }
+
+        .menu-footer p {
+            margin: 10px 0;
+        }
+
+        .link-voltar {
+            color: #ff6b35;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .link-voltar:hover {
+            color: #e05a25;
+        }
+
+        @media (max-width: 768px) {
+            .menu-header h1 {
+                font-size: 1.8em;
+            }
+
+            .btn-voltar {
+                position: relative;
+                left: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</body>
+</html>

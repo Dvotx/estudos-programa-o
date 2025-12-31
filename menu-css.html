@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Menu de Guias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-menu theme-css">
+        <header class="menu-header">
+            <a href="index.html" class="btn-voltar">← Voltar</a>
+            <h1>🎨 CSS - Estilo da Web</h1>
+            <p class="menu-subtitulo">Cascading Style Sheets</p>
+        </header>
+
+        <div class="menu-explicacao">
+            <section class="secao-intro">
+                <h2>O que é CSS?</h2>
+                <p>CSS é a linguagem que define o <strong>estilo e aparência</strong> de uma página web. Enquanto HTML estrutura o conteúdo, CSS deixa tudo bonito: cores, fontes, layouts, animações e responsividade.</p>
+            </section>
+
+            <section class="secao-componentes">
+                <div class="componente">
+                    <div class="comp-icone">🎨</div>
+                    <h3>Styling</h3>
+                    <p>Cores, fontes, tamanhos, opacidade e todos os estilos visuais dos elementos.</p>
+                </div>
+
+                <div class="componente">
+                    <div class="comp-icone">📐</div>
+                    <h3>Layout</h3>
+                    <p>Box Model, Flexbox, Grid, Posicionamento e responsividade para organizar elementos.</p>
+                </div>
+
+                <div class="componente">
+                    <div class="comp-icone">✨</div>
+                    <h3>Efeitos</h3>
+                    <p>Animações, transições, sombras, transformações e efeitos visuais incríveis.</p>
+                </div>
+            </section>
+
+            <section class="secao-topicos">
+                <h2>Tópicos Principais</h2>
+                <div class="topicos-grid">
+                    <a href="guias/width.html" class="topico-card">
+                        <h4>📏 Width</h4>
+                        <p>Definir largura com várias unidades</p>
+                    </a>
+
+                    <a href="guias/height.html" class="topico-card">
+                        <h4>📐 Height</h4>
+                        <p>Definir altura com várias unidades</p>
+                    </a>
+
+                    <a href="guias/border.html" class="topico-card">
+                        <h4>🔲 Border</h4>
+                        <p>Bordas e cantos arredondados</p>
+                    </a>
+
+                    <a href="guias/box-shadow.html" class="topico-card">
+                        <h4>💫 Box Shadow</h4>
+                        <p>Sombras em elementos</p>
+                    </a>
+
+                    <a href="guias/margin.html" class="topico-card">
+                        <h4>📦 Margin</h4>
+                        <p>Espaçamento externo</p>
+                    </a>
+
+                    <a href="guias/padding.html" class="topico-card">
+                        <h4>📐 Padding</h4>
+                        <p>Espaçamento interno</p>
+                    </a>
+
+                    <a href="guias/background.html" class="topico-card">
+                        <h4>🎨 Background</h4>
+                        <p>Cores, gradientes e imagens</p>
+                    </a>
+
+                    <a href="guias/text.html" class="topico-card">
+                        <h4>✍️ Text & Font</h4>
+                        <p>Tipografia e estilo de texto</p>
+                    </a>
+
+                    <a href="guias/text-align.html" class="topico-card">
+                        <h4>📝 Text-Align</h4>
+                        <p>Alinhamento de conteúdo</p>
+                    </a>
+
+                    <a href="guias/display.html" class="topico-card">
+                        <h4>📦 Display</h4>
+                        <p>Tipos de exibição flex, grid</p>
+                    </a>
+
+                    <a href="guias/opacity.html" class="topico-card">
+                        <h4>👁️ Opacity</h4>
+                        <p>Transparência e efeitos</p>
+                    </a>
+
+                    <a href="guias/transform.html" class="topico-card">
+                        <h4>✨ Transform</h4>
+                        <p>Rotação, escala e transformações</p>
+                    </a>
+
+                    <a href="guias/position.html" class="topico-card">
+                        <h4>📍 Position</h4>
+                        <p>Posicionamento de elementos</p>
+                    </a>
+                </div>
+            </section>
+
+            <section class="secao-resumo">
+                <h2>Resumo</h2>
+                <p><strong>CSS é a beleza da web.</strong> Define estilos, cores, layouts e animações. Sem CSS, a web seria um texto plano; com CSS, você cria designs incríveis!</p>
+                <p class="destaque">💡 HTML + CSS = Interface bonita. Adicione JavaScript para interatividade!</p>
+            </section>
+        </div>
+
+        <footer class="menu-footer">
+            <p><a href="index.html" class="link-voltar">← Voltar ao Menu Principal</a></p>
+        </footer>
+    </div>
+
+    
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Guias CSS</title>
+</head>
+<body>
+    <div class="guia-container">
+        <div class="breadcrumb">
+            <a href="index.html">🏠 Início</a> / <span>CSS</span>
+        </div>
+
+        <h1>🎨 Guias CSS</h1>
+        
+        <p class="guia-intro">
+            Aprenda CSS do básico ao avançado. Cada guia contém exemplos práticos e explicações detalhadas.
+        </p>
+
+        <div class="lista-guias">
+            <a href="guias/width.html" class="guia-link">
+                <div class="guia-item">
+                    <h3>📏 Width (Largura)</h3>
+                    <p>Todas as formas de definir largura: px, %, vw, em, rem, auto, max-content, min-content, fit-content, calc().</p>
+                </div>
+            </a>
+
+            <a href="guias/height.html" class="guia-link">
+                <div class="guia-item">
+                    <h3>📐 Height (Altura)</h3>
+                    <p>Todas as formas de definir altura: px, %, vh, em, rem, auto, max-content, min-content, fit-content, calc().</p>
+                </div>
+            </a>
+
+            <a href="guias/border.html" class="guia-link">
+                <div class="guia-item">
+                    <h3>🔲 Border (Borda)</h3>
+                    <p>Bordas completas: width, style, color, radius, cantos individuais, gradientes.</p>
+                </div>
+            </a>
+
+            <a href="guias/box-shadow.html" class="guia-link">
+                <div class="guia-item">
+                    <h3>💫 Box Shadow (Sombra)</h3>
+                    <p>Sombras: básicas, blur, spread, inset, múltiplas, direcionais, elevação.</p>
+                </div>
+            </a>
+
+            <a href="guias/margin.html" class="guia-link">
+                <div class="guia-item">
+                    <h3>📦 Margin (Margem)</h3>
+                    <p>Espaçamento externo: sintaxes, auto, negativas, collapse, porcentagem.</p>
+                </div>
+            </a>
+
+            <a href="guias/padding.html" class="guia-link">
+                <div class="guia-item">
+                    <h3>📐 Padding (Preenchimento)</h3>
+                    <p>Espaçamento interno: sintaxes, box-sizing, unidades (px, em, rem, %).</p>
+                </div>
+            </a>
+
+            <a href="guias/background.html" class="guia-link">
+                <div class="guia-item">
+                    <h3>🎨 Background (Fundo)</h3>
+                    <p>Fundos: cores, gradientes lineares/radiais, imagens, position, size, repeat, attachment.</p>
+                </div>
+            </a>
+
+            <a href="guias/text.html" class="guia-link">
+                <div class="guia-item">
+                    <h3>✍️ Text & Font (Texto e Fonte)</h3>
+                    <p>Estilização de texto: color, font-size, font-weight, font-family, text-decoration, text-transform, line-height.</p>
+                </div>
+            </a>
+
+            <a href="guias/text-align.html" class="guia-link">
+                <div class="guia-item">
+                    <h3>📝 Text-Align (Alinhamento)</h3>
+                    <p>Alinhamento de texto: left, center, right, justify, start, end.</p>
+                </div>
+            </a>
+
+            <a href="guias/display.html" class="guia-link">
+                <div class="guia-item">
+                    <h3>📦 Display</h3>
+                    <p>Tipos de exibição: block, inline, inline-block, flex, grid, none, table.</p>
+                </div>
+            </a>
+
+            <a href="guias/opacity.html" class="guia-link">
+                <div class="guia-item">
+                    <h3>👁️ Opacity (Transparência)</h3>
+                    <p>Controle de opacidade: valores de 0 a 1, diferença entre opacity e RGBA, transitions.</p>
+                </div>
+            </a>
+
+            <a href="guias/transform.html" class="guia-link">
+                <div class="guia-item">
+                    <h3>🔄 Transform (Transformação)</h3>
+                    <p>Transformações: rotate, scale, translate, skew, transform 3D, transform-origin.</p>
+                </div>
+            </a>
+
+            <a href="guias/position.html" class="guia-link">
+                <div class="guia-item">
+                    <h3>📍 Position (Posicionamento)</h3>
+                    <p>Posicionamento: static, relative, absolute, fixed, sticky, z-index, centralização.</p>
+                </div>
+            </a>
+
+            <a href="guias/box-model.html" class="guia-link">
+                <div class="guia-item">
+                    <h3>📦 Box Model (Modelo de Caixa)</h3>
+                    <p>Box Model completo: content, padding, border, margin, box-sizing, overflow + 40 exemplos profissionais.</p>
+                </div>
+            </a>
+        </div>
+
+        <br>
+        <a href="index.html">
+            <button>← Voltar ao Menu Principal</button>
+        </a>
+    </div>
+</body>
+</html>
