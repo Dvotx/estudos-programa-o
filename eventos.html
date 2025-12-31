@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>⬌ Eventos</h1>
+
+        <div class="guia-intro">
+            <p>Eventos são coisas que acontecem na página: cliques, digitação, movimento do mouse... Com JavaScript você pode "ouvir" esses eventos e fazer algo quando eles acontecerem!</p>
+            <p><em>Minha nota: Evento é tipo um alarme - quando alguém clica, o JS acorda e faz algo!</em></p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>Click (Clique)</h2>
+            <div class="explanation">
+                <p>O evento mais comum - quando alguém clica em algo:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// HTML: &lt;button id="meuBotao"&gt;Clique aqui&lt;/button&gt;
+
+const botao = document.getElementById("meuBotao");
+
+// Ouvir o evento de click
+botao.addEventListener("click", () => {
+    alert("Você clicou!");
+});
+
+// Exemplo 2: mudar texto ao clicar
+botao.addEventListener("click", () => {
+    botao.textContent = "Clicado!";
+});</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: addEventListener = "fique de olho". Quando acontecer o click, execute a função!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Input (Digitação)</h2>
+            <div class="explanation">
+                <p>Detectar quando alguém está digitando:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// HTML: &lt;input id="campo" type="text"&gt;
+
+const campo = document.getElementById("campo");
+
+// Detectar cada letra digitada
+campo.addEventListener("input", (evento) => {
+    console.log(evento.target.value);
+});
+
+// Exemplo: mostrar o que foi digitado
+campo.addEventListener("input", (e) => {
+    const texto = e.target.value;
+    console.log(`Você digitou: ${texto}`);
+});</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: evento.target.value = o que está escrito no campo agora!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Submit (Enviar Formulário)</h2>
+            <div class="explanation">
+                <p>Quando alguém envia um formulário:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// HTML: &lt;form id="meuForm"&gt;...&lt;/form&gt;
+
+const form = document.getElementById("meuForm");
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault(); // Impede de recarregar a página
+    
+    const nome = document.getElementById("nome").value;
+    console.log(`Nome enviado: ${nome}`);
+});</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: e.preventDefault() = não faça o padrão (não recarregue a página)!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Outros Eventos Úteis</h2>
+            <div class="explanation">
+                <p>Mais eventos que você pode usar:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>const elemento = document.getElementById("meuElemento");
+
+// Quando o mouse passa por cima
+elemento.addEventListener("mouseenter", () => {
+    elemento.style.backgroundColor = "yellow";
+});
+
+// Quando o mouse sai
+elemento.addEventListener("mouseleave", () => {
+    elemento.style.backgroundColor = "white";
+});
+
+// Duplo clique
+elemento.addEventListener("dblclick", () => {
+    console.log("Clicou duas vezes!");
+});
+
+// Apertar uma tecla
+document.addEventListener("keypress", (e) => {
+    console.log(`Tecla apertada: ${e.key}`);
+});</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: mouseenter = mouse entrou. mouseleave = mouse saiu. keypress = tecla apertada!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Exemplo Prático: Contador</h2>
+            <div class="explanation">
+                <p>Um botão que conta quantas vezes foi clicado:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// HTML:
+// &lt;button id="btnContar"&gt;Cliques: 0&lt;/button&gt;
+
+const botao = document.getElementById("btnContar");
+let contador = 0;
+
+botao.addEventListener("click", () => {
+    contador++;
+    botao.textContent = `Cliques: ${contador}`;
+});</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: contador++ = adiciona 1. É igual a contador = contador + 1!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie um botão que:</p>
+                <ul>
+                    <li>Quando clicar, muda o texto de um &lt;p&gt;</li>
+                    <li>Use addEventListener('click', function)</li>
+                    <li>Teste clicando várias vezes!</li>
+                </ul>
+                <p>💡 Dica: Coloque um contador pra ver quantas vezes clicou!</p>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="../menu-javascript.html" class="btn-back">← Voltar</a>
+        </div>
+    </div>
+</body>
+</html>

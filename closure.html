@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>🔒 Closures</h1>
+
+        <div class="guia-intro">
+            <p>Closure é quando uma função "lembra" das variáveis de fora dela! É tipo uma função que guarda segredos.</p>
+            <p><em>Minha nota: A função interna tem acesso às variáveis da função externa, mesmo depois que a externa terminou!</em></p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>Exemplo Básico</h2>
+            <div class="explanation">
+                <p>Função dentro de função que "lembra" da variável:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>function criarContador() {
+    let contador = 0;  // Variável privada
+    
+    return function() {
+        contador++;
+        return contador;
+    }
+}
+
+const meuContador = criarContador();
+console.log(meuContador());  // 1
+console.log(meuContador());  // 2
+console.log(meuContador());  // 3</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: A variável contador fica "trancada" dentro da função! Só a função interna tem acesso!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Exemplo Prático</h2>
+            <div class="explanation">
+                <p>Criando uma função com "memória":</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>function criarSaudacao(nome) {
+    return function(mensagem) {
+        return `${mensagem}, ${nome}!`;
+    }
+}
+
+const saudarJoao = criarSaudacao('João');
+console.log(saudarJoao('Bom dia'));   // "Bom dia, João!"
+console.log(saudarJoao('Boa noite')); // "Boa noite, João!"
+
+const saudarMaria = criarSaudacao('Maria');
+console.log(saudarMaria('Olá'));      // "Olá, Maria!"</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: Cada closure guarda seu próprio valor! João e Maria têm memórias separadas!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Variáveis Privadas</h2>
+            <div class="explanation">
+                <p>Use closures pra criar variáveis que ninguém mexe:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>function criarBanco() {
+    let saldo = 0;  // Ninguém consegue mexer direto!
+    
+    return {
+        depositar: (valor) => {
+            saldo += valor;
+            return saldo;
+        },
+        sacar: (valor) => {
+            saldo -= valor;
+            return saldo;
+        }
+    }
+}
+
+const minhaConta = criarBanco();
+minhaConta.depositar(100);  // 100
+minhaConta.sacar(30);       // 70</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: A variável saldo está protegida! Só conseguimos mexer por depositar() e sacar()!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie um contador privado:</p>
+                <ul>
+                    <li>Função externa que guarda um número</li>
+                    <li>Função interna que aumenta o número</li>
+                    <li>Teste chamando várias vezes!</li>
+                </ul>
+                <p>💡 Dica: A variável fica "trancada" na função externa!</p>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="../menu-javascript.html" class="btn-back">← Voltar</a>
+        </div>
+    </div>
+</body>
+</html>

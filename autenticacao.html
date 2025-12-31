@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autenticação & JWT</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>✦ Autenticação - Verificar quem você é</h1>
+
+        <div class="guia-intro">
+            <p><strong>Autenticação</strong> é quando o servidor verifica se você é quem diz ser. Tipo fazer login!</p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>Minha nota: O que é Login?</h2>
+            <div class="explanation">
+                <p>Login é quando você envia seu email e senha para um servidor:</p>
+                <ul>
+                    <li>Você envia: "Meu email é João, senha é 123"</li>
+                    <li>Servidor verifica se está certo</li>
+                    <li>Se sim, ele te dá um "cartão" especial (token)</li>
+                    <li>Você usa esse cartão para fazer coisas no site</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Um Login Simples</h2>
+            <div class="codigo-exemplo">
+                <pre>// Login bem simples
+app.post('/login', (req, res) => {
+    const { email, senha } = req.body;
+    
+    // Se dados estão corretos
+    if (email === "teste@email.com" && senha === "123") {
+        // Devolve um recado dizendo que deu certo
+        res.json({ mensagem: "Login ok!" });
+    } else {
+        // Se errou a senha
+        res.json({ mensagem: "Senha errada!" });
+    }
+});</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Minha nota: O que é um Token?</h2>
+            <div class="explanation">
+                <p>Token é um "cartão de acesso" que o servidor te dá:</p>
+                <ul>
+                    <li>Parece uma sequência de números e letras aleatória</li>
+                    <li>Você guarda e envia em cada requisição</li>
+                    <li>O servidor sabe que é você pelo cartão, sem pedir senha novamente</li>
+                    <li>Tipo um crachá que prova quem você é</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Como funciona na prática</h2>
+            <div class="explanation">
+                <p><strong>1.</strong> Você envia email/senha → <strong>2.</strong> Servidor verifica se está certo</p>
+                <p><strong>3.</strong> Servidor te dá um token → <strong>4.</strong> Você guarda esse token</p>
+                <p><strong>5.</strong> Quando quer acessar algo, você envia o token → <strong>6.</strong> Servidor sabe que é você</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie uma rota de login simples:</p>
+                <ul>
+                    <li>POST /login que recebe email e senha</li>
+                    <li>Se email="teste@email.com" e senha="123", retorna "Login ok!"</li>
+                    <li>Senão, retorna "Senha errada!"</li>
+                </ul>
+                <p>💡 Dica: Por enquanto sem JWT, só um if simples!</p>
+            </div>
+        </section>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="banco-dados.html" class="btn-caixa">← Anterior</a>
+            <a href="menu-backend.html" class="btn-caixa">Menu</a>
+            <a href="variaveis-ambiente.html" class="btn-caixa">Próximo →</a>
+        </div>
+    </div>
+</body>
+</html>

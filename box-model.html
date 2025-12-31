@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia: Box Model CSS</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>▭ Box Model: A Estrutura das Caixas</h1>
+        
+        <div class="guia-intro">
+            <p>Todos os elementos HTML são caixas. Cada caixa tem 4 partes: conteúdo, padding, borda e margem. Aprender sobre isso é essencial!</p>
+        </div>
+
+        <!-- Seção 1: Box Model Básico -->
+        <section class="exemplo-guia">
+            <h2>1. As 4 Partes da Caixa</h2>
+            <div class="boxmodel-guia-complete">
+                <div class="boxmodel-margin">Margem (espaço fora)
+                    <div class="boxmodel-border">Borda
+                        <div class="boxmodel-padding">Padding (espaço dentro)
+                            <div class="boxmodel-content">Conteúdo</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> Lembre-se: Content → Padding → Border → Margin</p>
+                <ul>
+                    <li><strong>Content:</strong> O texto ou imagem dentro da caixa</li>
+                    <li><strong>Padding:</strong> Espaço entre o texto e a borda (dentro)</li>
+                    <li><strong>Border:</strong> A borda da caixa</li>
+                    <li><strong>Margin:</strong> Espaço fora da caixa (afasta de outros elementos)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção 2: Width, Height e Padding -->
+        <section class="exemplo-guia">
+            <h2>2. Dimensões (Width e Height)</h2>
+            <div class="boxmodel-guia-dimensions">
+                width: 300px<br>
+                height: 150px
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> Width é a largura, height é a altura.</p>
+                <ul>
+                    <li><strong>width: 300px;</strong> - Define a largura em pixels</li>
+                    <li><strong>height: 150px;</strong> - Define a altura em pixels</li>
+                    <li>Pode usar px, %, vw (viewport width), ou vh (viewport height)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção 3: Padding (Espaço Dentro) -->
+        <section class="exemplo-guia">
+            <h2>3. Padding (Espaço Interno)</h2>
+            <div class="boxmodel-guia-padding">
+                Tem espaço dentro!
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> Padding é o espaço DENTRO da caixa, entre o conteúdo e a borda.</p>
+                <ul>
+                    <li><strong>padding: 20px;</strong> - Todos os lados com 20px</li>
+                    <li><strong>padding-top, padding-right, padding-bottom, padding-left</strong> - Espaço individual</li>
+                    <li>Exemplo: padding: 10px 20px; (10px top/bottom, 20px left/right)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção 4: Border (Borda) -->
+        <section class="exemplo-guia">
+            <h2>4. Border (A Borda)</h2>
+            <div class="boxmodel-guia-border">
+                Tenho uma borda!
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> A borda é a linha ao redor da caixa.</p>
+                <ul>
+                    <li><strong>border: 5px solid black;</strong> - 5px de espessura, sólida, preta</li>
+                    <li>Estilos: solid (sólida), dashed (tracejada), dotted (pontilhada)</li>
+                    <li>border-top, border-right, border-bottom, border-left - Bordas individuais</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção 5: Margin (Espaço Externo) -->
+        <section class="exemplo-guia">
+            <h2>5. Margin (Espaço Externo)</h2>
+            <div class="boxmodel-guia-margin">
+                Tenho espaço por fora!
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> Margin é o espaço FORA da caixa, que a afasta dos outros elementos.</p>
+                <ul>
+                    <li><strong>margin: 30px;</strong> - Todos os lados com 30px</li>
+                    <li><strong>margin: 0 auto;</strong> - Centraliza a caixa (margin 0 top/bottom, auto left/right)</li>
+                    <li>margin-top, margin-right, margin-bottom, margin-left - Espaço individual</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie uma div com:</p>
+                <ul>
+                    <li>width: 200px</li>
+                    <li>padding: 20px</li>
+                    <li>border: 5px solid black</li>
+                    <li>margin: 30px</li>
+                </ul>
+                <p>💡 Dica: Inspecione no navegador (F12) pra ver o box model!</p>
+            </div>
+        </section>
+
+        <h2 style="display: none;">Seções Ocultas</h2>
+        <section style="display: none;">
+        </section>
+
+        <div class="guia-navegacao">
+            <a href="padding.html"><button>← Anterior: Padding</button></a>
+            <a href="margin.html"><button>Próximo: Margin →</button></a>
+        </div>
+    </div>
+</body>
+</html>
+
+        <section class="exemplo-guia">
+            <h2>3. box-sizing: border-box (Recomendado)</h2>
+            <div class="boxmodel-guia-border-box">
+                Width: 200px (inclui padding e border)<br>
+                Largura Total: 200px
+            </div>
+            <div class="explanation">
+                <p><strong>border-box:</strong> Width e height incluem content, padding e border. O tamanho total permanece fixo, facilitando o layout.</p>
+                <p>Recomendado usar: <code>* { box-sizing: border-box; }</code> no CSS global.</p>
+            </div>
+        </section>
+
+        <!-- Seção 4: Width e Height -->
+        <section class="exemplo-guia">
+            <h2>4. Width e Height (Dimensões)</h2>
+            <div class="boxmodel-guia-dimensions">
+                Width: 300px<br>
+                Height: 150px
+            </div>
+            <div class="explanation">
+                <p><strong>width e height:</strong> Definem as dimensões da caixa. Podem usar px, %, vw, vh, em, rem, auto, etc.</p>
+                <p>Com content-box: dimensões do conteúdo apenas.<br>
+                Com border-box: dimensões totais incluindo padding e border.</p>
+            </div>
+        </section>
+
+        <!-- Seção 5: min-width e max-width -->
+        <section class="exemplo-guia">
+            <h2>5. min-width, max-width, min-height, max-height</h2>
+            <div class="boxmodel-guia-minmax">
+                min-width: 200px<br>
+                max-width: 500px<br>
+                (Redimensione a janela)
+            </div>
+            <div class="explanation">
+                <p><strong>Dimensões Responsivas:</strong></p>
+                <ul>
+                    <li><strong>min-width:</strong> Largura mínima permitida</li>
+                    <li><strong>max-width:</strong> Largura máxima permitida</li>
+                    <li><strong>min-height:</strong> Altura mínima permitida</li>
+                    <li><strong>max-height:</strong> Altura máxima permitida</li>
+                </ul>
+                <p>Útil para criar layouts responsivos que se adaptam a diferentes tamanhos de tela.</p>
+            </div>
+        </section>
+
+        <!-- Seção 6: Padding (Todas as Sintaxes) -->
+        <section class="exemplo-guia">
+            <h2>6. Padding (Espaçamento Interno)</h2>
+            <div class="boxmodel-guia-padding-demo">
+                Padding: 30px<br>
+                Espaço interno uniforme
+            </div>
+            <div class="explanation">
+                <p><strong>Sintaxes do Padding:</strong></p>
+                <ul>
+                    <li><code>padding: 20px;</code> - Todos os lados</li>
+                    <li><code>padding: 10px 20px;</code> - Vertical | Horizontal</li>
+                    <li><code>padding: 10px 20px 30px;</code> - Top | H | Bottom</li>
+                    <li><code>padding: 10px 20px 30px 40px;</code> - T | R | B | L (sentido horário)</li>
+                    <li><code>padding-top/right/bottom/left</code> - Lados individuais</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção 7: Margin (Todas as Sintaxes) -->
+        <section class="exemplo-guia">
+            <h2>7. Margin (Espaçamento Externo)</h2>
+            <div class="boxmodel-guia-margin-demo">
+                Margin: 30px<br>
+                Espaço externo
+            </div>
+            <div class="explanation">
+                <p><strong>Sintaxes do Margin:</strong></p>
+                <ul>
+                    <li><code>margin: 20px;</code> - Todos os lados</li>
+                    <li><code>margin: 10px 20px;</code> - Vertical | Horizontal</li>
+                    <li><code>margin: 10px 20px 30px 40px;</code> - T | R | B | L</li>
+                    <li><code>margin: 0 auto;</code> - Centralizar horizontalmente</li>
+                    <li>Margens podem ser negativas (sobrepor elementos)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção 8: Margin Collapse -->
+        <section class="exemplo-guia">
+            <h2>8. Margin Collapse (Colapso de Margens)</h2>
+            <div class="boxmodel-guia-collapse-container">
+                <div class="boxmodel-guia-collapse-1">Margin-bottom: 40px</div>
+                <div class="boxmodel-guia-collapse-2">Margin-top: 60px<br>(Espaço entre = 60px, não 100px)</div>
+            </div>
+            <div class="explanation">
+                <p><strong>Margin Collapse:</strong> Quando duas margens verticais se encontram, elas "colapsam" e apenas a maior é aplicada.</p>
+                <p>Não ocorre com margens horizontais, padding, ou quando há border/padding entre os elementos.</p>
+            </div>
+        </section>
+
+        <!-- Seção 9: Border (Completo) -->
+        <section class="exemplo-guia">
+            <h2>9. Border (Borda Completa)</h2>
+            <div class="boxmodel-guia-border-complete">
+                border: 5px solid #3498db;<br>
+                border-radius: 10px;
+            </div>
+            <div class="explanation">
+                <p><strong>Propriedades da Border:</strong></p>
+                <ul>
+                    <li><strong>border-width:</strong> Espessura (px, em, thin, medium, thick)</li>
+                    <li><strong>border-style:</strong> solid, dashed, dotted, double, groove, ridge, inset, outset, none</li>
+                    <li><strong>border-color:</strong> Cor da borda</li>
+                    <li><strong>border-radius:</strong> Cantos arredondados</li>
+                    <li><strong>border-top/right/bottom/left:</strong> Bordas individuais</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção 10: Overflow (Conteúdo Excedente) -->
+        <section class="exemplo-guia">
+            <h2>10. Overflow (Controle de Transbordamento)</h2>
+            <div class="boxmodel-guia-overflow-visible">
+                <strong>overflow: visible (padrão)</strong><br>
+                Conteúdo que excede a caixa fica visível e ultrapassa os limites da caixa, podendo sobrepor outros elementos da página.
+            </div>
+            <div class="boxmodel-guia-overflow-hidden">
+                <strong>overflow: hidden</strong><br>
+                Conteúdo que excede a caixa é cortado e ocultado, não aparecendo na tela mesmo que exista no HTML.
+            </div>
+            <div class="boxmodel-guia-overflow-scroll">
+                <strong>overflow: scroll</strong><br>
+                Adiciona barras de rolagem (sempre visíveis) para visualizar todo o conteúdo que excede os limites da caixa.
+            </div>
+            <div class="boxmodel-guia-overflow-auto">
+                <strong>overflow: auto</strong><br>
+                Adiciona barras de rolagem automaticamente apenas quando o conteúdo excede o tamanho da caixa, melhor opção na maioria dos casos.
+            </div>
+            <div class="explanation">
+                <p><strong>Valores do Overflow:</strong></p>
+                <ul>
+                    <li><strong>visible:</strong> Padrão, conteúdo vaza para fora</li>
+                    <li><strong>hidden:</strong> Corta o conteúdo excedente</li>
+                    <li><strong>scroll:</strong> Sempre mostra scrollbar</li>
+                    <li><strong>auto:</strong> Scrollbar apenas quando necessário</li>
+                    <li><strong>overflow-x/overflow-y:</strong> Controle por eixo</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção 11: Exemplos Profissionais de Caixas -->
+        <section class="exemplo-guia">
+            <h2>11. ✨ Exemplos Profissionais de Caixas CSS</h2>
+            
+            <h3 class="guia-section-title">🎴 Cards Modernos</h3>
+            <div class="grid-exemplos">
+                <div class="card-exemplo-1">
+                    <div class="card-header">Card Simples</div>
+                    <div class="card-body">
+                        <p>Card básico com sombra suave e cantos arredondados. Perfeito para conteúdo geral.</p>
+                    </div>
+                    <div class="card-footer">Ver mais →</div>
+                </div>
+
+                <div class="card-exemplo-2">
+                    <div class="card-icon">🚀</div>
+                    <h3>Card com Ícone</h3>
+                    <p>Card centralizado com ícone grande no topo. Ideal para features ou serviços.</p>
+                    <button class="card-button">Saiba Mais</button>
+                </div>
+
+                <div class="card-exemplo-3">
+                    <div class="card-image"></div>
+                    <div class="card-content">
+                        <h3>Card com Imagem</h3>
+                        <p>Card com área de imagem gradient e conteúdo abaixo.</p>
+                        <span class="card-tag">Novo</span>
+                    </div>
+                </div>
+
+                <div class="card-exemplo-4">
+                    <h3>Card Hover Elevado</h3>
+                    <p>Passe o mouse para ver o efeito de elevação suave com transição.</p>
+                    <div class="card-stats">
+                        <span>👁️ 1.2k</span>
+                        <span>❤️ 234</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="guia-section-title-large">🔘 Botões Profissionais</h3>
+            <div class="botoes-grid">
+                <button class="btn-exemplo-1">Botão Primário</button>
+                <button class="btn-exemplo-2">Botão Gradient</button>
+                <button class="btn-exemplo-3">Botão Outline</button>
+                <button class="btn-exemplo-4">Botão Elevado</button>
+                <button class="btn-exemplo-5">Botão Neon</button>
+                <button class="btn-exemplo-6">Botão 3D</button>
+                <button class="btn-exemplo-7">Botão Fantasma</button>
+                <button class="btn-exemplo-8">Botão Animado</button>
+            </div>
+
+            <h3 class="guia-section-title-large">📦 Containers com Efeitos</h3>
+            <div class="grid-exemplos">
+                <div class="container-exemplo-1">
+                    <h3>🌟 Glassmorphism</h3>
+                    <p>Efeito de vidro fosco moderno com transparência e blur.</p>
+                </div>
+
+                <div class="container-exemplo-2">
+                    <h3>⚡ Neomorphism</h3>
+                    <p>Design soft com sombras internas e externas suaves.</p>
+                </div>
+
+                <div class="container-exemplo-3">
+                    <h3>🎨 Gradient Border</h3>
+                    <p>Borda com gradiente colorido e fundo escuro.</p>
+                </div>
+
+                <div class="container-exemplo-4">
+                    <h3>💎 Brilho Sutil</h3>
+                    <p>Container com múltiplas sombras criando profundidade.</p>
+                </div>
+            </div>
+
+            <h3 class="guia-section-title-large">🏷️ Badges e Tags</h3>
+            <div class="badges-container">
+                <span class="badge-exemplo-1">Novo</span>
+                <span class="badge-exemplo-2">Popular</span>
+                <span class="badge-exemplo-3">Promoção</span>
+                <span class="badge-exemplo-4">Premium</span>
+                <span class="badge-exemplo-5">Beta</span>
+                <span class="badge-exemplo-6">Oferta</span>
+                <span class="badge-exemplo-7">Destaque</span>
+                <span class="badge-exemplo-8">VIP</span>
+            </div>
+
+            <h3 class="guia-section-title-large">🔔 Alertas e Notificações</h3>
+            <div class="alertas-container">
+                <div class="alert-exemplo-sucesso">
+                    <strong>✓ Sucesso!</strong> Sua operação foi concluída com êxito.
+                </div>
+                <div class="alert-exemplo-info">
+                    <strong>ℹ️ Informação:</strong> Você tem 3 novas mensagens.
+                </div>
+                <div class="alert-exemplo-aviso">
+                    <strong>⚠️ Atenção:</strong> Seu armazenamento está quase cheio.
+                </div>
+                <div class="alert-exemplo-erro">
+                    <strong>✗ Erro:</strong> Não foi possível processar sua solicitação.
+                </div>
+            </div>
+
+            <h3 class="guia-section-title-large">👤 Profile Cards</h3>
+            <div class="grid-exemplos">
+                <div class="profile-card-1">
+                    <div class="profile-header"></div>
+                    <div class="profile-avatar">JD</div>
+                    <h3>João Silva</h3>
+                    <p>Desenvolvedor Full Stack</p>
+                    <div class="profile-stats">
+                        <div><strong>1.2k</strong><br>Seguidores</div>
+                        <div><strong>234</strong><br>Seguindo</div>
+                        <div><strong>89</strong><br>Posts</div>
+                    </div>
+                    <button class="profile-button">Seguir</button>
+                </div>
+
+                <div class="profile-card-2">
+                    <div class="profile-bg"></div>
+                    <div class="profile-info">
+                        <div class="profile-pic">MS</div>
+                        <h3>Maria Santos</h3>
+                        <p>UI/UX Designer</p>
+                        <div class="profile-tags">
+                            <span>Design</span>
+                            <span>Figma</span>
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="guia-section-title-large">💰 Pricing Cards</h3>
+            <div class="pricing-grid">
+                <div class="pricing-card-basico">
+                    <h3>Básico</h3>
+                    <div class="pricing-price">
+                        <span class="currency">R$</span>
+                        <span class="amount">29</span>
+                        <span class="period">/mês</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ 5 Projetos</li>
+                        <li>✓ 10GB Armazenamento</li>
+                        <li>✓ Suporte por Email</li>
+                        <li>✗ API Access</li>
+                    </ul>
+                    <button class="pricing-button">Escolher Plano</button>
+                </div>
+
+                <div class="pricing-card-pro">
+                    <div class="pricing-badge">Popular</div>
+                    <h3>Profissional</h3>
+                    <div class="pricing-price">
+                        <span class="currency">R$</span>
+                        <span class="amount">79</span>
+                        <span class="period">/mês</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ 50 Projetos</li>
+                        <li>✓ 100GB Armazenamento</li>
+                        <li>✓ Suporte Prioritário</li>
+                        <li>✓ API Access</li>
+                    </ul>
+                    <button class="pricing-button">Escolher Plano</button>
+                </div>
+
+                <div class="pricing-card-enterprise">
+                    <h3>Enterprise</h3>
+                    <div class="pricing-price">
+                        <span class="currency">R$</span>
+                        <span class="amount">199</span>
+                        <span class="period">/mês</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Projetos Ilimitados</li>
+                        <li>✓ 1TB Armazenamento</li>
+                        <li>✓ Suporte 24/7</li>
+                        <li>✓ API Avançada</li>
+                    </ul>
+                    <button class="pricing-button">Escolher Plano</button>
+                </div>
+            </div>
+
+            <h3 class="guia-section-title-large">⏳ Loading States</h3>
+            <div class="loading-container">
+                <div class="loading-spinner"></div>
+                <div class="loading-dots">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="loading-bar"></div>
+                <div class="loading-pulse">Carregando...</div>
+            </div>
+
+            <div class="explanation">
+                <p><strong>Exemplos Profissionais:</strong> Todos esses componentes usam conceitos do Box Model (margin, padding, border, box-sizing) combinados com outras propriedades CSS para criar interfaces modernas e interativas.</p>
+                <p>Estude o código CSS desses exemplos para aprender técnicas profissionais de design.</p>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="position.html" class="prev-button">← Position</a>
+            <a href="../index.html" class="back-button">Menu Principal</a>
+            <a href="width.html" class="next-button">Width →</a>
+        </div>
+    </div>
+</body>
+</html>

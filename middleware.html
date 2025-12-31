@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middleware</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>◆ Middleware</h1>
+
+        <div class="guia-intro">
+            <p><strong>Middleware</strong> são funções que ficam no meio do caminho. Quando um pedido chega no servidor, o middleware pode fazer algo antes de responder.</p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>O que é Middleware?</h2>
+            <div class="explanation">
+                <p>Imagine que o pedido (request) chega, passa pelo middleware, depois pela rota, e sai a resposta (response).</p>
+                <p>O middleware fica no meio desse caminho!</p>
+                <p>É bom para:</p>
+                <ul>
+                    <li>Registrar que alguém acessou seu site</li>
+                    <li>Verificar se o usuário tem permissão</li>
+                    <li>Preparar dados antes de usar</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Exemplo: O middleware mais simples</h2>
+            <div class="explanation">
+                <p>Todo middleware tem três partes: <code>req</code>, <code>res</code>, e <code>next</code>:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>app.use((req, res, next) => {
+    console.log('Um pedido chegou!');
+    next();  // Deixe o pedido continuar
+});</pre>
+            </div>
+            <div class="explanation">
+                <ul>
+                    <li><code>req</code> = O pedido que chegou</li>
+                    <li><code>res</code> = A resposta que vamos enviar</li>
+                    <li><code>next</code> = Chame isso para deixar passar para a próxima coisa</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Exemplo: Registrar qual rota foi acessada</h2>
+            <div class="explanation">
+                <p>Um middleware que mostra quem acessou o que:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>app.use((req, res, next) => {
+    console.log(`${req.method} ${req.path}`);
+    next();
+});
+
+app.get('/', (req, res) => {
+    res.send('Página inicial');
+});</pre>
+            </div>
+            <div class="explanation">
+                <p>Quando alguém acessa /, o console mostra: <code>GET /</code></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Minha nota: Middleware que verifica permissão</h2>
+            <div class="explanation">
+                <p>Você pode usar middleware para proteger rotas:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>function verificarToken(req, res, next) {
+    const token = req.headers.authorization;
+    
+    if (token === 'Bearer segredo123') {
+        next();  // Deixe passar
+    } else {
+        res.status(403).json({ erro: 'Não autorizado' });
+    }
+}
+
+// Só essa rota é protegida
+app.get('/admin', verificarToken, (req, res) => {
+    res.json({ msg: 'Área do admin!' });
+});</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Minha nota: A ordem importa!</h2>
+            <div class="explanation">
+                <p>Os middlewares rodam na ordem que você escreve:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// 1º - Sempre roda
+app.use((req, res, next) => {
+    console.log('1 - Log');
+    next();
+});
+
+// 2º - Sempre roda
+app.use((req, res, next) => {
+    console.log('2 - Verificação');
+    next();
+});
+
+// 3º - Só se pediu essa rota
+app.get('/', (req, res) => {
+    console.log('3 - Rota');
+    res.send('Pronto!');
+});</pre>
+            </div>
+            <div class="explanation">
+                <p>Se acessar /, o console mostra: 1 - Log, 2 - Verificação, 3 - Rota</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Exemplo: Usar Express pronto</h2>
+            <div class="explanation">
+                <p>Express traz alguns middlewares prontos, como um que lê JSON:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>const express = require('express');
+const app = express();
+
+// Middleware do Express que lê JSON
+app.use(express.json());
+
+// Agora você pode receber dados JSON
+app.post('/dados', (req, res) => {
+    console.log(req.body);  // Aqui tem os dados!
+    res.json({ recebido: true });
+});</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie um middleware que:</p>
+                <ul>
+                    <li>Imprime a hora atual no console</li>
+                    <li>Imprime qual rota foi acessada</li>
+                    <li>Roda antes de todas as rotas</li>
+                </ul>
+                <p>💡 Dica: Use app.use() antes das rotas!</p>
+            </div>
+        </section>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="rotas-api.html" class="btn-caixa">← Anterior</a>
+            <a href="menu-backend.html" class="btn-caixa">Menu</a>
+            <a href="banco-dados.html" class="btn-caixa">Próximo →</a>
+        </div>
+    </div>
+</body>
+</html>

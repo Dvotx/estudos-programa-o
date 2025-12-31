@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao Node.js</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>▶ Introdução ao Node.js</h1>
+
+        <div class="guia-intro">
+            <p><strong>Node.js</strong> é um jeito de usar JavaScript no seu computador, não só no navegador. Você pode criar servidores e aplicações usando JavaScript!</p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>O que é Node.js?</h2>
+            <div class="explanation">
+                <p><strong>Node.js</strong> permite que você rode JavaScript fora do navegador. Em vez de escrever código que roda em páginas web, você escreve código que roda no servidor!</p>
+                <p>Serve para:</p>
+                <ul>
+                    <li>Criar servidores web</li>
+                    <li>Fazer APIs (interfaces de comunicação)</li>
+                    <li>Automatizar tarefas</li>
+                    <li>Processar dados</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Instalação do Node.js</h2>
+            <div class="explanation">
+                <p><strong>Como instalar:</strong></p>
+                <ol>
+                    <li>Abra <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a></li>
+                    <li>Baixe a versão "LTS" (é a mais estável)</li>
+                    <li>Execute o arquivo que você baixou</li>
+                    <li>Siga as instruções na tela</li>
+                </ol>
+                <p><strong>Para verificar se instalou corretamente:</strong></p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>node --version
+npm --version</pre>
+            </div>
+            <div class="explanation">
+                <p>Se aparecer os números das versões, está pronto!</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Seu Primeiro Programa</h2>
+            <div class="explanation">
+                <p>Crie um arquivo com final <code>.js</code> (por exemplo, <code>app.js</code>):</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>console.log("Olá, Node.js!");
+console.log("Bem-vindo ao backend!");</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>Como rodar:</strong> Abra o terminal, vá até a pasta do arquivo e digite:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>node app.js</pre>
+            </div>
+            <div class="explanation">
+                <p>Pronto! Seu código foi executado no servidor!</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Minha nota: Usando código de outros arquivos</h2>
+            <div class="explanation">
+                <p>Você pode separar seu código em vários arquivos e usar um dentro do outro:</p>
+                <p><strong>Arquivo: math.js</strong></p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>function somar(a, b) {
+    return a + b;
+}
+
+module.exports = somar;</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>Arquivo: app.js</strong></p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>const somar = require('./math');
+
+console.log(somar(5, 3));  // Mostra: 8</pre>
+            </div>
+            <div class="explanation">
+                <p><code>module.exports</code> = você está dizendo "este código pode ser usado em outro arquivo"</p>
+                <p><code>require</code> = você está pedindo usar o código de outro arquivo</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Minha nota: Ferramentas que vêm com Node.js</h2>
+            <div class="explanation">
+                <p>Node.js já vem com algumas ferramentas prontas:</p>
+                <ul>
+                    <li><strong>fs:</strong> Para ler e escrever arquivos</li>
+                    <li><strong>http:</strong> Para criar servidores</li>
+                    <li><strong>path:</strong> Para trabalhar com caminhos de pasta</li>
+                </ul>
+                <p><strong>Exemplo: Ler um arquivo</strong></p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>const fs = require('fs');
+
+fs.readFile('dados.txt', 'utf8', (erro, dados) => {
+    console.log(dados);
+});</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Minha nota: Código que acontece depois</h2>
+            <div class="explanation">
+                <p>Às vezes você precisa esperar algo terminar antes de fazer outra coisa. Node.js é bom nisso!</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>console.log('Começando...');
+
+setTimeout(() => {
+    console.log('Passou 1 segundo!');
+}, 1000);
+
+console.log('Esperando...');</pre>
+            </div>
+            <div class="explanation">
+                <p>A ordem que aparece no console é: "Começando..." → "Esperando..." → "Passou 1 segundo!"</p>
+                <p>Node.js não fica parado esperando, ele continua fazendo outras coisas!</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie um arquivo <code>ola.js</code> que:</p>
+                <ul>
+                    <li>Imprime "Olá, Node.js!" no console</li>
+                    <li>Execute com: node ola.js</li>
+                </ul>
+                <p>💡 Dica: Use console.log()!</p>
+            </div>
+        </section>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="menu-backend.html" class="btn-caixa">← Voltar ao Menu</a>
+            <a href="npm-pacotes.html" class="btn-caixa">Próximo: NPM & Pacotes →</a>
+        </div>
+    </div>
+</body>
+</html>

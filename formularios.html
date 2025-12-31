@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo: Formulários HTML</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>▭ Guia Completo: Formulários HTML</h1>
+        
+        <div class="guia-intro">
+            <p>Formulários são pra coletar informações. Tipo quando você faz login ou preenche um cadastro.</p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>1. Formulário Simples</h2>
+            <div class="html-exemplo-form">
+                <form>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> &lt;form&gt; cria o formulário, dentro dele vão os campos</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;form&gt;
+    &lt;input type="text"&gt;
+    &lt;button&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>2. Campos de Texto</h2>
+            <div class="html-exemplo-form">
+                <form>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+                </form>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> &lt;label&gt; é o título do campo</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;label for="email"&gt;Email:&lt;/label&gt;
+&lt;input type="email" id="email"&gt;</pre>
+                <p>required = campo obrigatório</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>3. Área de Texto Grande</h2>
+            <div class="html-exemplo-form">
+                <form>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva aqui..."></textarea>
+                </form>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> &lt;textarea&gt; é pra escrever textos longos</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;textarea rows="4"&gt;&lt;/textarea&gt;</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>4. Caixinhas de Marcar</h2>
+            <div class="html-exemplo-form">
+                <form>
+                    <p>O que você gosta:</p>
+                    <label>
+                        <input type="checkbox" name="interesse" value="html"> HTML
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interesse" value="css"> CSS
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interesse" value="js"> JavaScript
+                    </label>
+                </form>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> Checkbox = dá pra marcar várias opções</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;input type="checkbox"&gt; Opção 1</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>5. Bolinhas de Escolha</h2>
+            <div class="html-exemplo-form">
+                <form>
+                    <p>Seu nível:</p>
+                    <label>
+                        <input type="radio" name="nivel" value="iniciante"> Iniciante
+                    </label>
+                    <label>
+                        <input type="radio" name="nivel" value="intermediario"> Intermediário
+                    </label>
+                    <label>
+                        <input type="radio" name="nivel" value="avancado"> Avançado
+                    </label>
+                </form>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> Radio = só pode marcar UMA opção</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;input type="radio" name="nivel"&gt;</pre>
+                <p>Mesmo name = só uma opção ativa</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>6. Menu Suspenso</h2>
+            <div class="html-exemplo-form">
+                <form>
+                    <label for="cidade">Cidade:</label>
+                    <select id="cidade" name="cidade">
+                        <option value="">Escolha...</option>
+                        <option value="sp">São Paulo</option>
+                        <option value="rj">Rio de Janeiro</option>
+                    </select>
+                </form>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> &lt;select&gt; cria uma lista que abre quando clica</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;select&gt;
+    &lt;option&gt;Opção 1&lt;/option&gt;
+    &lt;option&gt;Opção 2&lt;/option&gt;
+&lt;/select&gt;</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>7. Outros Tipos de Campos</h2>
+            <div class="html-exemplo-form">
+                <form>
+                    <label>Número:
+                        <input type="number" min="0" max="100">
+                    </label>
+                    <label>Data:
+                        <input type="date">
+                    </label>
+                    <label>Cor:
+                        <input type="color">
+                    </label>
+                </form>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> Tem vários tipos especiais:</p>
+                <p>number = só números</p>
+                <p>date = escolhe data</p>
+                <p>color = escolhe cor</p>
+                <p>range = barrinha deslizante</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>8. Botões</h2>
+            <div class="html-exemplo-form">
+                <form>
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpar</button>
+                    <button type="button">Botão Normal</button>
+                </form>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> Tipos de botão:</p>
+                <p>submit = envia o formulário</p>
+                <p>reset = apaga tudo</p>
+                <p>button = botão comum</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie <code>meu-form.html</code> com um formulário de cadastro:</p>
+                <ul>
+                    <li>Input para nome (text)</li>
+                    <li>Input para email (email)</li>
+                    <li>Select com 3 opções de "Como nos conheceu?"</li>
+                    <li>Textarea para mensagem</li>
+                    <li>Botão de envio</li>
+                </ul>
+                <p>💡 Dica: Teste preenchendo o formulário para ver como funciona!</p>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="tabelas.html" class="prev-button">← Tabelas</a>
+            <a href="../pagina3.html" class="back-button">Voltar ao Índice</a>
+            <a href="semantica.html" class="next-button">HTML Semântico →</a>
+        </div>
+    </div>
+</body>
+</html>

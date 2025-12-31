@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Guia Completo: Border (Bordas)</title>
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>■ Guia Completo: Border (Bordas)</h1>
+        
+        <p class="guia-intro">
+            A propriedade <code>border</code> cria contornos ao redor de uma caixa. 
+            Você pode controlar a espessura, o estilo (traço contínuo, pontilhado, etc) e a cor.
+        </p>
+
+        <h2>1. Border Completo (Tudo de Uma Vez)</h2>
+        <div class="exemplo-guia">
+            <div class="border-guia-shorthand">border: 3px solid #3498db</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Define espessura, estilo e cor numa linha só.<br>
+                <strong>Como escrever:</strong> border: [espessura] [estilo] [cor]<br>
+                <strong>Quando usar:</strong> Quando todas as bordas são iguais.
+            </p>
+        </div>
+
+        <h2>2. Border-Width (Espessura da Borda)</h2>
+        <div class="exemplo-guia">
+            <div class="border-guia-width-px">border-width: 5px</div>
+            <p class="explanation">
+                <strong>Valores:</strong> px, em, thin (fina), medium (média), thick (grossa)<br>
+                <strong>Quando usar:</strong> Pra controlar só a espessura.
+            </p>
+        </div>
+
+        <h2>3. Border-Style (Tipo de Traço)</h2>
+        <div class="exemplo-guia">
+            <div class="border-guia-solid">border-style: solid (linha contínua)</div>
+            <div class="border-guia-dashed">border-style: dashed (tracejado)</div>
+            <div class="border-guia-dotted">border-style: dotted (pontilhado)</div>
+            <div class="border-guia-double">border-style: double (linha dupla)</div>
+            <div class="border-guia-groove">border-style: groove (sulco)</div>
+            <div class="border-guia-ridge">border-style: ridge (ressalto)</div>
+            <div class="border-guia-inset">border-style: inset (embutido)</div>
+            <div class="border-guia-outset">border-style: outset (elevado)</div>
+            <p class="explanation">
+                <strong>Valores:</strong> none, solid, dashed, dotted, double, groove, ridge, inset, outset, hidden<br>
+                <strong>Minha nota:</strong> Sem border-style, a borda não aparece!
+            </p>
+        </div>
+
+        <h2>4. Border-Color (Cor da Borda)</h2>
+        <div class="exemplo-guia">
+            <div class="border-guia-color-red">border-color: red</div>
+            <div class="border-guia-color-hex">border-color: #9b59b6</div>
+            <div class="border-guia-color-rgb">border-color: rgb(52, 152, 219)</div>
+            <div class="border-guia-color-rgba">border-color: rgba(231, 76, 60, 0.5)</div>
+            <p class="explanation">
+                <strong>Valores:</strong> Nomes de cores, códigos HEX, RGB, RGBA<br>
+                <strong>Minha nota:</strong> Se não definir cor, usa a cor do texto.
+            </p>
+        </div>
+
+        <h2>5. Bordas de Um Lado Só</h2>
+        <div class="exemplo-guia">
+            <div class="border-guia-top">border-top: 5px solid red</div>
+            <div class="border-guia-right">border-right: 5px solid blue</div>
+            <div class="border-guia-bottom">border-bottom: 5px solid green</div>
+            <div class="border-guia-left">border-left: 5px solid orange</div>
+            <div class="border-guia-mixed">Bordas diferentes em cada lado</div>
+            <p class="explanation">
+                <strong>Propriedades:</strong> border-top, border-right, border-bottom, border-left<br>
+                <strong>Quando usar:</strong> Pra deixar cada lado diferente.
+            </p>
+        </div>
+
+        <h2>6. Border-Radius (Cantos Arredondados)</h2>
+        <div class="exemplo-guia">
+            <div class="border-guia-radius-all">border-radius: 15px</div>
+            <div class="border-guia-radius-circle">border-radius: 50% (círculo!)</div>
+            <div class="border-guia-radius-individual">border-radius: 10px 20px 30px 40px</div>
+            <div class="border-guia-radius-ellipse">border-radius: 50px / 25px (oval)</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Arredonda os cantos da caixa.<br>
+                <strong>Valores:</strong> px, %, valores diferentes pra cada canto<br>
+                <strong>Minha nota:</strong> 50% cria um círculo perfeito em caixas quadradas!
+            </p>
+        </div>
+
+        <h2>7. Border-Radius por Canto</h2>
+        <div class="exemplo-guia">
+            <div class="border-guia-radius-corners">border-radius por canto</div>
+            <p class="explanation">
+                <strong>Propriedades:</strong><br>
+                - border-top-left-radius (canto superior esquerdo)<br>
+                - border-top-right-radius (canto superior direito)<br>
+                - border-bottom-right-radius (canto inferior direito)<br>
+                - border-bottom-left-radius (canto inferior esquerdo)
+            </p>
+        </div>
+
+        <h2>8. Border: none vs 0 (Sem Borda)</h2>
+        <div class="exemplo-guia">
+            <div class="border-guia-none">border: none</div>
+            <div class="border-guia-zero">border: 0</div>
+            <p class="explanation">
+                <strong>border: none:</strong> Remove completamente a borda (mais rápido).<br>
+                <strong>border: 0:</strong> Define espessura como 0, mas mantém o estilo.<br>
+                <strong>Minha nota:</strong> Use "none" pra remover bordas.
+            </p>
+        </div>
+
+        <h2>9. Border Transparente</h2>
+        <div class="exemplo-guia">
+            <div class="border-guia-transparent">border: 5px solid transparent</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Borda invisível que ainda ocupa espaço.<br>
+                <strong>Quando usar:</strong> Pra manter o tamanho da caixa ou em efeitos de hover.
+            </p>
+        </div>
+
+        <h2>10. Border com Gradiente (Truque Avançado)</h2>
+        <div class="exemplo-guia">
+            <div class="border-guia-gradient">Border com gradiente</div>
+            <p class="explanation">
+                <strong>Técnica:</strong> Usa border-image ou background-clip.<br>
+                <strong>Minha nota:</strong> Border não aceita gradiente direto, precisa de truques especiais.
+            </p>
+        </div>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie 4 divs com bordas diferentes:</p>
+                <ul>
+                    <li>border: 2px solid red</li>
+                    <li>border: 4px dashed blue</li>
+                    <li>border: 3px dotted green</li>
+                    <li>border-radius: 50% (círculo)</li>
+                </ul>
+                <p>💡 Dica: Teste misturar border com padding!</p>
+            </div>
+        </section>
+
+        <div class="guia-navegacao">
+            <a href="height.html"><button>← Anterior: Height</button></a>
+            <a href="box-shadow.html"><button>Próximo: Box-Shadow →</button></a>
+        </div>
+    </div>
+</body>
+</html>

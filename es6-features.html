@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Features</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>✨ ES6 Features</h1>
+
+        <div class="guia-intro">
+            <p>ES6 trouxe vários recursos novos pro JavaScript que deixam o código mais curto e fácil de ler!</p>
+            <p><em>Minha nota: São "atalhos" que economizam digitação e deixam o código mais limpo!</em></p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>Destructuring (Desestruturação)</h2>
+            <div class="explanation">
+                <p>Pegue valores de objetos de forma rápida:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Jeito antigo
+const pessoa = { nome: 'João', idade: 25 };
+const nome = pessoa.nome;
+const idade = pessoa.idade;
+
+// Jeito novo - MUITO mais fácil!
+const { nome, idade } = pessoa;
+console.log(nome);   // "João"
+console.log(idade);  // 25
+
+// Com arrays também funciona!
+const cores = ['vermelho', 'azul', 'verde'];
+const [cor1, cor2] = cores;
+console.log(cor1);  // "vermelho"
+console.log(cor2);  // "azul"</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: É como "desembalar" o objeto! Pega tudo de uma vez!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Spread Operator (...)</h2>
+            <div class="explanation">
+                <p>Os três pontinhos espalham os valores:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Copiar array
+const numeros = [1, 2, 3];
+const copiaNumeros = [...numeros];
+console.log(copiaNumeros);  // [1, 2, 3]
+
+// Juntar arrays
+const frutas1 = ['maçã', 'banana'];
+const frutas2 = ['laranja', 'uva'];
+const todasFrutas = [...frutas1, ...frutas2];
+// ['maçã', 'banana', 'laranja', 'uva']
+
+// Copiar objeto
+const pessoa = { nome: 'João', idade: 25 };
+const copiaPessoa = { ...pessoa, cidade: 'São Paulo' };
+// { nome: 'João', idade: 25, cidade: 'São Paulo' }</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: Os ... "espalham" os valores! É tipo tirar tudo da caixa e espalhar na mesa!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Template Strings</h2>
+            <div class="explanation">
+                <p>Use `` (crases) pra colocar variáveis no texto:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>const nome = 'João';
+const idade = 25;
+
+// Jeito antigo
+const msg1 = 'Olá, meu nome é ' + nome + ' e tenho ' + idade + ' anos';
+
+// Jeito novo - MUITO melhor!
+const msg2 = `Olá, meu nome é ${nome} e tenho ${idade} anos`;
+
+console.log(msg2);
+// "Olá, meu nome é João e tenho 25 anos"
+
+// Pode fazer contas dentro!
+const preco = 50;
+console.log(`O total com desconto é: R$ ${preco * 0.9}`);
+// "O total com desconto é: R$ 45"</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: Use ${} pra colocar variáveis dentro do texto. Muito mais fácil que ficar juntando com +!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Teste as funcionalidades ES6:</p>
+                <ul>
+                    <li>Use destructuring com um objeto {nome, idade}</li>
+                    <li>Use spread (...) pra copiar um array</li>
+                    <li>Use template strings com variáveis</li>
+                </ul>
+                <p>💡 Dica: ES6 deixa o código mais curto e limpo!</p>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="../menu-javascript.html" class="btn-back">← Voltar</a>
+        </div>
+    </div>
+</body>
+</html>

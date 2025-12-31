@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Dados</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>◉ Banco de Dados</h1>
+
+        <div class="guia-intro">
+            <p><strong>Banco de dados</strong> é um lugar seguro para guardar informações. Seus dados ficam salvos e você pode procurar depois!</p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>Tipos de Bancos de Dados</h2>
+            <div class="explanation">
+                <p>Existem dois tipos principais:</p>
+                <ul>
+                    <li><strong>SQL (relacional):</strong> Dados organizados em tabelas (linhas e colunas), tipo uma planilha do Excel. Exemplos: MySQL, PostgreSQL, SQLite</li>
+                    <li><strong>NoSQL (documento):</strong> Dados em formato de documento (JSON). Exemplo: MongoDB, Firebase</li>
+                </ul>
+                <p>Para iniciantes, é mais fácil começar com um array simples!</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Exemplo: Simulando um banco de dados com um array</h2>
+            <div class="explanation">
+                <p>No começo, você pode usar um array como "banco de dados" (fica na memória, não salva para sempre):</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>let usuarios = [
+    { id: 1, nome: 'João', email: 'joao@email.com' },
+    { id: 2, nome: 'Maria', email: 'maria@email.com' }
+];
+
+// Buscar todos
+console.log(usuarios);
+
+// Buscar um específico
+const usuario = usuarios.find(u => u.id == 1);
+console.log(usuario);</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Exemplo: API com dados (sem banco real)</h2>
+            <div class="explanation">
+                <p>Você pode fazer uma API que trabalha com dados no array:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>const express = require('express');
+const app = express();
+
+let usuarios = [
+    { id: 1, nome: 'João' },
+    { id: 2, nome: 'Maria' }
+];
+
+// GET - Ver todos
+app.get('/usuarios', (req, res) => {
+    res.json(usuarios);
+});
+
+// GET - Ver um específico
+app.get('/usuarios/:id', (req, res) => {
+    const user = usuarios.find(u => u.id == req.params.id);
+    if (user) {
+        res.json(user);
+    } else {
+        res.status(404).json({ erro: 'Usuário não existe' });
+    }
+});
+
+app.listen(3000);</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Minha nota: Operações básicas de dados</h2>
+            <div class="explanation">
+                <p>Existem 4 operações básicas em banco de dados:</p>
+                <ul>
+                    <li><strong>CREATE (C):</strong> Criar/adicionar um novo dado</li>
+                    <li><strong>READ (R):</strong> Ler/buscar um dado</li>
+                    <li><strong>UPDATE (U):</strong> Atualizar um dado</li>
+                    <li><strong>DELETE (D):</strong> Apagar um dado</li>
+                </ul>
+                <p>Juntas chamam de CRUD!</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Exemplo: CRUD completo com um array</h2>
+            <div class="explanation">
+                <p>Um exemplo prático de todas as 4 operações:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>const express = require('express');
+const app = express();
+app.use(express.json());
+
+let usuarios = [
+    { id: 1, nome: 'João' }
+];
+
+// CREATE - Criar novo
+app.post('/usuarios', (req, res) => {
+    const novoUser = {
+        id: usuarios.length + 1,
+        nome: req.body.nome
+    };
+    usuarios.push(novoUser);
+    res.status(201).json(novoUser);
+});
+
+// READ - Ver um
+app.get('/usuarios/:id', (req, res) => {
+    const user = usuarios.find(u => u.id == req.params.id);
+    res.json(user);
+});
+
+// UPDATE - Atualizar
+app.put('/usuarios/:id', (req, res) => {
+    const user = usuarios.find(u => u.id == req.params.id);
+    if (user) {
+        user.nome = req.body.nome;
+        res.json(user);
+    }
+});
+
+// DELETE - Apagar
+app.delete('/usuarios/:id', (req, res) => {
+    const index = usuarios.findIndex(u => u.id == req.params.id);
+    const removido = usuarios.splice(index, 1);
+    res.json(removido[0]);
+});
+
+app.listen(3000);</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Minha nota: Quando usar banco real?</h2>
+            <div class="explanation">
+                <p>Um array na memória desaparece quando você fecha o servidor. Para projetos reais, você precisa de um banco de dados!</p>
+                <p>Quando ficar confortável com essas operações, aprenda sobre:</p>
+                <ul>
+                    <li>SQLite (mais fácil, sem instalar nada)</li>
+                    <li>MongoDB (bom para JSON)</li>
+                    <li>PostgreSQL (profissional)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie um array simples que funciona como "banco":</p>
+                <ul>
+                    <li>Array com 3 objetos {id, nome, idade}</li>
+                    <li>Rota GET /usuarios que retorna todos</li>
+                    <li>Rota GET /usuarios/:id que retorna um específico</li>
+                </ul>
+                <p>💡 Dica: Não precisa de banco real, use um array por enquanto!</p>
+            </div>
+        </section>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="middleware.html" class="btn-caixa">← Anterior</a>
+            <a href="menu-backend.html" class="btn-caixa">Menu</a>
+            <a href="autenticacao.html" class="btn-caixa">Próximo →</a>
+        </div>
+    </div>
+</body>
+</html>

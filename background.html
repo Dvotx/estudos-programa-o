@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Guia: Background (Fundo)</title>
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>◉ Background: Como Colorir Fundos</h1>
+        
+        <p class="guia-intro">
+            <code>background</code> é usado para mudar a cor ou adicionar imagens ao fundo de elementos.
+        </p>
+
+        <h2>1. Cores Sólidas (background-color)</h2>
+        <div class="exemplo-guia">
+            <div class="bg-guia-color-name">Cor com nome: coral</div>
+            <div class="bg-guia-color-hex">Cor com código: #3498db</div>
+            <div class="bg-guia-color-rgb">Cor com RGB: rgb(231, 76, 60)</div>
+            <p class="explanation">
+                <strong>Minha nota:</strong> Você pode usar três jeitos pra mudar cor:<br>
+                • Nome da cor: background-color: red;<br>
+                • Código HEX: background-color: #ff0000;<br>
+                • Números RGB: background-color: rgb(255, 0, 0);
+            </p>
+        </div>
+
+        <h2>2. Gradiente Linear (Linear Gradient)</h2>
+        <div class="exemplo-guia">
+            <div class="bg-guia-linear-lr">Gradiente pra direita</div>
+            <div class="bg-guia-linear-tb">Gradiente pra baixo</div>
+            <div class="bg-guia-linear-deg">Gradiente na diagonal</div>
+            <p class="explanation">
+                <strong>Minha nota:</strong> Gradiente é uma mistura suave entre duas ou mais cores.<br>
+                • to right, to left, to bottom, to top: direção<br>
+                • 45deg: ângulo (pode ser qualquer número)<br>
+                • Exemplo: background: linear-gradient(to right, blue, red);
+            </p>
+        </div>
+
+        <h2>3. Gradiente Radial (Radial Gradient)</h2>
+        <div class="exemplo-guia">
+            <div class="bg-guia-radial-circle">Gradiente circular</div>
+            <div class="bg-guia-radial-ellipse">Gradiente oval</div>
+            <p class="explanation">
+                <strong>Minha nota:</strong> Radial gradiente sai do centro pra fora.<br>
+                • circle: formato redondo<br>
+                • ellipse: formato oval<br>
+                • Exemplo: background: radial-gradient(circle, red, blue);
+            </p>
+        </div>
+
+        <h2>4. Repetição (Background-Repeat)</h2>
+        <div class="exemplo-guia">
+            <div class="bg-guia-repeat">Repete em toda parte</div>
+            <div class="bg-guia-no-repeat">Aparece uma vez</div>
+            <div class="bg-guia-repeat-x">Repete na horizontal</div>
+            <div class="bg-guia-repeat-y">Repete na vertical</div>
+            <p class="explanation">
+                <strong>Minha nota:</strong> Controla se a imagem de fundo se repete ou não.<br>
+                • repeat: copia a imagem várias vezes<br>
+                • no-repeat: só mostra uma vez<br>
+                • repeat-x: repete só na largura<br>
+                • repeat-y: repete só na altura
+            </p>
+        </div>
+
+        <h2>5. Tamanho (Background-Size)</h2>
+        <div class="exemplo-guia">
+            <div class="bg-guia-size-cover">Cobre tudo (cover)</div>
+            <div class="bg-guia-size-contain">Entra inteira (contain)</div>
+            <p class="explanation">
+                <strong>Minha nota:</strong> Define o tamanho da imagem de fundo.<br>
+                • cover: preenche tudo, mas pode cortar a imagem<br>
+                • contain: entra toda a imagem, pode deixar espaço<br>
+                • Exemplo: background-size: 200px 150px;
+            </p>
+        </div>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie uma div com:</p>
+                <ul>
+                    <li>background-color com sua cor favorita</li>
+                    <li>background com gradiente de 2 cores</li>
+                    <li>Teste mudar as cores!</li>
+                </ul>
+                <p>💡 Dica: Use linear-gradient(blue, red) pra gradiente!</p>
+            </div>
+        </section>
+
+        <h2 style="display: none;">8. Background-Attachment (Fixação)</h2>
+        <div style="display: none;">
+        <div class="bg-guia-scroll">background-attachment: scroll (padrão)</div>
+            <div class="bg-guia-fixed">background-attachment: fixed (parallax)</div>
+            <p class="explanation">
+                <strong>scroll:</strong> Fundo rola com o elemento<br>
+                <strong>fixed:</strong> Fundo fixo na viewport (efeito parallax)<br>
+                <strong>local:</strong> Fundo rola com o conteúdo do elemento
+            </p>
+        </div>
+
+        <h2 style="display: none;">9. Background Shorthand (Abreviado)</h2>
+        <div style="display: none;">
+            <div class="bg-guia-shorthand">background: #3498db url('img.jpg') no-repeat center/cover</div>
+            <p class="explanation">
+                <strong>Sintaxe:</strong> background: [color] [image] [repeat] [position]/[size] [attachment]<br>
+                <strong>Ordem:</strong> Pode variar, mas position/size precisam estar juntos<br>
+                <strong>Vantagem:</strong> Código mais conciso
+            </p>
+        </div>
+
+        <h2 style="display: none;">10. Múltiplos Backgrounds</h2>
+        <div style="display: none;">
+            <div class="bg-guia-multiple">Múltiplos fundos em camadas</div>
+            <p class="explanation">
+                <strong>Uso:</strong> Separe cada background com vírgula<br>
+                <strong>Ordem:</strong> Primeiro declarado fica no topo<br>
+                <strong>Exemplo:</strong> background: url(1.png), url(2.png), linear-gradient(...)
+            </p>
+        </div>
+
+        <div class="guia-navegacao">
+            <a href="padding.html"><button>← Anterior: Padding</button></a>
+            <a href="text.html"><button>Próximo: Text & Font →</button></a>
+        </div>
+    </div>
+</body>
+</html>

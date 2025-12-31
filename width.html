@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Guia Completo: Width (Largura)</title>
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>▶ Guia Completo: Width (Largura)</h1>
+        
+        <p class="guia-intro">
+            A propriedade <code>width</code> controla a largura (o tamanho horizontal) de uma caixa. 
+            Você pode usar vários tipos de valores, desde medidas fixas até responsivas.
+        </p>
+
+        <h2>1. Pixels (px) - Tamanho Fixo</h2>
+        <div class="exemplo-guia">
+            <div class="width-guia-px">width: 300px</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Uma caixa com exatamente 300 pixels de largura.<br>
+                <strong>Quando usar:</strong> Quando você quer um tamanho que nunca muda.<br>
+                <strong>Minha nota:</strong> Não se adapta ao tamanho da tela.
+            </p>
+        </div>
+
+        <h2>2. Porcentagem (%) - Depende da Caixa Pai</h2>
+        <div class="exemplo-guia">
+            <div class="width-guia-percent">width: 50%</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Metade da largura da caixa que está em volta.<br>
+                <strong>Quando usar:</strong> Pra caixas que se adaptam ao tamanho do container.<br>
+                <strong>Minha nota:</strong> Cresce e diminui junto com a caixa pai.
+            </p>
+        </div>
+
+        <h2>3. Viewport Width (vw) - Depende da Janela</h2>
+        <div class="exemplo-guia">
+            <div class="width-guia-vw">width: 80vw</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> 80% da largura da janela do navegador.<br>
+                <strong>Quando usar:</strong> Pra elementos que acompanham o tamanho da tela.<br>
+                <strong>Minha nota:</strong> 1vw = 1% da largura da janela.
+            </p>
+        </div>
+
+        <h2>4. EM - Baseado no Tamanho da Letra</h2>
+        <div class="exemplo-guia">
+            <div class="width-guia-em">width: 20em</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> 20 vezes o tamanho da letra do elemento.<br>
+                <strong>Quando usar:</strong> Pra manter proporção com o texto.<br>
+                <strong>Minha nota:</strong> Se a letra é 16px, 1em = 16px.
+            </p>
+        </div>
+
+        <h2>5. REM - Baseado na Letra Principal</h2>
+        <div class="exemplo-guia">
+            <div class="width-guia-rem">width: 25rem</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> 25 vezes o tamanho da letra principal da página.<br>
+                <strong>Quando usar:</strong> Pra tamanhos consistentes na página toda.<br>
+                <strong>Minha nota:</strong> Mais fácil de prever que o em.
+            </p>
+        </div>
+
+        <h2>6. Auto - Largura Automática</h2>
+        <div class="exemplo-guia">
+            <div class="width-guia-auto">width: auto</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> O navegador decide a largura automaticamente.<br>
+                <strong>Quando usar:</strong> É o padrão, usa o espaço disponível.<br>
+                <strong>Minha nota:</strong> Caixas normais ocupam toda a largura disponível.
+            </p>
+        </div>
+
+        <h2>7. Max-Content - Largura do Conteúdo</h2>
+        <div class="exemplo-guia">
+            <div class="width-guia-max-content">width: max-content (texto longo sem quebra)</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Fica largo o suficiente pra mostrar tudo numa linha.<br>
+                <strong>Quando usar:</strong> Quando quer que caiba tudo sem quebrar linha.<br>
+                <strong>Minha nota:</strong> Pode ficar muito largo!
+            </p>
+        </div>
+
+        <h2>8. Min-Content - Menor Largura Possível</h2>
+        <div class="exemplo-guia">
+            <div class="width-guia-min-content">width: min-content (texto que quebra)</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> O mínimo de largura necessário.<br>
+                <strong>Quando usar:</strong> Quando quer economizar espaço horizontal.<br>
+                <strong>Minha nota:</strong> Quebra o texto pra ficar bem estreito.
+            </p>
+        </div>
+
+        <h2>9. Fit-Content - Se Ajusta ao Conteúdo</h2>
+        <div class="exemplo-guia">
+            <div class="width-guia-fit-content">width: fit-content</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Se ajusta ao conteúdo, mas respeita limites.<br>
+                <strong>Quando usar:</strong> Pra caixas que envolvem o conteúdo.<br>
+                <strong>Minha nota:</strong> Parecido com max-content, mas mais controlado.
+            </p>
+        </div>
+
+        <h2>10. Calc() - Faz Contas</h2>
+        <div class="exemplo-guia">
+            <div class="width-guia-calc">width: calc(100% - 100px)</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Largura total menos 100 pixels.<br>
+                <strong>Quando usar:</strong> Pra fazer contas com diferentes unidades.<br>
+                <strong>Minha nota:</strong> Você pode somar, subtrair, multiplicar e dividir.
+            </p>
+        </div>
+
+        <h2>11. Min-Width e Max-Width - Limites</h2>
+        <div class="exemplo-guia">
+            <div class="width-guia-minmax">min-width: 200px; max-width: 500px;</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Define largura mínima e máxima.<br>
+                <strong>Quando usar:</strong> Pra controlar o tamanho em telas diferentes.<br>
+                <strong>Minha nota:</strong> Nunca vai ficar menor que 200px nem maior que 500px.
+            </p>
+        </div>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie 3 divs com larguras diferentes:</p>
+                <ul>
+                    <li>Uma com 200px</li>
+                    <li>Uma com 50%</li>
+                    <li>Uma com 80vw</li>
+                </ul>
+                <p>💡 Dica: Coloque cores diferentes pra ver a diferença!</p>
+            </div>
+        </section>
+
+        <div class="guia-navegacao">
+            <a href="../pagina2.html"><button>← Voltar para Exemplos</button></a>
+            <a href="height.html"><button>Próximo: Height →</button></a>
+        </div>
+    </div>
+</body>
+</html>

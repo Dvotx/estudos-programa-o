@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>◉ DOM (Manipular HTML com JS)</h1>
+
+        <div class="guia-intro">
+            <p>DOM significa "Document Object Model". É como o JavaScript "conversa" com o HTML da página. Com JS você pode mudar textos, cores, criar elementos novos e muito mais!</p>
+            <p><em>Minha nota: DOM é tipo controle remoto do HTML. JavaScript é quem aperta os botões!</em></p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>Pegar Elementos do HTML</h2>
+            <div class="explanation">
+                <p>Primeiro você precisa "pegar" um elemento pra poder mexer nele:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Pegar por ID
+const titulo = document.getElementById("meuTitulo");
+
+// Pegar por classe (pega TODOS com essa classe)
+const botoes = document.querySelectorAll(".meu-botao");
+
+// Pegar o primeiro que achar
+const primeiroP = document.querySelector("p");
+
+// Pegar por tag (pega TODOS os &lt;p&gt;)
+const paragrafos = document.getElementsByTagName("p");</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: getElementById = pega UM por id. querySelectorAll = pega VÁRIOS. querySelector = pega só o PRIMEIRO!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Mudar o Texto</h2>
+            <div class="explanation">
+                <p>Depois de pegar o elemento, você pode mudar o texto dele:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// HTML: &lt;p id="texto"&gt;Texto antigo&lt;/p&gt;
+
+// Pegar o elemento
+const paragrafo = document.getElementById("texto");
+
+// Mudar o texto
+paragrafo.textContent = "Texto novo!";
+
+// Ou com innerHTML (aceita HTML)
+paragrafo.innerHTML = "Texto &lt;strong&gt;negrito&lt;/strong&gt;!";</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: textContent = só texto. innerHTML = pode ter tags HTML dentro!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Mudar Estilos (CSS)</h2>
+            <div class="explanation">
+                <p>Você pode mudar cores, tamanhos, tudo do CSS:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>const caixa = document.getElementById("minhaCaixa");
+
+// Mudar cor do texto
+caixa.style.color = "blue";
+
+// Mudar cor de fundo
+caixa.style.backgroundColor = "yellow";
+
+// Mudar tamanho
+caixa.style.fontSize = "24px";
+caixa.style.width = "200px";
+
+// Várias mudanças de uma vez
+caixa.style.cssText = "color: red; background: black; padding: 10px;";</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: background-color no CSS vira backgroundColor no JS (sem traço, com letra maiúscula)!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Criar e Adicionar Elementos</h2>
+            <div class="explanation">
+                <p>Você pode criar novos elementos do zero:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Criar um novo parágrafo
+const novoP = document.createElement("p");
+
+// Colocar texto nele
+novoP.textContent = "Eu fui criado pelo JavaScript!";
+
+// Adicionar na página
+document.body.appendChild(novoP);
+
+// Exemplo: criar um botão
+const botao = document.createElement("button");
+botao.textContent = "Clique aqui";
+botao.id = "meuBotao";
+document.body.appendChild(botao);</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: createElement = criar. appendChild = adicionar na página!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Classes CSS</h2>
+            <div class="explanation">
+                <p>Adicionar ou remover classes CSS de um elemento:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>const botao = document.getElementById("meuBotao");
+
+// Adicionar uma classe
+botao.classList.add("ativo");
+
+// Remover uma classe
+botao.classList.remove("ativo");
+
+// Alternar (se tem, remove; se não tem, adiciona)
+botao.classList.toggle("ativo");
+
+// Ver se tem uma classe
+if (botao.classList.contains("ativo")) {
+    console.log("Botão está ativo!");
+}</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: classList.add = adicionar. .remove = remover. .toggle = ligar/desligar!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> No HTML, crie:</p>
+                <ul>
+                    <li>Uma div com id="caixa"</li>
+                    <li>Use document.getElementById() pra pegar ela</li>
+                    <li>Mude o texto dela com .textContent</li>
+                    <li>Mude a cor com .style.color</li>
+                </ul>
+                <p>💡 Dica: Teste no console do navegador (F12)!</p>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="../menu-javascript.html" class="btn-back">← Voltar</a>
+        </div>
+    </div>
+</body>
+</html>

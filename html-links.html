@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo: Links e Navegação HTML</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>⬌ Guia Completo: Links e Navegação HTML</h1>
+        
+        <div class="guia-intro">
+            <p>Links são fundamentais na web, permitindo a navegação entre páginas. A tag &lt;a&gt; (anchor/âncora) cria hiperlinks clicáveis.</p>
+        </div>
+
+        <!-- Seção 1: Link Básico -->
+        <section class="exemplo-guia">
+            <h2>1. Link Básico com &lt;a href=""&gt;</h2>
+            <div class="html-exemplo-box">
+                <a href="https://www.google.com">Ir para o Google</a>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>&lt;a href="https://www.google.com"&gt;Ir para o Google&lt;/a&gt;</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>href:</strong> Atributo obrigatório que define o destino do link (URL).</p>
+                <p>O texto entre as tags é o conteúdo clicável.</p>
+            </div>
+        </section>
+
+        <!-- Seção 2: Abrir em Nova Aba -->
+        <section class="exemplo-guia">
+            <h2>2. Abrir em Nova Aba (target="_blank")</h2>
+            <div class="html-exemplo-box">
+                <a href="https://www.youtube.com" target="_blank" rel="noopener">Abrir YouTube em nova aba</a>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>&lt;a href="https://www.youtube.com" target="_blank"&gt;
+    Abrir YouTube em nova aba
+&lt;/a&gt;</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>target="_blank":</strong> Abre o link em nova aba/janela.</p>
+                <p><strong>Outros valores:</strong> _self (mesma aba), _parent, _top</p>
+            </div>
+        </section>
+
+        <!-- Seção 3: Links Internos (Mesma Página) -->
+        <section class="exemplo-guia">
+            <h2>3. Links Internos - Âncoras (#id)</h2>
+            <div class="html-exemplo-box">
+                <a href="#secao-10">Ir para Seção 10 desta página</a>
+                <br><br>
+                <a href="#">Voltar ao topo</a>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>&lt;a href="#secao-10"&gt;Ir para Seção 10&lt;/a&gt;
+&lt;a href="#"&gt;Voltar ao topo&lt;/a&gt;
+
+&lt;!-- Elemento de destino --&gt;
+&lt;section id="secao-10"&gt;...&lt;/section&gt;</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>href="#id":</strong> Navega para elemento com esse ID na mesma página.</p>
+                <p><strong>href="#":</strong> Volta ao topo da página.</p>
+            </div>
+        </section>
+
+        <!-- Seção 4: Links Relativos -->
+        <section class="exemplo-guia">
+            <h2>4. Links Relativos (Arquivos Locais)</h2>
+            <div class="html-exemplo-box">
+                <a href="../index.html">Voltar para index.html</a><br>
+                <a href="html-tags-basicas.html">Ir para Tags Básicas</a><br>
+                <a href="../pagina2.html">Ir para Página 2</a>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>&lt;!-- Mesma pasta --&gt;
+&lt;a href="arquivo.html"&gt;Link&lt;/a&gt;
+
+&lt;!-- Pasta acima --&gt;
+&lt;a href="../arquivo.html"&gt;Link&lt;/a&gt;
+
+&lt;!-- Subpasta --&gt;
+&lt;a href="pasta/arquivo.html"&gt;Link&lt;/a&gt;</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>Caminho relativo:</strong> Relativo à localização do arquivo atual.</p>
+                <p><strong>../:</strong> Volta uma pasta acima.</p>
+                <p><strong>pasta/:</strong> Entra em uma subpasta.</p>
+            </div>
+        </section>
+
+        <!-- Seção 5: Link para Email -->
+        <section class="exemplo-guia">
+            <h2>5. Link para Email (mailto:)</h2>
+            <div class="html-exemplo-box">
+                <a href="mailto:exemplo@email.com">Enviar email</a><br>
+                <a href="mailto:exemplo@email.com?subject=Assunto&body=Mensagem">Email com assunto e corpo</a>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>&lt;a href="mailto:exemplo@email.com"&gt;Enviar email&lt;/a&gt;
+
+&lt;!-- Com assunto e corpo --&gt;
+&lt;a href="mailto:email@exemplo.com?subject=Olá&amp;body=Mensagem"&gt;
+    Email completo
+&lt;/a&gt;</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>mailto:</strong> Abre o cliente de email padrão.</p>
+                <p><strong>Parâmetros:</strong> ?subject=, &body=, &cc=, &bcc=</p>
+            </div>
+        </section>
+
+        <!-- Seção 6: Link para Telefone -->
+        <section class="exemplo-guia">
+            <h2>6. Link para Telefone (tel:)</h2>
+            <div class="html-exemplo-box">
+                <a href="tel:+5511999999999">📱 Ligar: (11) 99999-9999</a>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>&lt;a href="tel:+5511999999999"&gt;Ligar&lt;/a&gt;</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>tel:</strong> Abre o discador do telefone (especialmente útil em mobile).</p>
+            </div>
+        </section>
+
+        <!-- Seção 7: Download de Arquivo -->
+        <section class="exemplo-guia">
+            <h2>7. Download de Arquivo (download)</h2>
+            <div class="html-exemplo-box">
+                <a href="../style.css" download>Baixar arquivo CSS</a><br>
+                <a href="../style.css" download="meu-estilo.css">Baixar com nome personalizado</a>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>&lt;a href="arquivo.pdf" download&gt;Baixar&lt;/a&gt;
+&lt;a href="arquivo.pdf" download="novo-nome.pdf"&gt;Baixar&lt;/a&gt;</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>download:</strong> Força o download ao invés de abrir no navegador.</p>
+                <p><strong>download="nome":</strong> Define nome do arquivo baixado.</p>
+            </div>
+        </section>
+
+        <!-- Seção 8: Link com Imagem -->
+        <section class="exemplo-guia">
+            <h2>8. Link com Imagem Clicável</h2>
+            <div class="html-exemplo-box">
+                <a href="https://www.google.com" target="_blank" rel="noopener" class="link-com-gradiente">
+                    🖼️ Clique na imagem<br>(Vai para Google)
+                </a>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>&lt;a href="https://www.google.com"&gt;
+    &lt;img src="logo.png" alt="Logo"&gt;
+&lt;/a&gt;</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>Link com imagem:</strong> Coloque a tag &lt;img&gt; dentro da tag &lt;a&gt; para tornar a imagem clicável.</p>
+            </div>
+        </section>
+
+        <!-- Seção 9: Título do Link (title) -->
+        <section class="exemplo-guia">
+            <h2>9. Tooltip com title</h2>
+            <div class="html-exemplo-box">
+                <a href="https://www.github.com" title="Plataforma de controle de versão e colaboração" target="_blank" rel="noopener">
+                    Passe o mouse aqui (GitHub)
+                </a>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>&lt;a href="url" title="Descrição do link"&gt;
+    Link
+&lt;/a&gt;</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>title:</strong> Mostra tooltip ao passar o mouse. Útil para acessibilidade e UX.</p>
+            </div>
+        </section>
+
+        <!-- Seção 10: Estilos de Links com CSS -->
+        <section class="exemplo-guia" id="secao-10">
+            <h2>10. Estilizando Links com CSS</h2>
+            <div class="html-exemplo-box">
+                <a href="#" class="link-exemplo-1">Link padrão estilizado</a><br><br>
+                <a href="#" class="link-exemplo-2">Link sem sublinhado</a><br><br>
+                <a href="#" class="link-exemplo-3">Link como botão</a><br><br>
+                <a href="#" class="link-exemplo-4">Link com hover animado</a>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>/* CSS */
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: red;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:active {
+    color: orange;
+}</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>Estados do link:</strong></p>
+                <ul>
+                    <li><code>:link</code> - Link não visitado</li>
+                    <li><code>:visited</code> - Link já visitado</li>
+                    <li><code>:hover</code> - Mouse sobre o link</li>
+                    <li><code>:active</code> - Link sendo clicado</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie uma página com:</p>
+                <ul>
+                    <li>Um link externo para seu site favorito</li>
+                    <li>Um link que abre em nova aba (target="_blank")</li>
+                    <li>Um link para email (mailto:)</li>
+                    <li>Um link para seção da mesma página (âncora #id)</li>
+                </ul>
+                <p>💡 Dica: Teste cada tipo de link no navegador!</p>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="html-tags-basicas.html" class="prev-button">← Tags Básicas</a>
+            <a href="../pagina3.html" class="back-button">Voltar ao Índice</a>
+            <a href="html-imagens.html" class="next-button">Imagens →</a>
+        </div>
+    </div>
+</body>
+</html>

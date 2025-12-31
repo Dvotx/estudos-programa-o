@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis de Ambiente</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>≡ Variáveis de Ambiente - Dados Secretos</h1>
+
+        <div class="guia-intro">
+            <p><strong>Variáveis de ambiente</strong> são informações secretas que não aparecem no seu código. Tipo passwords, chaves de API, etc.</p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>Minha nota: Por que usar?</h2>
+            <div class="explanation">
+                <p>Se você colocar senhas direto no código, todos veem! Melhor jeito:</p>
+                <ul>
+                    <li>Crie um arquivo chamado <strong>.env</strong></li>
+                    <li>Coloque as senhas e informações secretas lá</li>
+                    <li>No código, você lê essas informações com <code>process.env</code></li>
+                    <li>O arquivo .env NÃO vai para o Git (nem outras pessoas veem)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Como Usar</h2>
+            <div class="codigo-exemplo">
+                <pre>// 1. Instale a biblioteca dotenv
+npm install dotenv
+
+// 2. No começo do seu app.js
+require('dotenv').config();
+
+// 3. Agora você pode usar process.env
+const porta = process.env.PORT;
+const senha = process.env.SENHA_SECRETA;
+
+console.log(porta); // 3000</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Minha nota: O arquivo .env</h2>
+            <div class="explanation">
+                <p>Crie um arquivo chamado <code>.env</code> na raiz do seu projeto:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>PORT=3000
+SENHA=meuPassword123
+CHAVE_API=abc123def456
+NOME_BD=minhabasedados</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Minha nota: Protegendo o .env</h2>
+            <div class="explanation">
+                <p>Crie um arquivo <code>.gitignore</code> para que o .env não vá para o Git:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>.env
+node_modules/
+.DS_Store</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie um arquivo .env com:</p>
+                <ul>
+                    <li>PORT=3000</li>
+                    <li>NOME=SeuNome</li>
+                    <li>Use process.env.PORT no servidor</li>
+                    <li>Imprima process.env.NOME no console</li>
+                </ul>
+                <p>💡 Dica: Instale dotenv: npm install dotenv!</p>
+            </div>
+        </section>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="autenticacao.html" class="btn-caixa">← Anterior</a>
+            <a href="menu-backend.html" class="btn-caixa">Menu</a>
+            <a href="js-basico.html" class="btn-caixa">Próximo: JavaScript →</a>
+        </div>
+    </div>
+</body>
+</html>

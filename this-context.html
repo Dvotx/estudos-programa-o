@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>👉 This</h1>
+
+        <div class="guia-intro">
+            <p>A palavra "this" significa "este" ou "isso". Em JavaScript, this aponta pra "quem chamou" a função!</p>
+            <p><em>Minha nota: Dentro de um objeto, this se refere ao próprio objeto. É tipo dizer "eu mesmo"!</em></p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>This em Objetos</h2>
+            <div class="explanation">
+                <p>Dentro de um objeto, this aponta pro próprio objeto:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>const pessoa = {
+    nome: 'João',
+    idade: 25,
+    apresentar: function() {
+        return `Olá, eu sou ${this.nome} e tenho ${this.idade} anos`;
+    }
+};
+
+console.log(pessoa.apresentar());
+// "Olá, eu sou João e tenho 25 anos"</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: this.nome pega o nome DO PRÓPRIO OBJETO. É como a pessoa dizer "MEU nome"!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Exemplo com Método</h2>
+            <div class="explanation">
+                <p>This dentro de métodos do objeto:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>const carro = {
+    marca: 'Toyota',
+    modelo: 'Corolla',
+    ano: 2023,
+    descrever() {
+        return `${this.marca} ${this.modelo} ${this.ano}`;
+    }
+};
+
+console.log(carro.descrever());
+// "Toyota Corolla 2023"</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: this é como o carro falando dele mesmo: "MINHA marca, MEU modelo"!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Arrow Functions e This</h2>
+            <div class="explanation">
+                <p>Arrow functions NÃO têm this próprio! Elas pegam o this de fora:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>const pessoa = {
+    nome: 'Ana',
+    
+    // Função normal - this funciona
+    saudar1: function() {
+        console.log(`Oi, ${this.nome}`);  // Funciona!
+    },
+    
+    // Arrow function - this NÃO funciona
+    saudar2: () => {
+        console.log(`Oi, ${this.nome}`);  // undefined
+    }
+};
+
+pessoa.saudar1();  // "Oi, Ana"
+pessoa.saudar2();  // "Oi, undefined"</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: Use função normal quando precisar de this! Arrow function não tem this próprio!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie um objeto pessoa:</p>
+                <ul>
+                    <li>Com propriedades: nome, idade</li>
+                    <li>Com método apresentar() que usa this.nome</li>
+                    <li>Chame pessoa.apresentar() e veja o resultado</li>
+                </ul>
+                <p>💡 Dica: this se refere ao próprio objeto!</p>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="../menu-javascript.html" class="btn-back">← Voltar</a>
+        </div>
+    </div>
+</body>
+</html>

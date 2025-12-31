@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo: Links e Imagens HTML</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>⬌ Guia Completo: Links e Imagens HTML</h1>
+        
+        <div class="guia-intro">
+            <p>Links são tipo pontes entre páginas. Imagens deixam tudo mais bonito.</p>
+        </div>
+
+        <!-- Seção 1: Link Básico -->
+        <section class="exemplo-guia">
+            <h2>1. Link Básico (&lt;a&gt;)</h2>
+            <div class="html-exemplo-link">
+                <a href="https://www.google.com">Ir para o Google</a>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> href é onde o link vai levar</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;a href="https://www.google.com"&gt;Texto do Link&lt;/a&gt;</pre>
+            </div>
+        </section>
+
+        <!-- Seção 2: Link em Nova Aba -->
+        <section class="exemplo-guia">
+            <h2>2. Abrir em Nova Aba (target="_blank")</h2>
+            <div class="html-exemplo-link">
+                <a href="https://www.google.com" target="_blank" rel="noopener">Abrir Google em nova aba</a>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> target="_blank" abre em outra aba</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;a href="url" target="_blank"&gt;Link&lt;/a&gt;</pre>
+            </div>
+        </section>
+
+        <!-- Seção 3: Link Interno (Âncora) -->
+        <section class="exemplo-guia">
+            <h2>3. Link Interno/Âncora (id)</h2>
+            <div class="html-exemplo-link">
+                <a href="#secao-5">Ir para Seção 5 desta página</a>
+                <p id="exemplo-ancora">Este elemento tem id="exemplo-ancora"</p>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> Usa # pra pular pra outra parte da mesma página</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;a href="#minhaSecao"&gt;Ir para seção&lt;/a&gt;
+&lt;div id="minhaSecao"&gt;Conteúdo&lt;/div&gt;</pre>
+            </div>
+        </section>
+
+        <!-- Seção 4: Link Relativo -->
+        <section class="exemplo-guia">
+            <h2>4. Link Relativo (Arquivo Local)</h2>
+            <div class="html-exemplo-link">
+                <a href="../index.html">Voltar para index.html</a>
+                <a href="../pagina2.html">Ir para pagina2.html</a>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> ../ volta uma pasta, depois coloca o nome do arquivo</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;a href="../pagina.html"&gt;Pasta acima&lt;/a&gt;</pre>
+            </div>
+        </section>
+
+        <!-- Seção 5: Link de Email -->
+        <section class="exemplo-guia" id="secao-5">
+            <h2>5. Link de Email (mailto:)</h2>
+            <div class="html-exemplo-link">
+                <a href="mailto:exemplo@email.com">Enviar email</a>
+                <a href="mailto:exemplo@email.com?subject=Assunto&body=Mensagem">Email com assunto</a>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> mailto: abre o programa de email</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;a href="mailto:email@exemplo.com"&gt;Enviar Email&lt;/a&gt;</pre>
+            </div>
+        </section>
+
+        <!-- Seção 6: Link de Telefone -->
+        <section class="exemplo-guia">
+            <h2>6. Link de Telefone (tel:)</h2>
+            <div class="html-exemplo-link">
+                <a href="tel:+5511999999999">Ligar: (11) 99999-9999</a>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> tel: faz o celular ligar pro número</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;a href="tel:+5511999999999"&gt;Ligar&lt;/a&gt;</pre>
+            </div>
+        </section>
+
+        <!-- Seção 7: Link de Download -->
+        <section class="exemplo-guia">
+            <h2>7. Link de Download (download)</h2>
+            <div class="html-exemplo-link">
+                <a href="../style.css" download>Baixar arquivo CSS</a>
+                <a href="arquivo.pdf" download="meu-arquivo.pdf">Baixar com nome personalizado</a>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> download faz baixar o arquivo em vez de abrir</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;a href="arquivo.pdf" download&gt;Baixar&lt;/a&gt;</pre>
+            </div>
+        </section>
+
+        <!-- Seção 8: Imagem Básica -->
+        <section class="exemplo-guia">
+            <h2>8. Imagem Básica (&lt;img&gt;)</h2>
+            <div class="html-exemplo-img">
+                <div class="img-placeholder">300x200</div>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> src é onde tá a imagem, alt é uma descrição dela</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;img src="imagem.jpg" alt="Descrição"&gt;</pre>
+            </div>
+        </section>
+
+        <!-- Seção 9: Imagem com Dimensões -->
+        <section class="exemplo-guia">
+            <h2>9. Imagem com Width e Height</h2>
+            <div class="html-exemplo-img">
+                <div class="img-placeholder img-placeholder-demo">200x150</div>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> width é largura, height é altura (em pixels)</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;img src="foto.jpg" alt="Foto" width="200" height="150"&gt;</pre>
+            </div>
+        </section>
+
+        <!-- Seção 10: Imagem como Link -->
+        <section class="exemplo-guia">
+            <h2>10. Imagem Clicável (Link)</h2>
+            <div class="html-exemplo-img">
+                <a href="https://www.google.com" target="_blank" rel="noopener">
+                    <div class="img-placeholder img-link">Clique na imagem</div>
+                </a>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> Bota a &lt;img&gt; dentro da &lt;a&gt; pra imagem virar link</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;a href="destino.html"&gt;
+    &lt;img src="imagem.jpg" alt="Descrição"&gt;
+&lt;/a&gt;</pre>
+            </div>
+        </section>
+
+        <!-- Pratique Agora! -->
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie um arquivo <code>meus-links.html</code> com:</p>
+                <ul>
+                    <li>Um link para o Google que abre em nova aba</li>
+                    <li>Um link para seu email usando mailto:</li>
+                    <li>Dois links internos (#secao1 e #secao2) apontando para duas seções diferentes</li>
+                    <li>Um link de download para qualquer arquivo</li>
+                </ul>
+                <p>💡 Dica: Teste todos os links para ver se funcionam!</p>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="tags-basicas.html" class="prev-button">← Tags Básicas</a>
+            <a href="../pagina3.html" class="back-button">Voltar ao Índice</a>
+            <a href="listas.html" class="next-button">Listas →</a>
+        </div>
+    </div>
+</body>
+</html>

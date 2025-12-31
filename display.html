@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Guia: Display</title>
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>▭ Display: Como os Elementos Aparecem</h1>
+        
+        <p class="guia-intro">
+            <code>display</code> define como um elemento aparece na página - se em uma linha ou em bloco.
+        </p>
+
+        <h2>1. Display: Block (Em Bloco)</h2>
+        <div class="exemplo-guia">
+            <span class="display-guia-block">Sou um bloco</span>
+            <span class="display-guia-block">Outro bloco</span>
+            <p class="explanation">
+                <strong>Minha nota:</strong> Block significa que o elemento ocupa toda a largura disponível.<br>
+                • Um elemento por linha (quebra linha antes e depois)<br>
+                • Aceita width, height, margin, padding<br>
+                • Exemplos: div, p, h1, section
+            </p>
+        </div>
+
+        <h2>2. Display: Inline (Na Linha)</h2>
+        <div class="exemplo-guia">
+            <div class="display-guia-inline">Inline 1</div>
+            <div class="display-guia-inline">Inline 2</div>
+            <div class="display-guia-inline">Inline 3</div>
+            <p class="explanation">
+                <strong>Minha nota:</strong> Inline fica tudo na mesma linha, lado a lado.<br>
+                • Ocupa só o espaço que precisa<br>
+                • NÃO aceita width, height<br>
+                • Exemplos: span, a, strong
+            </p>
+        </div>
+
+        <h2>3. Display: Inline-Block (Híbrido)</h2>
+        <div class="exemplo-guia">
+            <div class="display-guia-inline-block">Box 1</div>
+            <div class="display-guia-inline-block">Box 2</div>
+            <div class="display-guia-inline-block">Box 3</div>
+            <p class="explanation">
+                <strong>Minha nota:</strong> Combina o melhor de ambos: fica na mesma linha MAS aceita dimensões!<br>
+                • Elementos lado a lado<br>
+                • Aceita width, height, margin, padding<br>
+                • Perfeito para botões e cards em linha
+            </p>
+        </div>
+
+        <h2>4. Display: None (Desaparece)</h2>
+        <div class="exemplo-guia">
+            <div>Elemento visível</div>
+            <div class="display-guia-none">Este elemento desapareceu!</div>
+            <div>Outro elemento visível</div>
+            <p class="explanation">
+                <strong>Minha nota:</strong> Display none remove completamente o elemento da página.<br>
+                • Não aparece na tela<br>
+                • Não ocupa espaço<br>
+                • Muito usado com JavaScript pra mostrar/ocultar coisas
+            </p>
+        </div>
+
+        <h2>5. Display: Flex (Flexível)</h2>
+        <div class="exemplo-guia">
+            <div class="display-guia-flex">
+                <div class="display-item-red">Item 1</div>
+                <div class="display-item-blue">Item 2</div>
+                <div class="display-item-green">Item 3</div>
+            </div>
+            <p class="explanation">
+                <strong>Minha nota:</strong> Flex organiza elementos de forma flexível em uma linha ou coluna.<br>
+                • Fácil de centralizar<br>
+                • Automaticamente responsivo<br>
+                • Perfeito para navbars e layouts
+            </p>
+        </div>
+
+        <h2>6. Display: Grid (Grelha)</h2>
+        <div class="exemplo-guia">
+            <div class="display-guia-grid">
+                <div class="display-item-purple">1</div>
+                <div class="display-item-orange">2</div>
+                <div class="display-item-teal">3</div>
+                <div class="display-item-gold">4</div>
+            </div>
+            <p class="explanation">
+                <strong>Minha nota:</strong> Grid organiza elementos em linhas e colunas (como uma tabela).<br>
+                • Controle total sobre posicionamento<br>
+                • Pode fazer layouts complexos<br>
+                • Perfeito para galerias e dashboards
+            </p>
+        </div>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie 3 divs e teste:</p>
+                <ul>
+                    <li>Todas com display: block (uma embaixo da outra)</li>
+                    <li>Todas com display: inline-block (lado a lado)</li>
+                    <li>Uma com display: none (invisível)</li>
+                </ul>
+                <p>💡 Dica: Mude o display e veja a diferença!</p>
+            </div>
+        </section>
+
+        <div class="guia-navegacao">
+            <a href="position.html"><button>← Anterior: Position</button></a>
+            <a href="opacity.html"><button>Próximo: Opacity →</button></a>
+        </div>
+    </div>
+</body>
+</html>

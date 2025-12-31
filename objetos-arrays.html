@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos & Arrays</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>▭ Objetos & Arrays</h1>
+
+        <div class="guia-intro">
+            <p>Objetos e arrays são formas de organizar várias informações juntas. É como ter uma caixa com várias gavetas!</p>
+            <p><em>Minha nota: Objeto = várias informações sobre UMA coisa. Array = uma lista de várias coisas!</em></p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>Objetos (Uma coisa com várias informações)</h2>
+            <div class="explanation">
+                <p>Um objeto guarda várias propriedades sobre algo:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Criar um objeto
+const pessoa = {
+    nome: "Ana",
+    idade: 25,
+    cidade: "São Paulo"
+};
+
+// Acessar as informações
+console.log(pessoa.nome);    // "Ana"
+console.log(pessoa.idade);   // 25
+
+// Mudar uma informação
+pessoa.idade = 26;
+
+// Adicionar nova informação
+pessoa.email = "ana@email.com";</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: Use ponto (.) pra acessar as coisas do objeto. Tipo pessoa.nome!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Arrays (Listas)</h2>
+            <div class="explanation">
+                <p>Arrays são listas ordenadas de coisas:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Criar um array
+const frutas = ["maçã", "banana", "laranja"];
+
+// Acessar itens (começa do 0!)
+console.log(frutas[0]);  // "maçã"
+console.log(frutas[1]);  // "banana"
+
+// Adicionar no final
+frutas.push("uva");
+
+// Ver quantos itens tem
+console.log(frutas.length);  // 4
+
+// Remover o último
+frutas.pop();</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: Arrays começam no 0! Então o primeiro item é [0], não [1]!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Array de Objetos</h2>
+            <div class="explanation">
+                <p>Você pode ter uma lista de objetos! Super comum:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Lista de pessoas
+const pessoas = [
+    { nome: "Ana", idade: 25 },
+    { nome: "João", idade: 30 },
+    { nome: "Maria", idade: 22 }
+];
+
+// Acessar
+console.log(pessoas[0].nome);  // "Ana"
+console.log(pessoas[1].idade); // 30
+
+// Adicionar nova pessoa
+pessoas.push({ nome: "Pedro", idade: 28 });</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: pessoas[0].nome = pega a primeira pessoa e depois o nome dela!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Métodos Úteis de Array</h2>
+            <div class="explanation">
+                <p>Funções que facilitam trabalhar com listas:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>const numeros = [1, 2, 3, 4, 5];
+
+// .map() - transforma cada item
+const dobrados = numeros.map(n => n * 2);
+// [2, 4, 6, 8, 10]
+
+// .filter() - filtra itens
+const maioresQue2 = numeros.filter(n => n > 2);
+// [3, 4, 5]
+
+// .find() - acha o primeiro que bate
+const achou = numeros.find(n => n === 3);
+// 3
+
+const pessoas = [
+    { nome: "Ana", idade: 17 },
+    { nome: "João", idade: 25 }
+];
+
+// Pegar só os nomes
+const nomes = pessoas.map(p => p.nome);
+// ["Ana", "João"]
+
+// Pegar só maiores de idade
+const maiores = pessoas.filter(p => p.idade >= 18);
+// [{ nome: "João", idade: 25 }]</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: .map() = transformar tudo. .filter() = pegar só alguns. .find() = achar um!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie um array de objetos:</p>
+                <ul>
+                    <li>Array com 3 pessoas: {nome, idade}</li>
+                    <li>Use .map() pra pegar só os nomes</li>
+                    <li>Use .filter() pra pegar quem tem mais de 18 anos</li>
+                </ul>
+                <p>💡 Dica: console.log() em cada etapa!</p>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="../menu-javascript.html" class="btn-back">← Voltar</a>
+        </div>
+    </div>
+</body>
+</html>

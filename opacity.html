@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Guia Completo: Opacity</title>
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>● Guia Completo: Opacity (Transparência)</h1>
+        
+        <p class="guia-intro">
+            A propriedade <code>opacity</code> controla a transparência de um elemento inteiro, 
+            incluindo seu conteúdo, borda e fundo. Valores de 0 (invisível) a 1 (opaco).
+        </p>
+
+        <h2>1. Opacity: 1 (Totalmente Opaco)</h2>
+        <div class="exemplo-guia">
+            <div class="opacity-guia-1">opacity: 1 (100% visível - padrão)</div>
+            <p class="explanation">
+                <strong>Valor:</strong> 1 ou 100%<br>
+                <strong>Comportamento:</strong> Elemento completamente visível.<br>
+                <strong>Padrão:</strong> Todos os elementos têm opacity: 1 por padrão.
+            </p>
+        </div>
+
+        <h2>2. Opacity: 0.9</h2>
+        <div class="exemplo-guia">
+            <div class="opacity-guia-09">opacity: 0.9 (90% opaco)</div>
+            <p class="explanation">
+                <strong>Efeito:</strong> Levemente transparente.<br>
+                <strong>Uso:</strong> Efeitos sutis, overlays.
+            </p>
+        </div>
+
+        <h2>3. Opacity: 0.75</h2>
+        <div class="exemplo-guia">
+            <div class="opacity-guia-075">opacity: 0.75 (75% opaco)</div>
+            <p class="explanation">
+                <strong>Efeito:</strong> Transparência moderada.<br>
+                <strong>Uso:</strong> Elementos de fundo, camadas intermediárias.
+            </p>
+        </div>
+
+        <h2>4. Opacity: 0.5</h2>
+        <div class="exemplo-guia">
+            <div class="opacity-guia-05">opacity: 0.5 (50% opaco)</div>
+            <p class="explanation">
+                <strong>Efeito:</strong> Meio opaco, meio transparente.<br>
+                <strong>Uso:</strong> Elementos desabilitados, overlays, efeitos hover.
+            </p>
+        </div>
+
+        <h2>5. Opacity: 0.25</h2>
+        <div class="exemplo-guia">
+            <div class="opacity-guia-025">opacity: 0.25 (25% opaco)</div>
+            <p class="explanation">
+                <strong>Efeito:</strong> Muito transparente.<br>
+                <strong>Uso:</strong> Marcas d'água, fundos sutis.
+            </p>
+        </div>
+
+        <h2>6. Opacity: 0.1</h2>
+        <div class="exemplo-guia">
+            <div class="opacity-guia-01">opacity: 0.1 (10% opaco)</div>
+            <p class="explanation">
+                <strong>Efeito:</strong> Quase invisível.<br>
+                <strong>Uso:</strong> Efeitos muito sutis, transições.
+            </p>
+        </div>
+
+        <h2>7. Opacity: 0 (Totalmente Transparente)</h2>
+        <div class="exemplo-guia">
+            <div class="opacity-guia-0">opacity: 0 (invisível mas ocupa espaço)</div>
+            <div class="opacity-demo-red">Elemento abaixo ainda recebe o espaço</div>
+            <p class="explanation">
+                <strong>Valor:</strong> 0<br>
+                <strong>Comportamento:</strong> Completamente invisível MAS ainda ocupa espaço.<br>
+                <strong>vs display:none:</strong> display:none não ocupa espaço.<br>
+                <strong>vs visibility:hidden:</strong> Ambos ocupam espaço, mas opacity permite transições.
+            </p>
+        </div>
+
+        <h2>8. Opacity com Transições</h2>
+        <div class="exemplo-guia">
+            <div class="opacity-guia-transition">
+                Passe o mouse - transition: opacity 0.3s
+            </div>
+            <p class="explanation">
+                <strong>Uso:</strong> Criar animações suaves de fade in/out.<br>
+                <strong>Sintaxe:</strong> transition: opacity [duração] [timing-function]<br>
+                <strong>Comum:</strong> Efeitos hover, modais, tooltips.
+            </p>
+        </div>
+
+        <h2>9. Opacity vs RGBA</h2>
+        <div class="exemplo-guia">
+            <div class="opacity-guia-vs-rgba-opacity">
+                <p class="opacity-demo-text">opacity: 0.5 - TODO o elemento fica transparente</p>
+            </div>
+            <div class="opacity-guia-vs-rgba">
+                <p class="opacity-demo-text">rgba(52, 152, 219, 0.5) - APENAS o fundo fica transparente</p>
+            </div>
+            <p class="explanation">
+                <strong>opacity:</strong> Afeta TODO o elemento (conteúdo, borda, fundo, filhos).<br>
+                <strong>rgba():</strong> Afeta APENAS a propriedade específica (ex: background-color).<br>
+                <strong>Preferência:</strong> Use RGBA quando só quer transparência no fundo.
+            </p>
+        </div>
+
+        <h2>10. Opacity e Acessibilidade</h2>
+        <div class="exemplo-guia">
+            <div class="opacity-guia-accessibility-bad">
+                opacity: 0.3 - Difícil de ler
+            </div>
+            <div class="opacity-guia-accessibility-good">
+                opacity: 0.9 - Melhor legibilidade
+            </div>
+            <p class="explanation">
+                <strong>Cuidado:</strong> Opacity muito baixa dificulta leitura.<br>
+                <strong>Contraste:</strong> Certifique-se de manter contraste adequado.<br>
+                <strong>Texto:</strong> Evite opacity muito baixa em texto.<br>
+                <strong>WCAG:</strong> Contraste mínimo de 4.5:1 para texto normal.
+            </p>
+        </div>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie 3 divs sobrepostas com:</p>
+                <ul>
+                    <li>opacity: 1 (totalmente visível)</li>
+                    <li>opacity: 0.5 (meio transparente)</li>
+                    <li>opacity: 0.2 (bem transparente)</li>
+                </ul>
+                <p>💡 Dica: Coloque cores diferentes em cada uma!</p>
+            </div>
+        </section>
+
+        <div class="guia-navegacao">
+            <a href="display.html"><button>← Anterior: Display</button></a>
+            <a href="transform.html"><button>Próximo: Transform →</button></a>
+        </div>
+    </div>
+</body>
+</html>

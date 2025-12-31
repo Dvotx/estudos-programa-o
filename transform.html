@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Guia Completo: Transform</title>
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>◎ Guia Completo: Transform (Transformação)</h1>
+        
+        <p class="guia-intro">
+            A propriedade <code>transform</code> permite modificar a forma e posição de elementos 
+            usando transformações 2D e 3D sem afetar o fluxo do documento.
+        </p>
+
+        <h2>1. Rotate (Rotação)</h2>
+        <div class="exemplo-guia">
+            <div class="transform-guia-rotate-15">transform: rotate(15deg)</div>
+            <div class="transform-guia-rotate-45">transform: rotate(45deg)</div>
+            <div class="transform-guia-rotate-90">transform: rotate(90deg)</div>
+            <div class="transform-guia-rotate-negative">transform: rotate(-30deg)</div>
+            <p class="explanation">
+                <strong>Unidade:</strong> deg (graus), rad (radianos), turn (voltas)<br>
+                <strong>Positivo:</strong> Rotação horária<br>
+                <strong>Negativo:</strong> Rotação anti-horária<br>
+                <strong>Exemplos:</strong> 360deg = 1turn, 180deg = 0.5turn
+            </p>
+        </div>
+
+        <h2>2. Scale (Escala/Tamanho)</h2>
+        <div class="exemplo-guia">
+            <div class="transform-guia-scale-small">transform: scale(0.5)</div>
+            <div class="transform-guia-scale-normal">transform: scale(1)</div>
+            <div class="transform-guia-scale-large">transform: scale(1.5)</div>
+            <div class="transform-guia-scale-xy">transform: scale(2, 0.5)</div>
+            <p class="explanation">
+                <strong>scale(n):</strong> Aumenta/diminui proporcionalmente<br>
+                <strong>1:</strong> Tamanho original<br>
+                <strong>&lt;1:</strong> Diminui (0.5 = metade)<br>
+                <strong>&gt;1:</strong> Aumenta (2 = dobro)<br>
+                <strong>scale(x, y):</strong> Escala diferente em cada eixo<br>
+                <strong>Variações:</strong> scaleX(), scaleY()
+            </p>
+        </div>
+
+        <h2>3. Translate (Movimento/Deslocamento)</h2>
+        <div class="exemplo-guia">
+            <div class="transform-guia-translate-right">transform: translateX(50px)</div>
+            <div class="transform-guia-translate-down">transform: translateY(30px)</div>
+            <div class="transform-guia-translate-both">transform: translate(40px, 20px)</div>
+            <div class="transform-guia-translate-negative">transform: translate(-30px, -20px)</div>
+            <p class="explanation">
+                <strong>translateX(n):</strong> Move horizontalmente<br>
+                <strong>translateY(n):</strong> Move verticalmente<br>
+                <strong>translate(x, y):</strong> Move em ambos os eixos<br>
+                <strong>Unidades:</strong> px, %, em, rem<br>
+                <strong>Porcentagem:</strong> Relativa ao próprio tamanho do elemento
+            </p>
+        </div>
+
+        <h2>4. Skew (Inclinação/Distorção)</h2>
+        <div class="exemplo-guia">
+            <div class="transform-guia-skew-x">transform: skewX(20deg)</div>
+            <div class="transform-guia-skew-y">transform: skewY(15deg)</div>
+            <div class="transform-guia-skew-both">transform: skew(10deg, 5deg)</div>
+            <p class="explanation">
+                <strong>skewX(n):</strong> Inclina horizontalmente<br>
+                <strong>skewY(n):</strong> Inclina verticalmente<br>
+                <strong>skew(x, y):</strong> Inclina em ambos os eixos<br>
+                <strong>Unidade:</strong> deg (graus)<br>
+                <strong>Uso:</strong> Efeitos paralaxe, perspectiva
+            </p>
+        </div>
+
+        <h2>5. Transform Origin (Ponto de Origem)</h2>
+        <div class="exemplo-guia">
+            <div class="transform-guia-origin-center">transform-origin: center (padrão)</div>
+            <div class="transform-guia-origin-topleft">transform-origin: top left</div>
+            <div class="transform-guia-origin-bottomright">transform-origin: bottom right</div>
+            <p class="explanation">
+                <strong>Uso:</strong> Define o ponto ao redor do qual as transformações ocorrem<br>
+                <strong>Padrão:</strong> center (50% 50%)<br>
+                <strong>Valores:</strong> left, center, right, top, bottom, px, %<br>
+                <strong>Afeta:</strong> rotate, scale, skew
+            </p>
+        </div>
+
+        <h2>6. Múltiplas Transformações</h2>
+        <div class="exemplo-guia">
+            <div class="transform-guia-multiple-1">transform: rotate(15deg) scale(1.2)</div>
+            <div class="transform-guia-multiple-2">transform: translate(30px, 20px) rotate(20deg)</div>
+            <div class="transform-guia-multiple-3">transform: scale(1.3) rotate(10deg) translateX(20px)</div>
+            <p class="explanation">
+                <strong>Sintaxe:</strong> Separe cada transformação com espaço<br>
+                <strong>Ordem importa:</strong> São aplicadas da direita para esquerda<br>
+                <strong>Exemplo:</strong> translate rotate aplica rotate primeiro, depois translate
+            </p>
+        </div>
+
+        <h2>7. Transform 3D - RotateX/Y/Z</h2>
+        <div class="exemplo-guia">
+            <div class="transform-guia-3d-x">transform: rotateX(45deg)</div>
+            <div class="transform-guia-3d-y">transform: rotateY(45deg)</div>
+            <div class="transform-guia-3d-z">transform: rotateZ(45deg)</div>
+            <p class="explanation">
+                <strong>rotateX:</strong> Rotação em torno do eixo X (horizontal)<br>
+                <strong>rotateY:</strong> Rotação em torno do eixo Y (vertical)<br>
+                <strong>rotateZ:</strong> Rotação em torno do eixo Z (profundidade) - igual a rotate()<br>
+                <strong>Requer:</strong> perspective no elemento pai para efeito 3D
+            </p>
+        </div>
+
+        <h2>8. Transform 3D - Translate3D</h2>
+        <div class="exemplo-guia">
+            <div class="transform-guia-3d-translate">transform: translate3d(20px, 20px, 0)</div>
+            <p class="explanation">
+                <strong>Sintaxe:</strong> translate3d(x, y, z)<br>
+                <strong>Z:</strong> Eixo de profundidade (positivo = frente, negativo = trás)<br>
+                <strong>Performance:</strong> Ativa aceleração de hardware<br>
+                <strong>Hack:</strong> translate3d(0,0,0) força aceleração GPU
+            </p>
+        </div>
+
+        <h2>9. Transform: none</h2>
+        <div class="exemplo-guia">
+            <div class="transform-guia-none">transform: none (sem transformação)</div>
+            <p class="explanation">
+                <strong>Uso:</strong> Remove todas as transformações<br>
+                <strong>Quando usar:</strong> Resetar transformações, remover efeitos hover
+            </p>
+        </div>
+
+        <h2>10. Transform com Transitions</h2>
+        <div class="exemplo-guia">
+            <div class="transform-guia-transition-hover">
+                Passe o mouse - transform + transition
+            </div>
+            <p class="explanation">
+                <strong>Combo poderoso:</strong> transform + transition cria animações suaves<br>
+                <strong>Performance:</strong> Transform é otimizado, não causa reflow<br>
+                <strong>Propriedades animáveis:</strong> rotate, scale, translate, skew<br>
+                <strong>Exemplo:</strong> transition: transform 0.3s ease;
+            </p>
+        </div>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie divs com transforms diferentes:</p>
+                <ul>
+                    <li>transform: rotate(45deg)</li>
+                    <li>transform: scale(1.5)</li>
+                    <li>transform: translate(50px, 20px)</li>
+                </ul>
+                <p>💡 Dica: Use :hover pra fazer animação!</p>
+            </div>
+        </section>
+
+        <div class="guia-navegacao">
+            <a href="opacity.html"><button>← Anterior: Opacity</button></a>
+            <a href="position.html"><button>Próximo: Position →</button></a>
+        </div>
+    </div>
+</body>
+</html>

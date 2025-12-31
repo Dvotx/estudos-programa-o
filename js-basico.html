@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Básico</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>▶ JavaScript Básico</h1>
+
+        <div class="guia-intro">
+            <p>JavaScript é a linguagem que deixa as páginas da web interativas! Vamos aprender o básico: como guardar informações, fazer contas e tomar decisões.</p>
+            <p><em>Minha nota: JavaScript é tipo a "inteligência" do site - HTML é o corpo, CSS é a roupa, e JS é o cérebro!</em></p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>Variáveis (Guardar informações)</h2>
+            <div class="explanation">
+                <p>Variáveis são como "caixinhas" onde você guarda informações. Pense como se fossem gavetas com etiquetas!</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>let nome = "Ana";        // let = pode mudar depois
+const idade = 20;        // const = NÃO muda (constante)
+let cidade = "São Paulo";
+
+nome = "Maria";          // Pode mudar let ✅
+// idade = 21;           // NÃO pode mudar const ❌</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: Sempre use const quando o valor não vai mudar. Use let só quando precisar mudar depois!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Tipos de Dados</h2>
+            <div class="explanation">
+                <p>Diferentes tipos de informações que podemos guardar:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Texto (string) - sempre com aspas
+let nome = "João";
+let cidade = 'São Paulo';
+
+// Número (number)
+let idade = 25;
+let preco = 19.90;
+
+// Verdadeiro/Falso (boolean)
+let estaChovendo = true;
+let estaAberto = false;</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: String = texto. Number = número. Boolean = sim ou não!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Operadores (Fazer contas)</h2>
+            <div class="explanation">
+                <p>Operadores são os símbolos que usamos pra fazer cálculos:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Matemática básica
+5 + 3    // = 8 (soma)
+10 - 2   // = 8 (subtração)
+4 * 3    // = 12 (multiplicação)
+15 / 3   // = 5 (divisão)
+
+// Comparar coisas
+5 === 5       // true (igual a)
+5 !== 3       // true (diferente de)
+10 > 5        // true (maior que)
+3 < 10        // true (menor que)</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: Use === (3 iguais) em vez de == (2 iguais). É mais seguro!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>If/Else (Tomar decisões)</h2>
+            <div class="explanation">
+                <p>O if funciona como uma pergunta: SE isso for verdade, ENTÃO faça aquilo.</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>let idade = 18;
+
+if (idade >= 18) {
+    console.log("Pode dirigir!");
+} else {
+    console.log("Ainda não pode dirigir");
+}
+
+// Exemplo 2
+let nota = 7;
+
+if (nota >= 7) {
+    console.log("Aprovado! 🎉");
+} else if (nota >= 5) {
+    console.log("Recuperação");
+} else {
+    console.log("Reprovado");
+}</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: if = se. else = senão. else if = senão se. É como falar: "se tiver sol, vou à praia, senão fico em casa"</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Template Strings (Juntar texto)</h2>
+            <div class="explanation">
+                <p>Use `` (crase) pra misturar texto com variáveis facilmente:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>let nome = "Ana";
+let idade = 22;
+
+// Jeito antigo (ruim)
+console.log("Olá, " + nome + "! Você tem " + idade + " anos.");
+
+// Jeito novo (bom!) - com template strings
+console.log(`Olá, ${nome}! Você tem ${idade} anos.`);
+
+// Pode fazer contas dentro
+console.log(`Daqui a 5 anos você terá ${idade + 5} anos`);</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: Crase (`) é do lado do 1 no teclado. ${} é pra colocar variáveis dentro do texto!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie variáveis e teste:</p>
+                <ul>
+                    <li>let nome = "seu nome"</li>
+                    <li>const idade = sua idade</li>
+                    <li>Imprima: "Olá, [nome]! Você tem [idade] anos."</li>
+                </ul>
+                <p>💡 Dica: Use template strings com ``!</p>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="../menu-javascript.html" class="btn-back">← Voltar</a>
+        </div>
+    </div>
+</body>
+</html>

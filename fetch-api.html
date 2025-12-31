@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch & AJAX</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>📤 Fetch API (Buscar Dados)</h1>
+
+        <div class="guia-intro">
+            <p>Fetch é como você busca informações de outros lugares da internet (APIs). É tipo pedir dados de um servidor e trazer pra sua página!</p>
+            <p><em>Minha nota: Fetch = buscar. API = lugar na internet que dá dados. É tipo pedir pizza por app - você pede, espera, e recebe!</em></p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>Fetch Básico (GET)</h2>
+            <div class="explanation">
+                <p>Buscar dados de uma API (modo de leitura):</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Buscar dados
+fetch('https://jsonplaceholder.typicode.com/users/1')
+    .then(resposta => resposta.json())
+    .then(dados => {
+        console.log(dados);
+        console.log(`Nome: ${dados.name}`);
+    })
+    .catch(erro => {
+        console.log("Deu erro!", erro);
+    });</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: .then() = "então faça isso". .catch() = "se der erro, faça isso". É uma cadeia!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>O que é .then() e .catch()?</h2>
+            <div class="explanation">
+                <p>Fetch demora um pouco pra buscar os dados. Então usamos .then() pra esperar:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>fetch('url-da-api')
+    .then(resposta => resposta.json())  // 1. Transformar em JSON
+    .then(dados => {                    // 2. Usar os dados
+        console.log(dados);
+    })
+    .catch(erro => {                    // 3. Se der erro
+        console.log(erro);
+    });
+
+// Passo a passo:
+// 1. fetch() busca os dados (demora um pouco)
+// 2. .then() espera chegar e transforma em JSON
+// 3. .then() recebe os dados prontos
+// 4. .catch() pega qualquer erro</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: .json() transforma a resposta em objeto JavaScript que dá pra usar!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Exemplo Prático: Mostrar na Página</h2>
+            <div class="explanation">
+                <p>Buscar dados e mostrar no HTML:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// HTML: &lt;div id="usuario"&gt;&lt;/div&gt;
+
+const divUsuario = document.getElementById("usuario");
+
+fetch('https://jsonplaceholder.typicode.com/users/1')
+    .then(res => res.json())
+    .then(usuario => {
+        divUsuario.innerHTML = `
+            &lt;h2&gt;${usuario.name}&lt;/h2&gt;
+            &lt;p&gt;Email: ${usuario.email}&lt;/p&gt;
+            &lt;p&gt;Cidade: ${usuario.address.city}&lt;/p&gt;
+        `;
+    })
+    .catch(erro => {
+        divUsuario.textContent = "Erro ao carregar";
+    });</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: Pega os dados da API e joga no HTML. Tipo copiar e colar automático!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Buscar Múltiplos Itens</h2>
+            <div class="explanation">
+                <p>Buscar uma lista de coisas e mostrar todas:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Buscar lista de posts
+fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(res => res.json())
+    .then(posts => {
+        // posts é um array!
+        posts.forEach(post => {
+            console.log(post.title);
+        });
+        
+        // Pegar só os 5 primeiros
+        const primeiros5 = posts.slice(0, 5);
+        console.log(primeiros5);
+    });</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: .forEach() = fazer algo com cada item da lista. .slice(0, 5) = pegar do 0 ao 5!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>POST (Enviar Dados)</h2>
+            <div class="explanation">
+                <p>Enviar dados pra API (tipo criar algo novo):</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Criar um novo post
+const novoPost = {
+    title: 'Meu Post',
+    body: 'Conteúdo do post',
+    userId: 1
+};
+
+fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(novoPost)
+})
+.then(res => res.json())
+.then(dados => {
+    console.log('Post criado!', dados);
+});</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: GET = buscar. POST = enviar/criar. JSON.stringify() = transformar objeto em texto!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Busque dados de uma API:</p>
+                <ul>
+                    <li>Use: https://jsonplaceholder.typicode.com/users/1</li>
+                    <li>fetch() com .then() pra pegar os dados</li>
+                    <li>Imprima o nome do usuário no console</li>
+                </ul>
+                <p>💡 Dica: Teste a URL no navegador primeiro!</p>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="../menu-javascript.html" class="btn-back">← Voltar</a>
+        </div>
+    </div>
+</body>
+</html>

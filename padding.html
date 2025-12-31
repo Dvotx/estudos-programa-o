@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Guia Completo: Padding (Espaço Interno)</title>
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>□ Guia Completo: Padding (Espaço Dentro)</h1>
+        
+        <p class="guia-intro">
+            A propriedade <code>padding</code> cria espaço dentro de uma caixa, 
+            entre o conteúdo e a borda. A cor de fundo da caixa preenche esse espaço.
+        </p>
+
+        <h2>1. Padding com Um Valor (Todos os Lados)</h2>
+        <div class="exemplo-guia">
+            <div class="padding-guia-all">padding: 30px - Conteúdo aqui</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Coloca 30px de espaço interno em todos os 4 lados.<br>
+                <strong>Como escrever:</strong> padding: [valor]<br>
+                <strong>Minha nota:</strong> Afasta o conteúdo das bordas.
+            </p>
+        </div>
+
+        <h2>2. Padding com Dois Valores (Cima/Baixo e Lados)</h2>
+        <div class="exemplo-guia">
+            <div class="padding-guia-two">padding: 40px 20px - Vertical diferente de horizontal</div>
+            <p class="explanation">
+                <strong>Como escrever:</strong> padding: [cima-baixo] [esquerda-direita]<br>
+                <strong>1º valor:</strong> espaço em cima e embaixo (40px)<br>
+                <strong>2º valor:</strong> espaço nas laterais (20px)
+            </p>
+        </div>
+
+        <h2>3. Padding com Três Valores</h2>
+        <div class="exemplo-guia">
+            <div class="padding-guia-three">padding: 10px 30px 50px</div>
+            <p class="explanation">
+                <strong>Como escrever:</strong> padding: [cima] [lados] [baixo]<br>
+                <strong>1º valor:</strong> só em cima (10px)<br>
+                <strong>2º valor:</strong> esquerda e direita (30px)<br>
+                <strong>3º valor:</strong> só embaixo (50px)
+            </p>
+        </div>
+
+        <h2>4. Padding com Quatro Valores (Relógio)</h2>
+        <div class="exemplo-guia">
+            <div class="padding-guia-four">padding: 10px 20px 30px 40px</div>
+            <p class="explanation">
+                <strong>Como escrever:</strong> padding: [cima] [direita] [baixo] [esquerda]<br>
+                <strong>Dica:</strong> Começa em cima e vai girando como ponteiros do relógio 🕐.<br>
+                <strong>Valores:</strong> cima=10px, direita=20px, baixo=30px, esquerda=40px
+            </p>
+        </div>
+
+        <h2>5. Padding de Um Lado Só</h2>
+        <div class="exemplo-guia">
+            <div class="padding-guia-top">padding-top: 50px</div>
+            <div class="padding-guia-right">padding-right: 60px</div>
+            <div class="padding-guia-bottom">padding-bottom: 50px</div>
+            <div class="padding-guia-left">padding-left: 60px</div>
+            <p class="explanation">
+                <strong>Propriedades:</strong> padding-top, padding-right, padding-bottom, padding-left<br>
+                <strong>Quando usar:</strong> Pra mexer só em um lado sem afetar os outros.
+            </p>
+        </div>
+
+        <h2>6. Padding com Porcentagem</h2>
+        <div class="exemplo-guia">
+            <div class="padding-guia-percent">padding: 5% - Responsivo ao container</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Espaço baseado na largura da caixa pai.<br>
+                <strong>Minha nota:</strong> Sempre usa a largura, mesmo pra cima e baixo.<br>
+                <strong>Quando usar:</strong> Pra layouts que se adaptam.
+            </p>
+        </div>
+
+        <h2>7. Padding: 0 (Sem Espaço Dentro)</h2>
+        <div class="exemplo-guia">
+            <div class="padding-guia-zero">padding: 0 - Sem espaço interno</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Tira todo o espaço interno.<br>
+                <strong>Quando usar:</strong> Pra resetar estilos ou quando não precisa de espaço.<br>
+                <strong>Minha nota:</strong> O conteúdo fica colado nas bordas.
+            </p>
+        </div>
+
+        <h2>8. Padding NÃO Aceita Valores Negativos</h2>
+        <div class="exemplo-guia">
+            <div class="padding-guia-no-negative">⚠️ padding: -10px NÃO funciona</div>
+            <p class="explanation">
+                <strong>Regra:</strong> Padding não aceita números negativos.<br>
+                <strong>Diferença:</strong> Margin aceita negativo, padding não.<br>
+                <strong>Minha nota:</strong> Espaço interno não pode ser negativo!
+            </p>
+        </div>
+
+        <h2>9. Padding e Box-Sizing</h2>
+        <div class="exemplo-guia">
+            <div class="padding-guia-box-sizing-content">box-sizing: content-box (padrão)</div>
+            <div class="padding-guia-box-sizing-border">box-sizing: border-box (recomendado)</div>
+            <p class="explanation">
+                <strong>content-box:</strong> width NÃO inclui padding (width + padding = tamanho real).<br>
+                <strong>border-box:</strong> width INCLUI padding (width = tamanho real).<br>
+                <strong>Minha nota:</strong> Use border-box pra facilitar sua vida!
+            </p>
+        </div>
+
+        <h2>10. Padding com EM e REM</h2>
+        <div class="exemplo-guia">
+            <div class="padding-guia-em">padding: 2em - Relativo à fonte</div>
+            <div class="padding-guia-rem">padding: 2rem - Relativo à fonte raiz</div>
+            <p class="explanation">
+                <strong>EM:</strong> Baseado no tamanho da letra do próprio elemento.<br>
+                <strong>REM:</strong> Baseado no tamanho da letra principal (html).<br>
+                <strong>Quando usar:</strong> Pra manter proporção com o texto.
+            </p>
+        </div>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie uma div com:</p>
+                <ul>
+                    <li>Texto dentro</li>
+                    <li>padding: 30px</li>
+                    <li>background-color para ver o espaço interno</li>
+                </ul>
+                <p>💡 Dica: Compare com uma div sem padding!</p>
+            </div>
+        </section>
+
+        <div class="guia-navegacao">
+            <a href="margin.html"><button>← Anterior: Margin</button></a>
+            <a href="background.html"><button>Próximo: Background →</button></a>
+        </div>
+    </div>
+</body>
+</html>

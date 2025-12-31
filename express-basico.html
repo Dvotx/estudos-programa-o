@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Básico</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>▭ Express Básico</h1>
+
+        <div class="guia-intro">
+            <p><strong>Express</strong> é um kit para criar servidores web com Node.js. É a ferramenta mais popular para iniciantes!</p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>O que é Express?</h2>
+            <div class="explanation">
+                <p>Express torna fácil:</p>
+                <ul>
+                    <li><strong>Criar um servidor:</strong> Seu código roda o tempo todo esperando pedidos</li>
+                    <li><strong>Criar rotas:</strong> Diferentes URLs fazem coisas diferentes</li>
+                    <li><strong>Responder pedidos:</strong> Envie textos, números ou dados</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Instalar Express</h2>
+            <div class="explanation">
+                <p>Primeiro, abra o terminal na pasta do seu projeto e instale:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>npm install express</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Exemplo: Seu Primeiro Servidor</h2>
+            <div class="explanation">
+                <p>Crie um arquivo chamado <code>app.js</code> e adicione:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('Bem-vindo ao Express!');
+});
+
+app.listen(3000, () => {
+    console.log('Servidor rodando em http://localhost:3000');
+});</pre>
+            </div>
+            <div class="explanation">
+                <p>Agora rode no terminal:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>node app.js</pre>
+            </div>
+            <div class="explanation">
+                <p>Abra seu navegador e vá para <code>http://localhost:3000</code>. Pronto!</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Entendendo o código</h2>
+            <div class="explanation">
+                <ul>
+                    <li><code>require('express')</code> = Importa o Express</li>
+                    <li><code>app.get('/')</code> = Quando alguém vai para o site principal</li>
+                    <li><code>res.send()</code> = Envie uma resposta para o navegador</li>
+                    <li><code>app.listen(3000)</code> = Servidor escuta na porta 3000</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Exemplo: Diferentes URLs (Rotas)</h2>
+            <div class="explanation">
+                <p>Você pode ter URLs diferentes fazendo coisas diferentes:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>const express = require('express');
+const app = express();
+
+// Página principal
+app.get('/', (req, res) => {
+    res.send('Bem-vindo!');
+});
+
+// Página sobre
+app.get('/sobre', (req, res) => {
+    res.send('Esta é a página sobre');
+});
+
+// Página de contato
+app.get('/contato', (req, res) => {
+    res.send('Entre em contato!');
+});
+
+app.listen(3000);</pre>
+            </div>
+            <div class="explanation">
+                <p>Agora você pode acessar:</p>
+                <ul>
+                    <li>http://localhost:3000/ → Bem-vindo!</li>
+                    <li>http://localhost:3000/sobre → Esta é a página sobre</li>
+                    <li>http://localhost:3000/contato → Entre em contato!</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Exemplo: Responder com números e dados</h2>
+            <div class="explanation">
+                <p>Você pode também responder com dados estruturados (JSON):</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>app.get('/usuarios', (req, res) => {
+    const usuarios = [
+        { id: 1, nome: 'João' },
+        { id: 2, nome: 'Maria' }
+    ];
+    
+    res.json(usuarios);
+});</pre>
+            </div>
+            <div class="explanation">
+                <p>Acesse http://localhost:3000/usuarios e você vê uma lista com dados!</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Minha nota: Códigos de resposta</h2>
+            <div class="explanation">
+                <p>Você pode enviar números que indicam se tudo correu bem:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// 200 = Tudo bem!
+res.status(200).send('Sucesso!');
+
+// 201 = Criou algo novo
+res.status(201).json({ id: 1 });
+
+// 404 = Não encontrou
+res.status(404).send('Não existe!');</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie seu primeiro servidor:</p>
+                <ul>
+                    <li>Instale: npm install express</li>
+                    <li>Crie server.js com um servidor básico na porta 3000</li>
+                    <li>Acesse http://localhost:3000 no navegador!</li>
+                </ul>
+                <p>💡 Dica: Copie o exemplo básico desta página!</p>
+            </div>
+        </section>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="npm-pacotes.html" class="btn-caixa">← Anterior: NPM</a>
+            <a href="menu-backend.html" class="btn-caixa">Menu</a>
+            <a href="rotas-api.html" class="btn-caixa">Próximo: Rotas & API →</a>
+        </div>
+    </div>
+</body>
+</html>
+app.get('/usuarios/:id', (req, res) => {
+    const id = req.params.id;
+    res.json({ id: id, nome: 'João' });
+});
+
+// Múltiplos parâmetros
+app.get('/posts/:id/comentarios/:comId', (req, res) => {
+    const postId = req.params.id;
+    const comentId = req.params.comId;
+    res.json({ postId, comentId });
+});</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Query Strings</h2>
+            <div class="explanation">
+                <p>Acesse parâmetros da query string (após ?):</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// URL: /buscar?q=javascript&limit=10
+app.get('/buscar', (req, res) => {
+    const query = req.query.q;
+    const limit = req.query.limit;
+    res.json({ busca: query, limite: limit });
+});</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Middleware</h2>
+            <div class="explanation">
+                <p>Middleware são funções que processam requisições:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Middleware global - Executa para todas as requisições
+app.use((req, res, next) => {
+    console.log(`${req.method} ${req.path}`);
+    next();
+});
+
+// Middleware para parse JSON
+app.use(express.json());
+
+// Middleware em rota específica
+app.get('/admin', (req, res, next) => {
+    console.log('Verificando autenticação...');
+    next();
+}, (req, res) => {
+    res.send('Dashboard admin');
+});</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Responder com JSON</h2>
+            <div class="explanation">
+                <p>Envie dados em formato JSON:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>app.get('/api/usuarios', (req, res) => {
+    const usuarios = [
+        { id: 1, nome: 'João' },
+        { id: 2, nome: 'Maria' }
+    ];
+    
+    res.json(usuarios);
+    
+    // ou equivalente
+    res.type('application/json').send(usuarios);
+});</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Status HTTP</h2>
+            <div class="explanation">
+                <p>Defina o código de status apropriado:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Sucesso
+res.status(200).json({ ok: true });
+
+// Criado
+app.post('/usuarios', (req, res) => {
+    res.status(201).json({ id: 1, nome: 'João' });
+});
+
+// Não encontrado
+app.get('/usuarios/:id', (req, res) => {
+    res.status(404).json({ erro: 'Usuário não encontrado' });
+});
+
+// Erro do servidor
+res.status(500).json({ erro: 'Erro interno' });</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Pasta Static (CSS, JS, Imagens)</h2>
+            <div class="explanation">
+                <p>Sirva arquivos estáticos:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Arquivos em pasta 'public' são acessíveis
+app.use(express.static('public'));
+
+// Depois acesse: /style.css, /script.js, /imagem.png</pre>
+            </div>
+        </section>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="npm-pacotes.html" class="btn-caixa">← Anterior: NPM</a>
+            <a href="menu-backend.html" class="btn-caixa">Menu</a>
+            <a href="rotas-api.html" class="btn-caixa">Próximo: Rotas & API →</a>
+        </div>
+    </div>
+</body>
+</html>

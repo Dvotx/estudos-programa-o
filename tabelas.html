@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo: Tabelas HTML</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>■ Guia Completo: Tabelas HTML</h1>
+        
+        <div class="guia-intro">
+            <p>Tabelas são tipo planilhas. Use pra organizar informações em linhas e colunas.</p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>1. Tabela Simples</h2>
+            <div class="html-exemplo-tabela">
+                <table class="tabela-exemplo">
+                    <tr>
+                        <td>Linha 1, Coluna 1</td>
+                        <td>Linha 1, Coluna 2</td>
+                    </tr>
+                    <tr>
+                        <td>Linha 2, Coluna 1</td>
+                        <td>Linha 2, Coluna 2</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> &lt;table&gt; cria a tabela, &lt;tr&gt; é uma linha, &lt;td&gt; é uma célula</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Dado&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>2. Tabela com Títulos</h2>
+            <div class="html-exemplo-tabela">
+                <table class="tabela-exemplo">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Cidade</th>
+                    </tr>
+                    <tr>
+                        <td>João</td>
+                        <td>25</td>
+                        <td>São Paulo</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> &lt;th&gt; é pra título das colunas (fica em negrito)</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;tr&gt;
+    &lt;th&gt;Nome&lt;/th&gt;
+    &lt;th&gt;Idade&lt;/th&gt;
+&lt;/tr&gt;</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>3. Organizando a Tabela</h2>
+            <div class="html-exemplo-tabela">
+                <table class="tabela-exemplo">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Preço</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Item A</td>
+                            <td>R$ 10</td>
+                        </tr>
+                        <tr>
+                            <td>Item B</td>
+                            <td>R$ 20</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td><strong>Total</strong></td>
+                            <td><strong>R$ 30</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> Dá pra separar em partes:</p>
+                <p>&lt;thead&gt; = cabeçalho (títulos)</p>
+                <p>&lt;tbody&gt; = corpo (dados)</p>
+                <p>&lt;tfoot&gt; = rodapé (totais)</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>4. Juntando Células</h2>
+            <div class="html-exemplo-tabela">
+                <table class="tabela-exemplo">
+                    <tr>
+                        <th colspan="2">Ocupa 2 colunas</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Ocupa 2 linhas</td>
+                        <td>Célula normal</td>
+                    </tr>
+                    <tr>
+                        <td>Célula normal</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> Dá pra juntar células</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;td colspan="2"&gt;Junta 2 colunas&lt;/td&gt;
+&lt;td rowspan="2"&gt;Junta 2 linhas&lt;/td&gt;</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie <code>minha-tabela.html</code> com:</p>
+                <ul>
+                    <li>Uma tabela com 3 colunas: Nome, Idade, Cidade</li>
+                    <li>Adicione dados de 4 pessoas (pode ser fictício)</li>
+                    <li>Use &lt;thead&gt; para o cabeçalho e &lt;tbody&gt; para os dados</li>
+                </ul>
+                <p>💡 Dica: Use border="1" na tag table para ver as bordas!</p>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="listas.html" class="prev-button">← Listas</a>
+            <a href="../pagina3.html" class="back-button">Voltar ao Índice</a>
+            <a href="formularios.html" class="next-button">Formulários →</a>
+        </div>
+    </div>
+</body>
+</html>

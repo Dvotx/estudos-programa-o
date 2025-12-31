@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções Completo</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>◎ Funções - Versão Completa</h1>
+
+        <div class="guia-intro">
+            <p><strong>Aqui vou anotar os 3 jeitos diferentes de criar funções em JavaScript!</strong></p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>Minha nota: 3 Tipos de Funções</h2>
+            <div class="codigo-exemplo">
+                <pre>// 1. Função Normal (Declaration)
+function somar(a, b) {
+    return a + b;
+}
+
+// 2. Função em Variável (Expression)
+const subtrair = function(a, b) {
+    return a - b;
+};
+
+// 3. Arrow Function (Função Seta) - MAIS CURTA!
+const multiplicar = (a, b) => a * b;
+
+console.log(somar(5, 3));        // 8
+console.log(subtrair(10, 4));    // 6
+console.log(multiplicar(4, 3));  // 12</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Arrow Function é Mais Curta!</h2>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> Arrow function (=>) é um jeito mais rápido de escrever funções:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Jeito normal
+function dobro(n) {
+    return n * 2;
+}
+
+// Arrow function
+const dobro = (n) => n * 2;
+
+// Mesma coisa, mas bem menor!</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Quando Usar Cada Tipo?</h2>
+            <div class="explanation">
+                <p><strong>Minhas anotações:</strong></p>
+                <ul>
+                    <li><strong>function normal:</strong> Funciona em qualquer lugar do código</li>
+                    <li><strong>const funcao = function:</strong> Só funciona depois de declarar</li>
+                    <li><strong>Arrow function (=>):</strong> Mais curta, boa pra coisas rápidas</li>
+                </ul>
+                <p>💡 Dica que aprendi: Usa arrow function quando a função é pequena e rápida!</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie uma arrow function:</p>
+                <ul>
+                    <li>const multiplicar = (a, b) => a * b</li>
+                    <li>Teste: multiplicar(4, 5)</li>
+                    <li>Crie outra arrow function que você quiser!</li>
+                </ul>
+                <p>💡 Dica: Arrow functions são mais curtas!</p>
+            </div>
+        </section>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="funcoes.html" class="btn-caixa">← Anterior</a>
+            <a href="../menu-backend.html" class="btn-caixa">Menu</a>
+            <a href="variaveis-ambiente.html" class="btn-caixa">Próximo →</a>
+        </div>
+    </div>
+</body>
+</html>

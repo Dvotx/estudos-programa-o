@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotas & API REST</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>⬌ Rotas & API REST</h1>
+
+        <div class="guia-intro">
+            <p><strong>Rotas</strong> são caminhos do seu servidor. <strong>API</strong> é um jeito de outras aplicações pegarem dados do seu servidor.</p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>O que é uma Rota?</h2>
+            <div class="explanation">
+                <p>Uma rota é um caminho no seu servidor:</p>
+                <ul>
+                    <li>http://localhost:3000/ → Página inicial</li>
+                    <li>http://localhost:3000/usuarios → Lista de usuários</li>
+                    <li>http://localhost:3000/produto/123 → Um produto específico</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Exemplo: URLs que buscam dados</h2>
+            <div class="explanation">
+                <p>Você pode ter rotas que trazem dados diferentes:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// GET = Pedir dados
+app.get('/usuarios', (req, res) => {
+    res.json(['João', 'Maria', 'Pedro']);
+});
+
+app.get('/produtos', (req, res) => {
+    res.json([
+        { id: 1, nome: 'Notebook', preco: 3000 },
+        { id: 2, nome: 'Mouse', preco: 50 }
+    ]);
+});</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Exemplo: Pegar um item específico</h2>
+            <div class="explanation">
+                <p>Use <code>:id</code> para ter um número na URL:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// http://localhost:3000/usuarios/1
+app.get('/usuarios/:id', (req, res) => {
+    const id = req.params.id;
+    res.json({ id: id, nome: 'João' });
+});</pre>
+            </div>
+            <div class="explanation">
+                <p><code>req.params.id</code> = o número que vem na URL</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Exemplo: Rotas que criam, atualizam e deletam</h2>
+            <div class="explanation">
+                <p>Diferentes tipos de pedidos fazem coisas diferentes:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// GET = Buscar dados
+app.get('/usuarios', (req, res) => {
+    res.json({ usuarios: ['João', 'Maria'] });
+});
+
+// POST = Criar algo novo
+app.post('/usuarios', (req, res) => {
+    res.status(201).json({ msg: 'Usuário criado!' });
+});
+
+// PUT = Atualizar um usuário
+app.put('/usuarios/:id', (req, res) => {
+    res.json({ msg: 'Usuário atualizado!' });
+});
+
+// DELETE = Apagar um usuário
+app.delete('/usuarios/:id', (req, res) => {
+    res.json({ msg: 'Usuário apagado!' });
+});</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Minha nota: Uma API completa de exemplo</h2>
+            <div class="explanation">
+                <p>Vamos fazer uma API de produtos bem simples:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>const express = require('express');
+const app = express();
+app.use(express.json());
+
+let produtos = [
+    { id: 1, nome: 'Notebook', preco: 3000 },
+    { id: 2, nome: 'Mouse', preco: 50 }
+];
+
+// Listar todos
+app.get('/produtos', (req, res) => {
+    res.json(produtos);
+});
+
+// Pegar um específico
+app.get('/produtos/:id', (req, res) => {
+    const produto = produtos.find(p => p.id == req.params.id);
+    res.json(produto);
+});
+
+app.listen(3000);</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Minha nota: Buscar com parâmetros</h2>
+            <div class="explanation">
+                <p>Você pode usar <code>?</code> na URL para enviar informações extras:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// http://localhost:3000/buscar?q=notebook&preco=3000
+app.get('/buscar', (req, res) => {
+    const termo = req.query.q;
+    const preco = req.query.preco;
+    res.json({ termo: termo, preco: preco });
+});</pre>
+            </div>
+            <div class="explanation">
+                <p><code>req.query</code> = os parâmetros que vêm depois do <code>?</code></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie 3 rotas no seu servidor:</p>
+                <ul>
+                    <li>GET /ola que retorna "Olá!"</li>
+                    <li>GET /nome que retorna seu nome</li>
+                    <li>GET /idade que retorna sua idade</li>
+                </ul>
+                <p>💡 Dica: Teste cada rota no navegador!</p>
+            </div>
+        </section>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="express-basico.html" class="btn-caixa">← Anterior: Express</a>
+            <a href="menu-backend.html" class="btn-caixa">Menu</a>
+            <a href="middleware.html" class="btn-caixa">Próximo: Middleware →</a>
+        </div>
+    </div>
+</body>
+</html>
+
+// PUT - Atualizar
+app.put('/api/produtos/:id', (req, res) => {
+    const produto = produtos.find(p => p.id == req.params.id);
+    
+    if (!produto) {
+        return res.status(404).json({ erro: 'Produto não encontrado' });
+    }
+    
+    if (req.body.nome) produto.nome = req.body.nome;
+    if (req.body.preco) produto.preco = req.body.preco;
+    
+    res.json(produto);
+});
+
+// DELETE - Remover
+app.delete('/api/produtos/:id', (req, res) => {
+    const index = produtos.findIndex(p => p.id == req.params.id);
+    
+    if (index === -1) {
+        return res.status(404).json({ erro: 'Produto não encontrado' });
+    }
+    
+    const removido = produtos.splice(index, 1);
+    res.json(removido[0]);
+});
+
+app.listen(3000, () => {
+    console.log('API rodando em http://localhost:3000');
+});</pre>
+            </div>
+

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo: Listas HTML</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>◆ Guia Completo: Listas HTML</h1>
+        
+        <div class="guia-intro">
+            <p>Listas são pra organizar coisas. Tipo uma lista de compras ou passos de uma receita.</p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>1. Lista com Bolinhas (&lt;ul&gt;)</h2>
+            <div class="html-exemplo-lista">
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> Use quando a ordem não importa (tipo lista de compras)</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;ul&gt;
+    &lt;li&gt;Maçã&lt;/li&gt;
+    &lt;li&gt;Banana&lt;/li&gt;
+&lt;/ul&gt;</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>2. Lista Numerada (&lt;ol&gt;)</h2>
+            <div class="html-exemplo-lista">
+                <ol>
+                    <li>Primeiro item</li>
+                    <li>Segundo item</li>
+                    <li>Terceiro item</li>
+                </ol>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> Use quando a ordem importa (tipo passos de receita)</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;ol&gt;
+    &lt;li&gt;Abra o arquivo&lt;/li&gt;
+    &lt;li&gt;Edite o texto&lt;/li&gt;
+&lt;/ol&gt;</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>3. Lista de Palavras e Significados (&lt;dl&gt;)</h2>
+            <div class="html-exemplo-lista">
+                <dl>
+                    <dt>HTML</dt>
+                    <dd>Faz a estrutura da página</dd>
+                    <dt>CSS</dt>
+                    <dd>Deixa bonito</dd>
+                </dl>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> Use pra mostrar palavra e sua explicação</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre>&lt;dl&gt;
+    &lt;dt&gt;Café&lt;/dt&gt;
+    &lt;dd&gt;Bebida quente&lt;/dd&gt;
+&lt;/dl&gt;</pre>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>4. Lista Dentro de Lista</h2>
+            <div class="html-exemplo-lista">
+                <ul>
+                    <li>Item 1
+                        <ul>
+                            <li>Subitem 1.1</li>
+                            <li>Subitem 1.2</li>
+                        </ul>
+                    </li>
+                    <li>Item 2</li>
+                </ul>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> Dá pra colocar lista dentro de lista pra organizar melhor</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie <code>minha-lista.html</code> com:</p>
+                <ul>
+                    <li>Uma lista não ordenada com seus 5 filmes favoritos</li>
+                    <li>Uma lista ordenada com suas 3 metas do ano</li>
+                    <li>Uma lista de definição com 3 termos de programação que você aprendeu</li>
+                </ul>
+                <p>💡 Dica: Use &lt;strong&gt; para destacar itens importantes!</p>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="links.html" class="prev-button">← Links e Imagens</a>
+            <a href="../pagina3.html" class="back-button">Voltar ao Índice</a>
+            <a href="tabelas.html" class="next-button">Tabelas →</a>
+        </div>
+    </div>
+</body>
+</html>

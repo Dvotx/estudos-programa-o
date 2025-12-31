@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPM & Pacotes</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>📦 NPM & Pacotes</h1>
+
+        <div class="guia-intro">
+            <p><strong>NPM</strong> (Node Package Manager) é um lugar onde outras pessoas compartilham código pronto para usar. É como uma loja de ferramentas para Node.js!</p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>O que é NPM?</h2>
+            <div class="explanation">
+                <p>NPM é um gerenciador de pacotes. Permite que você:</p>
+                <ul>
+                    <li><strong>Instale pacotes:</strong> Pegue código que outros fizeram</li>
+                    <li><strong>Use em seus projetos:</strong> Adicione ferramentas prontas</li>
+                    <li><strong>Organize seu projeto:</strong> Saiba quais ferramentas estão usando</li>
+                    <li><strong>Compartilhe código:</strong> Publique seus pacotes para outros usarem</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Começar um Novo Projeto</h2>
+            <div class="explanation">
+                <p>Toda vez que começa um novo projeto, NPM precisa saber o que ele usa. Para isso, crie um arquivo chamado <strong>package.json</strong>:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>npm init -y</pre>
+            </div>
+            <div class="explanation">
+                <p>O <code>-y</code> significa "sim para tudo". Isso cria o arquivo rapidinho!</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Exemplo: O que é package.json?</h2>
+            <div class="explanation">
+                <p>O arquivo <strong>package.json</strong> é como uma lista de compras. Ele diz:</p>
+                <ul>
+                    <li>Qual é o nome do seu projeto</li>
+                    <li>Qual é a versão</li>
+                    <li>Quais ferramentas você instalou</li>
+                </ul>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>{
+  "name": "meu-projeto",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.18.0"
+  }
+}</pre>
+            </div>
+            <div class="explanation">
+                <p>Quando você instala um pacote, NPM adiciona automaticamente na lista em "dependencies"!</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Instalando Pacotes</h2>
+            <div class="explanation">
+                <p>Instale um pacote (ferramenta) com este comando:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>npm install express
+npm i express</pre>
+            </div>
+            <div class="explanation">
+                <p>Ambos fazem a mesma coisa! <code>npm install</code> e <code>npm i</code> são iguais.</p>
+                <p>O pacote é baixado e salvo em uma pasta chamada <code>node_modules</code> (não precisa editar lá!).</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Minha nota: Onde vão os pacotes?</h2>
+            <div class="explanation">
+                <p>Quando você instala um pacote, NPM cria uma pasta chamada <code>node_modules</code>. Não precisa mecher lá!</p>
+                <p>Também cria um arquivo <code>package-lock.json</code> que guarda a versão exata do que foi instalado.</p>
+                <p>Se você enviar seu projeto para outra pessoa, ela não precisa da pasta <code>node_modules</code>. Basta ela rodar:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>npm install</pre>
+            </div>
+            <div class="explanation">
+                <p>E NPM vai ler o package.json e instalar tudo de novo! Mas para isso, você precisa adicionar <code>node_modules/</code> ao arquivo <code>.gitignore</code> (se usar Git).</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Exemplo: Rodando comandos do package.json</h2>
+            <div class="explanation">
+                <p>Você pode criar atalhos no package.json para rodar comandos rápido:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>{
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  }
+}</pre>
+            </div>
+            <div class="explanation">
+                <p>Depois você roda:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>npm start     // Roda node app.js
+npm run dev   // Roda nodemon app.js</pre>
+            </div>
+            <div class="explanation">
+                <p>Muito mais fácil que digitar o comando todo!</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Removendo Pacotes</h2>
+            <div class="explanation">
+                <p>Se não precisa mais de um pacote, remova com:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>npm uninstall express
+npm remove dotenv</pre>
+            </div>
+            <div class="explanation">
+                <p>O pacote sai do node_modules e do package.json!</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> No seu projeto:</p>
+                <ul>
+                    <li>Rode npm init -y pra criar package.json</li>
+                    <li>Instale um pacote simples: npm install colors</li>
+                    <li>Veja o colors aparecer em package.json!</li>
+                </ul>
+                <p>💡 Dica: Abre a pasta node_modules pra ver o que foi instalado!</p>
+            </div>
+        </section>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="nodejs-intro.html" class="btn-caixa">← Anterior: Node.js</a>
+            <a href="menu-backend.html" class="btn-caixa">Menu</a>
+            <a href="express-basico.html" class="btn-caixa">Próximo: Express →</a>
+        </div>
+    </div>
+</body>
+</html>

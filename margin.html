@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Guia Completo: Margin (Margem Externa)</title>
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>◄► Guia Completo: Margin (Espaço Fora)</h1>
+        
+        <p class="guia-intro">
+            A propriedade <code>margin</code> cria espaço do lado de fora de uma caixa, 
+            afastando ela de outras caixas. É sempre transparente (sem cor).
+        </p>
+
+        <h2>1. Margin com Um Valor (Todos os Lados)</h2>
+        <div class="exemplo-guia">
+            <div class="margin-guia-container">
+                <div class="margin-guia-all">margin: 30px</div>
+            </div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Coloca 30px de espaço em todos os 4 lados.<br>
+                <strong>Como escrever:</strong> margin: [valor]<br>
+                <strong>Minha nota:</strong> Afasta a caixa de tudo ao redor.
+            </p>
+        </div>
+
+        <h2>2. Margin com Dois Valores (Cima/Baixo e Lados)</h2>
+        <div class="exemplo-guia">
+            <div class="margin-guia-container">
+                <div class="margin-guia-two">margin: 40px 20px</div>
+            </div>
+            <p class="explanation">
+                <strong>Como escrever:</strong> margin: [cima-baixo] [esquerda-direita]<br>
+                <strong>1º valor:</strong> espaço em cima e embaixo<br>
+                <strong>2º valor:</strong> espaço nas laterais
+            </p>
+        </div>
+
+        <h2>3. Margin com Três Valores</h2>
+        <div class="exemplo-guia">
+            <div class="margin-guia-container">
+                <div class="margin-guia-three">margin: 10px 30px 50px</div>
+            </div>
+            <p class="explanation">
+                <strong>Como escrever:</strong> margin: [cima] [lados] [baixo]<br>
+                <strong>1º valor:</strong> só em cima<br>
+                <strong>2º valor:</strong> esquerda e direita<br>
+                <strong>3º valor:</strong> só embaixo
+            </p>
+        </div>
+
+        <h2>4. Margin com Quatro Valores (Relógio)</h2>
+        <div class="exemplo-guia">
+            <div class="margin-guia-container">
+                <div class="margin-guia-four">margin: 10px 20px 30px 40px</div>
+            </div>
+            <p class="explanation">
+                <strong>Como escrever:</strong> margin: [cima] [direita] [baixo] [esquerda]<br>
+                <strong>Dica:</strong> Começa em cima e vai girando como ponteiros do relógio 🕐.<br>
+                <strong>Valores:</strong> cima=10px, direita=20px, baixo=30px, esquerda=40px
+            </p>
+        </div>
+
+        <h2>5. Margin de Um Lado Só</h2>
+        <div class="exemplo-guia">
+            <div class="margin-guia-container">
+                <div class="margin-guia-top">margin-top: 50px</div>
+            </div>
+            <div class="margin-guia-container">
+                <div class="margin-guia-right">margin-right: 80px</div>
+            </div>
+            <div class="margin-guia-container">
+                <div class="margin-guia-bottom">margin-bottom: 50px</div>
+            </div>
+            <div class="margin-guia-container">
+                <div class="margin-guia-left">margin-left: 80px</div>
+            </div>
+            <p class="explanation">
+                <strong>Propriedades:</strong> margin-top, margin-right, margin-bottom, margin-left<br>
+                <strong>Quando usar:</strong> Pra mexer só em um lado sem afetar os outros.
+            </p>
+        </div>
+
+        <h2>6. Margin: auto (Centralizar)</h2>
+        <div class="exemplo-guia">
+            <div class="margin-guia-auto">margin: 0 auto (centralizado)</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Centraliza a caixa no meio (horizontalmente).<br>
+                <strong>Como escrever:</strong> margin: 0 auto; ou margin: auto;<br>
+                <strong>Minha nota:</strong> A caixa precisa ter largura definida pra funcionar!
+            </p>
+        </div>
+
+        <h2>7. Margin Negativa</h2>
+        <div class="exemplo-guia">
+            <div class="margin-guia-container-negative">
+                <div class="margin-guia-negative-top">margin-top: -20px</div>
+                <div class="margin-guia-negative-left">margin-left: -30px</div>
+            </div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Puxa a caixa na direção oposta.<br>
+                <strong>Negativo em cima:</strong> Puxa pra cima.<br>
+                <strong>Negativo na esquerda:</strong> Puxa pra esquerda.<br>
+                <strong>Minha nota:</strong> Cuidado! Pode fazer as caixas se sobreporem.
+            </p>
+        </div>
+
+        <h2>8. Margin com Porcentagem</h2>
+        <div class="exemplo-guia">
+            <div class="margin-guia-percent">margin: 5%</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Espaço baseado na largura da caixa pai.<br>
+                <strong>Minha nota:</strong> Sempre usa a largura, mesmo pra cima e baixo.<br>
+                <strong>Quando usar:</strong> Pra layouts que se adaptam.
+            </p>
+        </div>
+
+        <h2>9. Colapso de Margens (Elas Se Juntam!)</h2>
+        <div class="exemplo-guia">
+            <div class="margin-guia-collapse-demo">
+                <div class="margin-guia-collapse-1">margin-bottom: 30px</div>
+                <div class="margin-guia-collapse-2">margin-top: 50px</div>
+            </div>
+            <p class="explanation">
+                <strong>O que acontece:</strong> Margens de cima e baixo se juntam entre caixas.<br>
+                <strong>Resultado:</strong> Só a maior margem aparece (não somam!).<br>
+                <strong>Exemplo:</strong> 30px + 50px = 50px (não 80px).<br>
+                <strong>Minha nota:</strong> Margens dos lados NÃO se juntam.
+            </p>
+        </div>
+
+        <h2>10. Margin: 0 (Sem Espaço Fora)</h2>
+        <div class="exemplo-guia">
+            <div class="margin-guia-container">
+                <div class="margin-guia-zero">margin: 0</div>
+            </div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Tira todo o espaço externo.<br>
+                <strong>Quando usar:</strong> Pra resetar margens padrão do navegador.<br>
+                <strong>Comum em:</strong> body, h1-h6, p { margin: 0; }
+            </p>
+        </div>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie 3 caixas:</p>
+                <ul>
+                    <li>Primeira com margin: 20px em todos os lados</li>
+                    <li>Segunda com margin-top: 50px</li>
+                    <li>Terceira com margin: 10px 30px (vertical horizontal)</li>
+                </ul>
+                <p>💡 Dica: Veja o espaço que aparece entre elas!</p>
+            </div>
+        </section>
+
+        <div class="guia-navegacao">
+            <a href="box-shadow.html"><button>← Anterior: Box-Shadow</button></a>
+            <a href="padding.html"><button>Próximo: Padding →</button></a>
+        </div>
+    </div>
+</body>
+</html>

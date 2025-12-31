@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Guia: Position</title>
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>✦ Position: Como Posicionar Elementos</h1>
+        
+        <p class="guia-intro">
+            <code>position</code> controla onde um elemento aparece na página - fixo, relativo, absoluto, etc.
+        </p>
+
+        <h2>1. Position: Static (Padrão)</h2>
+        <div class="exemplo-guia">
+            <div class="position-guia-static">Posicionamento normal</div>
+            <p class="explanation">
+                <strong>Minha nota:</strong> Static é o padrão - o elemento fica onde naturalmente deveria estar.<br>
+                • Não pode usar top, right, bottom, left<br>
+                • Segue o fluxo normal do documento<br>
+                • Todos os elementos são static por padrão
+            </p>
+        </div>
+
+        <h2>2. Position: Relative (Relativo)</h2>
+        <div class="exemplo-guia">
+            <div class="position-guia-relative-demo">
+                <div class="position-guia-relative">Deslocado: top 20px, left 30px</div>
+            </div>
+            <p class="explanation">
+                <strong>Minha nota:</strong> Relative move o elemento a partir de onde ele estava naturalmente.<br>
+                • Ainda ocupa espaço no documento<br>
+                • Use top, right, bottom, left pra deslocar<br>
+                • Exemplo: position: relative; top: 50px; left: 50px;
+            </p>
+        </div>
+
+        <h2>3. Position: Absolute (Absoluto)</h2>
+        <div class="exemplo-guia">
+            <div class="position-guia-absolute-container">
+                <div class="position-guia-absolute">Sou absoluto!</div>
+                Container (posição relativa)
+            </div>
+            <p class="explanation">
+                <strong>Minha nota:</strong> Absolute sai completamente do fluxo do documento.<br>
+                • Não ocupa espaço<br>
+                • Se posiciona relativo ao ancestral mais próximo com position<br>
+                • Exemplo: position: absolute; top: 10px; right: 10px;
+            </p>
+        </div>
+
+        <h2>4. Position: Fixed (Fixo)</h2>
+        <div class="exemplo-guia">
+            <div class="position-guia-fixed-demo">
+                <p>(O elemento fixed fica fixo mesmo se você rolar)</p>
+            </div>
+            <p class="explanation">
+                <strong>Minha nota:</strong> Fixed deixa o elemento preso na tela, não rola com a página.<br>
+                • Perfeito para headers, botões "voltar ao topo"<br>
+                • Não ocupa espaço<br>
+                • Exemplo: position: fixed; top: 0; right: 0;
+            </p>
+        </div>
+
+        <h2>5. Position: Sticky (Pegajoso)</h2>
+        <div class="exemplo-guia">
+            <div class="position-guia-sticky-container">
+                <div class="position-guia-sticky">Sou sticky! Role pra ver</div>
+                <p>Conteúdo...<br>Mais conteúdo...<br>Mais conteúdo...<br>Mais conteúdo...</p>
+            </div>
+            <p class="explanation">
+                <strong>Minha nota:</strong> Sticky rola normalmente, mas gruda quando atinge um ponto.<br>
+                • Combinação de relative e fixed<br>
+                • Precisa de top, right, bottom ou left<br>
+                • Exemplo: position: sticky; top: 0;
+            </p>
+        </div>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie uma div com:</p>
+                <ul>
+                    <li>position: relative</li>
+                    <li>top: 50px e left: 50px</li>
+                    <li>Depois teste com position: absolute</li>
+                </ul>
+                <p>💡 Dica: Veja como a div se move de jeitos diferentes!</p>
+            </div>
+        </section>
+
+        <h2 style="display: none;">
+                <strong>Uso:</strong> Headers fixos, botões "voltar ao topo", notificações.
+            </p>
+        </div>
+
+        <h2>5. Position: Sticky</h2>
+        <div class="exemplo-guia">
+            <div class="position-guia-sticky-container">
+                <div class="position-guia-sticky">position: sticky; top: 0;</div>
+                <p>Role dentro desta área...<br>Mais conteúdo...<br>Mais conteúdo...<br>Mais conteúdo...<br>Mais conteúdo...<br>Mais conteúdo...<br>Mais conteúdo...</p>
+            </div>
+            <p class="explanation">
+                <strong>Comportamento:</strong> Híbrido entre relative e fixed.<br>
+                <strong>Rola normalmente:</strong> Até atingir o limite especificado (ex: top: 0).<br>
+                <strong>Então gruda:</strong> Fica fixo até o container pai acabar.<br>
+                <strong>Requer:</strong> top, right, bottom ou left para funcionar.<br>
+                <strong>Z-index:</strong> Funciona.<br>
+                <strong>Uso:</strong> Headers de tabelas, sidebars, table of contents.
+            </p>
+        </div>
+
+        <h2>6. Top, Right, Bottom, Left</h2>
+        <div class="exemplo-guia">
+            <div class="position-guia-trbl-container">
+                <div class="position-guia-trbl-top">top: 10px</div>
+                <div class="position-guia-trbl-right">right: 10px</div>
+                <div class="position-guia-trbl-bottom">bottom: 10px</div>
+                <div class="position-guia-trbl-left">left: 10px</div>
+                <div class="position-guia-trbl-center">top: 50%; left: 50%; transform: translate(-50%, -50%)</div>
+            </div>
+            <p class="explanation">
+                <strong>top:</strong> Distância do topo<br>
+                <strong>right:</strong> Distância da direita<br>
+                <strong>bottom:</strong> Distância de baixo<br>
+                <strong>left:</strong> Distância da esquerda<br>
+                <strong>Centralização:</strong> top: 50%, left: 50% + transform
+            </p>
+        </div>
+
+        <h2>7. Z-Index (Empilhamento)</h2>
+        <div class="exemplo-guia">
+            <div class="position-guia-zindex-container">
+                <div class="position-guia-zindex-1">z-index: 1</div>
+                <div class="position-guia-zindex-2">z-index: 2</div>
+                <div class="position-guia-zindex-3">z-index: 3</div>
+            </div>
+            <p class="explanation">
+                <strong>Uso:</strong> Controla a ordem de empilhamento de elementos posicionados.<br>
+                <strong>Valores:</strong> Números inteiros (podem ser negativos).<br>
+                <strong>Maior valor:</strong> Fica por cima.<br>
+                <strong>Requer:</strong> position diferente de static.<br>
+                <strong>Stacking context:</strong> Cada posicionamento cria um novo contexto.
+            </p>
+        </div>
+
+        <h2>8. Position: Absolute - Centralização</h2>
+        <div class="exemplo-guia">
+            <div class="position-guia-center-container">
+                <div class="position-guia-center-absolute">Centralizado</div>
+            </div>
+            <p class="explanation">
+                <strong>Método 1:</strong> top: 50%; left: 50%; transform: translate(-50%, -50%)<br>
+                <strong>Método 2:</strong> top: 0; right: 0; bottom: 0; left: 0; margin: auto;<br>
+                <strong>Método 3:</strong> Usar flexbox no pai.
+            </p>
+        </div>
+
+        <h2>9. Position e Overflow</h2>
+        <div class="exemplo-guia">
+            <div class="position-guia-overflow-container">
+                <div class="position-guia-overflow-absolute">Position absolute</div>
+                Container com overflow: hidden
+            </div>
+            <p class="explanation">
+                <strong>Absolute:</strong> Cortado se o pai tiver overflow: hidden.<br>
+                <strong>Fixed:</strong> NÃO é afetado por overflow do pai.<br>
+                <strong>Sticky:</strong> Afetado por overflow do ancestral.
+            </p>
+        </div>
+
+        <h2>10. Position: Comparação Geral</h2>
+        <div class="exemplo-guia">
+            <table class="position-guia-comparison">
+                <tr>
+                    <th>Position</th>
+                    <th>Fluxo</th>
+                    <th>Relativo a</th>
+                    <th>Z-index</th>
+                </tr>
+                <tr>
+                    <td>static</td>
+                    <td>Sim</td>
+                    <td>-</td>
+                    <td>Não</td>
+                </tr>
+                <tr>
+                    <td>relative</td>
+                    <td>Sim</td>
+                    <td>Si mesmo</td>
+                    <td>Sim</td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>Não</td>
+                    <td>Ancestral posicionado</td>
+                    <td>Sim</td>
+                </tr>
+                <tr>
+                    <td>fixed</td>
+                    <td>Não</td>
+                    <td>Viewport</td>
+                    <td>Sim</td>
+                </tr>
+                <tr>
+                    <td>sticky</td>
+                    <td>Sim/Não</td>
+                    <td>Ancestral scroll</td>
+                    <td>Sim</td>
+                </tr>
+            </table>
+            <p class="explanation">
+                <strong>Resumo:</strong> Cada tipo de position tem seu caso de uso específico.<br>
+                <strong>Fluxo:</strong> Se o elemento ocupa espaço no layout normal.
+            </p>
+        </div>
+
+        <div class="guia-navegacao">
+            <a href="transform.html"><button>← Anterior: Transform</button></a>
+            <a href="../pagina3.html"><button>Voltar ao Índice</button></a>
+        </div>
+    </div>
+</body>
+</html>

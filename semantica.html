@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo: HTML Semântico</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>◉ Guia Completo: HTML Semântico</h1>
+        
+        <div class="guia-intro">
+            <p>Tags semânticas são tipo etiquetas que dizem o que cada parte da página faz. É como organizar seus livros por tipo (aventura, romance, etc) em vez de só empilhar!</p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>1. Como fica a página</h2>
+            <div class="html-exemplo-semantica">
+                <div class="layout-demo">
+                    <div class="demo-header">&lt;header&gt;</div>
+                    <div class="demo-nav">&lt;nav&gt;</div>
+                    <div class="demo-main">
+                        &lt;main&gt;
+                        <div class="demo-article">&lt;article&gt;</div>
+                        <div class="demo-aside">&lt;aside&gt;</div>
+                    </div>
+                    <div class="demo-footer">&lt;footer&gt;</div>
+                </div>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> É tipo um mapa mostrando cada parte da sua página!</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>2. &lt;header&gt; - O cabeçalho</h2>
+            <div class="html-exemplo-semantica">
+                <header class="semantica-header">
+                    <h1>Título do Site</h1>
+                    <p>Slogan ou descrição</p>
+                </header>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> O &lt;header&gt; é tipo o cabeçalho da página - onde você coloca o nome do site e a logo.</p>
+                <p><strong>Exemplo:</strong> Tipo a placa da sua loja!</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>3. &lt;nav&gt; - Menu de navegação</h2>
+            <div class="html-exemplo-semantica">
+                <nav class="semantica-nav">
+                    <a href="#" class="semantica-nav-link">Home</a>
+                    <a href="#" class="semantica-nav-link">Sobre</a>
+                    <a href="#" class="semantica-nav-link">Contato</a>
+                </nav>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> O &lt;nav&gt; é onde ficam os links do menu - tipo aqueles botõezinhos que levam pra outras páginas.</p>
+                <p><strong>Exemplo:</strong> É o menu do restaurante que mostra as opções!</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>4. &lt;main&gt; - Conteúdo principal</h2>
+            <div class="html-exemplo-semantica">
+                <main class="semantica-main">
+                    <h2>Conteúdo Principal</h2>
+                    <p>O texto principal da sua página. Só pode ter um &lt;main&gt; por página!</p>
+                </main>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> O &lt;main&gt; é o conteúdo principal da página - a parte mais importante!</p>
+                <p><strong>Exemplo:</strong> É tipo o palco principal do show. Só pode ter um!</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>5. &lt;article&gt; - Um artigo</h2>
+            <div class="html-exemplo-semantica">
+                <article class="semantica-article">
+                    <h3>Título do Artigo</h3>
+                    <p>Um texto que faz sentido sozinho - tipo um post de blog ou uma notícia.</p>
+                </article>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> O &lt;article&gt; é pra textos que fazem sentido sozinhos.</p>
+                <p><strong>Exemplo:</strong> Tipo um post no Instagram - dá pra entender sem precisar ler outras coisas!</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>6. &lt;section&gt; - Uma seção</h2>
+            <div class="html-exemplo-semantica">
+                <section class="semantica-section">
+                    <h3>Título da Seção</h3>
+                    <p>Serve pra separar partes diferentes do conteúdo - tipo capítulos de um livro.</p>
+                </section>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> O &lt;section&gt; divide a página em pedaços organizados.</p>
+                <p><strong>Exemplo:</strong> Tipo os capítulos de um livro - cada um sobre um assunto!</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>7. &lt;aside&gt; - Conteúdo extra</h2>
+            <div class="html-exemplo-semantica">
+                <aside class="semantica-aside">
+                    <h4>Sidebar</h4>
+                    <p>Informação extra que não é tão importante - tipo aquela barrinha do lado.</p>
+                </aside>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> O &lt;aside&gt; é pra coisas extras, tipo aquela barra lateral com informações adicionais.</p>
+                <p><strong>Exemplo:</strong> Tipo os comentários no canto da página - interessante mas não essencial!</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>8. &lt;footer&gt; - Rodapé</h2>
+            <div class="html-exemplo-semantica">
+                <footer class="semantica-footer">
+                    <p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
+                    <p>Contato: exemplo@email.com</p>
+                </footer>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> O &lt;footer&gt; é o rodapé - a parte de baixo da página.</p>
+                <p><strong>Exemplo:</strong> Tipo o rodapé do caderno onde você coloca seu nome e a data!</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>9. Outras tags úteis</h2>
+            <div class="html-exemplo-semantica">
+                <figure class="semantica-figure">
+                    <div class="semantica-figure-img">Imagem</div>
+                    <figcaption class="semantica-figcaption">Legenda da imagem</figcaption>
+                </figure>
+                <p><time datetime="2025-12-26">26 de Dezembro de 2025</time></p>
+                <p><mark>Texto destacado com &lt;mark&gt;</mark></p>
+            </div>
+            <div class="explanation">
+                <p><strong>&lt;figure&gt;:</strong> Pra colocar imagens com legenda</p>
+                <p><strong>&lt;figcaption&gt;:</strong> A legenda da imagem</p>
+                <p><strong>&lt;time&gt;:</strong> Pra marcar datas e horários</p>
+                <p><strong>&lt;mark&gt;:</strong> Tipo um marca-texto amarelo no texto!</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>10. Por que usar essas tags?</h2>
+            <div class="html-exemplo-semantica">
+                <div class="semantica-error-demo">
+                    <strong>❌ Jeito ruim:</strong>
+                    <pre class="semantica-error-code">&lt;div id="header"&gt;
+&lt;div id="nav"&gt;
+&lt;div id="main"&gt;</pre>
+                </div>
+                <div class="semantica-success-demo">
+                    <strong>✓ Jeito bom:</strong>
+                    <pre class="semantica-success-code">&lt;header&gt;
+&lt;nav&gt;
+&lt;main&gt;</pre>
+                </div>
+            </div>
+            <div class="explanation">
+                <p><strong>Minha nota:</strong> Só usa &lt;div&gt; quando não tiver uma tag especial pra isso!</p>
+                <p><strong>Por que é melhor usar tags semânticas?</strong></p>
+                <ul>
+                    <li>O Google entende melhor sua página</li>
+                    <li>Pessoas cegas conseguem navegar melhor</li>
+                    <li>Seu código fica mais fácil de entender</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie <code>pagina-semantica.html</code> com:</p>
+                <ul>
+                    <li>Uma &lt;header&gt; com título do site</li>
+                    <li>Uma &lt;nav&gt; com 3 links</li>
+                    <li>Um &lt;main&gt; com dois &lt;article&gt;</li>
+                    <li>Um &lt;aside&gt; com informação extra</li>
+                    <li>Um &lt;footer&gt; com seu nome</li>
+                </ul>
+                <p>💡 Dica: É tipo montar as peças de um quebra-cabeça da página!</p>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="formularios.html" class="prev-button">← Formulários</a>
+            <a href="../pagina3.html" class="back-button">Voltar ao Índice</a>
+        </div>
+    </div>
+</body>
+</html>

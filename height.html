@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Guia Completo: Height (Altura)</title>
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>▼ Guia Completo: Height (Altura)</h1>
+        
+        <p class="guia-intro">
+            A propriedade <code>height</code> controla a altura (o tamanho vertical) de uma caixa. 
+            Funciona parecido com width, mas controla a dimensão vertical.
+        </p>
+
+        <h2>1. Pixels (px) - Tamanho Fixo</h2>
+        <div class="exemplo-guia">
+            <div class="height-guia-px">height: 150px</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Uma caixa com exatamente 150 pixels de altura.<br>
+                <strong>Quando usar:</strong> Quando você quer uma altura que não muda.<br>
+                <strong>Minha nota:</strong> Não se adapta ao tamanho da tela ou do conteúdo.
+            </p>
+        </div>
+
+        <h2>2. Porcentagem (%) - Depende da Caixa Pai</h2>
+        <div class="exemplo-guia">
+            <div class="height-container">
+                <div class="height-guia-percent">height: 50%</div>
+            </div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Metade da altura da caixa que está em volta.<br>
+                <strong>Quando usar:</strong> Pra ocupar parte da altura do container.<br>
+                <strong>Minha nota:</strong> A caixa pai precisa ter altura definida pra funcionar.
+            </p>
+        </div>
+
+        <h2>3. Viewport Height (vh) - Depende da Janela</h2>
+        <div class="exemplo-guia">
+            <div class="height-guia-vh">height: 30vh</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> 30% da altura da janela do navegador.<br>
+                <strong>Quando usar:</strong> Pra elementos que ocupam parte da altura da tela.<br>
+                <strong>Minha nota:</strong> 1vh = 1% da altura da janela. 100vh = tela inteira!
+            </p>
+        </div>
+
+        <h2>4. EM - Baseado no Tamanho da Letra</h2>
+        <div class="exemplo-guia">
+            <div class="height-guia-em">height: 10em</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> 10 vezes o tamanho da letra do elemento.<br>
+                <strong>Quando usar:</strong> Pra manter proporção com o texto.<br>
+                <strong>Minha nota:</strong> Se a letra é 16px, 1em = 16px.
+            </p>
+        </div>
+
+        <h2>5. REM - Baseado na Letra Principal</h2>
+        <div class="exemplo-guia">
+            <div class="height-guia-rem">height: 12rem</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> 12 vezes o tamanho da letra principal da página.<br>
+                <strong>Quando usar:</strong> Pra tamanhos consistentes na página toda.<br>
+                <strong>Minha nota:</strong> Mais fácil de prever que o em.
+            </p>
+        </div>
+
+        <h2>6. Auto - Altura Automática</h2>
+        <div class="exemplo-guia">
+            <div class="height-guia-auto">height: auto<br>A altura se ajusta automaticamente ao conteúdo dentro deste elemento.</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> O navegador decide a altura automaticamente.<br>
+                <strong>Quando usar:</strong> É o padrão, a altura cresce com o conteúdo.<br>
+                <strong>Minha nota:</strong> A caixa fica do tamanho do que tem dentro.
+            </p>
+        </div>
+
+        <h2>7. Max-Content - Altura do Conteúdo</h2>
+        <div class="exemplo-guia">
+            <div class="height-guia-max-content">height: max-content<br>Múltiplas<br>Linhas<br>De<br>Conteúdo</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Altura necessária pra mostrar todo o conteúdo.<br>
+                <strong>Quando usar:</strong> Quando quer que caiba tudo certinho.<br>
+                <strong>Minha nota:</strong> Parecido com auto, mas mais específico.
+            </p>
+        </div>
+
+        <h2>8. Min-Content - Menor Altura Possível</h2>
+        <div class="exemplo-guia">
+            <div class="height-guia-min-content">height: min-content</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> O mínimo de altura necessário.<br>
+                <strong>Quando usar:</strong> Quando quer economizar espaço vertical.<br>
+                <strong>Minha nota:</strong> Fica bem compacto!
+            </p>
+        </div>
+
+        <h2>9. Fit-Content - Se Ajusta ao Conteúdo</h2>
+        <div class="exemplo-guia">
+            <div class="height-guia-fit-content">height: fit-content<br>Ajusta perfeitamente</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Se ajusta ao conteúdo, respeitando limites.<br>
+                <strong>Quando usar:</strong> Pra caixas que envolvem o conteúdo verticalmente.<br>
+                <strong>Minha nota:</strong> Parecido com max-content, mas mais controlado.
+            </p>
+        </div>
+
+        <h2>10. Calc() - Faz Contas</h2>
+        <div class="exemplo-guia">
+            <div class="height-guia-calc">height: calc(100vh - 100px)</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Altura da tela menos 100 pixels.<br>
+                <strong>Quando usar:</strong> Pra fazer contas com diferentes unidades.<br>
+                <strong>Minha nota:</strong> Útil pra tela cheia menos o cabeçalho!
+            </p>
+        </div>
+
+        <h2>11. Min-Height e Max-Height - Limites</h2>
+        <div class="exemplo-guia">
+            <div class="height-guia-minmax">min-height: 100px; max-height: 200px;<br>Conteúdo limitado</div>
+            <p class="explanation">
+                <strong>Exemplo:</strong> Define altura mínima e máxima.<br>
+                <strong>Quando usar:</strong> Pra controlar limites, crescendo até certo ponto.<br>
+                <strong>Minha nota:</strong> Nunca vai ficar menor que 100px nem maior que 200px.
+            </p>
+        </div>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie 2 divs com alturas diferentes:</p>
+                <ul>
+                    <li>Uma com 100px de altura fixa</li>
+                    <li>Uma com 30vh (30% da altura da janela)</li>
+                </ul>
+                <p>💡 Dica: Redimensione a janela pra ver o vh funcionar!</p>
+            </div>
+        </section>
+
+        <div class="guia-navegacao">
+            <a href="width.html"><button>← Anterior: Width</button></a>
+            <a href="border.html"><button>Próximo: Border →</button></a>
+        </div>
+    </div>
+</body>
+</html>

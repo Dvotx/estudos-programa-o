@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Guia: Box-Shadow (Sombra)</title>
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>◆ Box-Shadow: Adicione Sombras</h1>
+        
+        <p class="guia-intro">
+            <code>box-shadow</code> adiciona sombras aos elementos, deixando mais bonito e com profundidade.
+        </p>
+
+        <h2>1. Sombra Básica</h2>
+        <div class="exemplo-guia">
+            <div class="shadow-guia-basic">Tem uma sombra embaixo</div>
+            <p class="explanation">
+                <strong>Minha nota:</strong> A sombra aparece deslocada do elemento.<br>
+                • box-shadow: 10px 10px;<br>
+                • O primeiro número é o deslocamento horizontal (pra direita)<br>
+                • O segundo número é o deslocamento vertical (pra baixo)
+            </p>
+        </div>
+
+        <h2>2. Sombra com Desfoque (Blur)</h2>
+        <div class="exemplo-guia">
+            <div class="shadow-guia-blur-small">Sombra levemente desfocada</div>
+            <div class="shadow-guia-blur-medium">Sombra mais desfocada</div>
+            <div class="shadow-guia-blur-large">Sombra bem desfocada</div>
+            <p class="explanation">
+                <strong>Minha nota:</strong> O terceiro número deixa a sombra mais suave.<br>
+                • box-shadow: 5px 5px 10px;<br>
+                • Quanto maior o número, mais desfocada a sombra<br>
+                • Exemplo: box-shadow: 5px 5px 20px;
+            </p>
+        </div>
+
+        <h2>3. Sombra com Cor</h2>
+        <div class="exemplo-guia">
+            <div class="shadow-guia-color-red">Sombra vermelha</div>
+            <div class="shadow-guia-color-blue">Sombra azul</div>
+            <p class="explanation">
+                <strong>Minha nota:</strong> Você pode mudar a cor da sombra!<br>
+                • box-shadow: 5px 5px 10px red;<br>
+                • Pode usar nome, HEX ou RGB<br>
+                • Exemplo: box-shadow: 5px 5px 10px #3498db;
+            </p>
+        </div>
+
+        <h2>4. Sombra Interna (Inset)</h2>
+        <div class="exemplo-guia">
+            <div class="shadow-guia-inset">Sombra pra dentro (inset)</div>
+            <p class="explanation">
+                <strong>Minha nota:</strong> Use "inset" pra colocar a sombra pra dentro.<br>
+                • box-shadow: inset 0 0 20px rgba(0,0,0,0.5);<br>
+                • Deixa parecendo que tem um buraco<br>
+                • Útil pra fazer efeito de profundidade
+            </p>
+        </div>
+
+        <h2>5. Sombra ao Redor (Glow)</h2>
+        <div class="exemplo-guia">
+            <div class="shadow-guia-all-sides">Sombra brilhosa ao redor</div>
+            <p class="explanation">
+                <strong>Minha nota:</strong> Para sombra em volta de tudo, use 0 nos primeiros números.<br>
+                • box-shadow: 0 0 20px;<br>
+                • Primeiro 0 = sem deslocamento horizontal<br>
+                • Segundo 0 = sem deslocamento vertical<br>
+                • 20px = tamanho do brilho
+            </p>
+        </div>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie 3 caixas com sombras diferentes:</p>
+                <ul>
+                    <li>box-shadow: 5px 5px 10px black</li>
+                    <li>box-shadow: 0 0 20px blue (sombra ao redor)</li>
+                    <li>box-shadow: inset 0 0 10px red (sombra pra dentro)</li>
+                </ul>
+                <p>💡 Dica: Mude os números pra ver o que acontece!</p>
+            </div>
+        </section>
+
+        <div style="display: none;">
+        </div>
+
+        <div class="guia-navegacao">
+            <a href="border.html"><button>← Anterior: Border</button></a>
+            <a href="margin.html"><button>Próximo: Margin →</button></a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Guia Completo: Text & Font</title>
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>≡ Guia Completo: Text & Font</h1>
+        
+        <p class="guia-intro">
+            Propriedades de texto e fonte controlam a aparência, tamanho, peso e estilo do texto.
+        </p>
+
+        <h2>1. Color (Cor do Texto)</h2>
+        <div class="exemplo-guia">
+            <div class="text-guia-color-name text-guia-color-demo">color: red</div>
+            <div class="text-guia-color-hex text-guia-color-demo">color: #3498db</div>
+            <div class="text-guia-color-rgb text-guia-color-demo">color: rgb(231, 76, 60)</div>
+            <div class="text-guia-color-rgba text-guia-color-demo">color: rgba(46, 204, 113, 0.7)</div>
+            <p class="explanation">
+                <strong>Formatos:</strong> Nomes, HEX, RGB, RGBA, HSL<br>
+                <strong>Herança:</strong> Color é herdada pelos elementos filhos<br>
+                <strong>currentColor:</strong> Usa a cor atual do texto
+            </p>
+        </div>
+
+        <h2>2. Font-Size (Tamanho da Fonte)</h2>
+        <div class="exemplo-guia">
+            <div class="text-guia-size-px">font-size: 24px</div>
+            <div class="text-guia-size-em">font-size: 1.5em (relativo ao pai)</div>
+            <div class="text-guia-size-rem">font-size: 1.5rem (relativo à raiz)</div>
+            <div class="text-guia-size-percent">font-size: 150%</div>
+            <div class="text-guia-size-keyword">font-size: large</div>
+            <p class="explanation">
+                <strong>Unidades:</strong> px, em, rem, %, vw<br>
+                <strong>Keywords:</strong> xx-small, x-small, small, medium, large, x-large, xx-large<br>
+                <strong>Recomendado:</strong> rem para acessibilidade
+            </p>
+        </div>
+
+        <h2>3. Font-Weight (Peso da Fonte)</h2>
+        <div class="exemplo-guia">
+            <div class="text-guia-weight-normal">font-weight: normal (400)</div>
+            <div class="text-guia-weight-bold">font-weight: bold (700)</div>
+            <div class="text-guia-weight-100">font-weight: 100 (thin)</div>
+            <div class="text-guia-weight-900">font-weight: 900 (black)</div>
+            <p class="explanation">
+                <strong>Palavras-chave:</strong> normal (400), bold (700), bolder, lighter<br>
+                <strong>Números:</strong> 100, 200, 300, 400, 500, 600, 700, 800, 900<br>
+                <strong>Nota:</strong> Nem todas as fontes têm todos os pesos
+            </p>
+        </div>
+
+        <h2>4. Font-Family (Família da Fonte)</h2>
+        <div class="exemplo-guia">
+            <div class="text-guia-family-arial">font-family: Arial, sans-serif</div>
+            <div class="text-guia-family-times">font-family: "Times New Roman", serif</div>
+            <div class="text-guia-family-courier">font-family: "Courier New", monospace</div>
+            <div class="text-guia-family-georgia">font-family: Georgia, serif</div>
+            <p class="explanation">
+                <strong>Fallback:</strong> Liste múltiplas fontes separadas por vírgula<br>
+                <strong>Genéricas:</strong> serif, sans-serif, monospace, cursive, fantasy<br>
+                <strong>Aspas:</strong> Use para nomes com espaços ("Times New Roman")
+            </p>
+        </div>
+
+        <h2>5. Font-Style (Estilo da Fonte)</h2>
+        <div class="exemplo-guia">
+            <div class="text-guia-style-normal">font-style: normal</div>
+            <div class="text-guia-style-italic">font-style: italic</div>
+            <div class="text-guia-style-oblique">font-style: oblique</div>
+            <p class="explanation">
+                <strong>normal:</strong> Estilo padrão<br>
+                <strong>italic:</strong> Versão itálica da fonte<br>
+                <strong>oblique:</strong> Versão inclinada (similar a italic)
+            </p>
+        </div>
+
+        <h2>6. Text-Decoration (Decoração do Texto)</h2>
+        <div class="exemplo-guia">
+            <div class="text-guia-deco-none">text-decoration: none</div>
+            <div class="text-guia-deco-underline">text-decoration: underline</div>
+            <div class="text-guia-deco-overline">text-decoration: overline</div>
+            <div class="text-guia-deco-line-through">text-decoration: line-through</div>
+            <p class="explanation">
+                <strong>Valores:</strong> none, underline, overline, line-through<br>
+                <strong>Comum:</strong> text-decoration: none para remover sublinhado de links<br>
+                <strong>Composto:</strong> text-decoration: underline wavy red
+            </p>
+        </div>
+
+        <h2>7. Text-Transform (Transformação de Texto)</h2>
+        <div class="exemplo-guia">
+            <div class="text-guia-transform-uppercase">text-transform: uppercase</div>
+            <div class="text-guia-transform-lowercase">text-transform: LOWERCASE</div>
+            <div class="text-guia-transform-capitalize">text-transform: capitalize texto</div>
+            <p class="explanation">
+                <strong>uppercase:</strong> TUDO EM MAIÚSCULO<br>
+                <strong>lowercase:</strong> tudo em minúsculo<br>
+                <strong>capitalize:</strong> Primeira Letra De Cada Palavra<br>
+                <strong>none:</strong> Sem transformação
+            </p>
+        </div>
+
+        <h2>8. Line-Height (Altura da Linha)</h2>
+        <div class="exemplo-guia">
+            <div class="text-guia-lineheight-1">line-height: 1 (apertado)</div>
+            <div class="text-guia-lineheight-1-5">line-height: 1.5 (normal)</div>
+            <div class="text-guia-lineheight-2">line-height: 2 (espaçado)</div>
+            <p class="explanation">
+                <strong>Sem unidade:</strong> Multiplicador do font-size (recomendado)<br>
+                <strong>Com unidade:</strong> px, em, %, rem<br>
+                <strong>Legibilidade:</strong> 1.5 a 1.6 é ideal para texto corrido
+            </p>
+        </div>
+
+        <h2>9. Letter-Spacing (Espaçamento Entre Letras)</h2>
+        <div class="exemplo-guia">
+            <div class="text-guia-letterspacing-normal">letter-spacing: normal</div>
+            <div class="text-guia-letterspacing-wide">letter-spacing: 3px (amplo)</div>
+            <div class="text-guia-letterspacing-narrow">letter-spacing: -1px (estreito)</div>
+            <p class="explanation">
+                <strong>Valores:</strong> normal, px, em<br>
+                <strong>Positivo:</strong> Afasta as letras<br>
+                <strong>Negativo:</strong> Aproxima as letras
+            </p>
+        </div>
+
+        <h2>10. Font Shorthand (Abreviado)</h2>
+        <div class="exemplo-guia">
+            <div class="text-guia-font-shorthand">font: italic bold 20px/1.5 Georgia, serif</div>
+            <p class="explanation">
+                <strong>Sintaxe:</strong> font: [style] [weight] [size]/[line-height] [family]<br>
+                <strong>Obrigatório:</strong> size e family<br>
+                <strong>Opcional:</strong> style, weight, line-height
+            </p>
+        </div>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Estilize um parágrafo com:</p>
+                <ul>
+                    <li>color: sua cor favorita</li>
+                    <li>font-size: 20px</li>
+                    <li>font-weight: bold</li>
+                    <li>text-decoration: underline</li>
+                </ul>
+                <p>💡 Dica: Experimente diferentes combinações!</p>
+            </div>
+        </section>
+
+        <div class="guia-navegacao">
+            <a href="background.html"><button>← Anterior: Background</button></a>
+            <a href="text-align.html"><button>Próximo: Text-Align →</button></a>
+        </div>
+    </div>
+</body>
+</html>

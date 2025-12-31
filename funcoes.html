@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções JavaScript</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>◎ Funções</h1>
+
+        <div class="guia-intro">
+            <p>Funções são como "receitas" que você cria uma vez e pode usar quantas vezes quiser! É um pedaço de código que faz algo específico.</p>
+            <p><em>Minha nota: Função é tipo uma máquina: você coloca algo (parâmetros), ela processa e devolve um resultado!</em></p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>Função Básica</h2>
+            <div class="explanation">
+                <p>O jeito clássico de criar funções:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Criar a função
+function saudar(nome) {
+    return `Olá, ${nome}!`;
+}
+
+// Usar a função
+saudar("Ana");     // "Olá, Ana!"
+saudar("Carlos");  // "Olá, Carlos!"
+
+// Exemplo 2: função que soma
+function somar(a, b) {
+    return a + b;
+}
+
+somar(5, 3);   // 8
+somar(10, 20); // 30</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: Entre () vai o que você ENVIA pra função. Depois do return vem o que ela DEVOLVE!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Arrow Functions (Funções Seta)</h2>
+            <div class="explanation">
+                <p>Uma forma mais curta e moderna de escrever funções:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Jeito antigo
+function somar(a, b) {
+    return a + b;
+}
+
+// Arrow function - jeito novo (igual!)
+const somar = (a, b) => {
+    return a + b;
+}
+
+// Arrow function SUPER curta (quando só tem return)
+const somar = (a, b) => a + b;
+
+// Mais exemplos
+const dobro = (n) => n * 2;
+const cumprimentar = (nome) => `Oi, ${nome}!`;
+
+dobro(5);              // 10
+cumprimentar("João");  // "Oi, João!"</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: Arrow function => é tipo um atalho. Menos código, mesmo resultado!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Função sem Return</h2>
+            <div class="explanation">
+                <p>Nem toda função precisa devolver algo. Às vezes ela só FAZ algo:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Função que só mostra mensagem
+function mostrarMensagem(texto) {
+    console.log(texto);
+    // Não tem return!
+}
+
+mostrarMensagem("Olá!");  // Mostra "Olá!" no console
+
+// Arrow function sem return
+const exibirNome = (nome) => {
+    console.log(`Nome: ${nome}`);
+}
+
+exibirNome("Maria");  // Mostra "Nome: Maria"</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: Se a função não tem return, ela só EXECUTA algo, não devolve nada!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Parâmetros Default</h2>
+            <div class="explanation">
+                <p>Você pode definir valores padrão caso não passe um parâmetro:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Se não passar o nome, usa "amigo" como padrão
+const saudar = (nome = "amigo") => {
+    return `Olá, ${nome}!`;
+}
+
+saudar("Ana");    // "Olá, Ana!"
+saudar();         // "Olá, amigo!" (usou o padrão)
+
+// Exemplo com número
+const calcularDesconto = (preco, desconto = 10) => {
+    return preco - (preco * desconto / 100);
+}
+
+calcularDesconto(100, 20);  // 80 (20% de desconto)
+calcularDesconto(100);      // 90 (10% padrão)</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: Valores padrão são tipo um "plano B" - se você não passar nada, ele usa isso!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie 2 arrow functions:</p>
+                <ul>
+                    <li>const somar = (a, b) => a + b</li>
+                    <li>const dobro = (n) => n * 2</li>
+                    <li>Teste ambas no console!</li>
+                </ul>
+                <p>💡 Dica: Arrow functions são mais curtas!</p>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="../menu-javascript.html" class="btn-back">← Voltar</a>
+        </div>
+    </div>
+</body>
+</html>

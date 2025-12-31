@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises & Async/Await</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>⏳ Promises & Async/Await</h1>
+
+        <div class="guia-intro">
+            <p>Promises são "promessas" de que algo vai acontecer no futuro! Tipo quando você pede uma pizza: você não recebe na hora, mas ela VAI chegar.</p>
+            <p><em>Minha nota: Async/Await é a forma mais fácil de trabalhar com promessas. É tipo esperar a pizza chegar!</em></p>
+        </div>
+
+        <section class="exemplo-guia">
+            <h2>Async/Await</h2>
+            <div class="explanation">
+                <p>Use async e await pra "esperar" algo acontecer:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Função async (assíncrona)
+async function buscarDados() {
+    // await = "espera isso terminar"
+    const resposta = await fetch('https://api.exemplo.com/dados');
+    const dados = await resposta.json();
+    console.log(dados);
+}
+
+buscarDados();</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: async diz "essa função vai demorar". await diz "espera isso terminar antes de continuar"!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Exemplo Prático</h2>
+            <div class="explanation">
+                <p>Buscando dados de uma API:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>// Buscar dados do usuário
+async function pegarUsuario() {
+    const resposta = await fetch('https://api.github.com/users/github');
+    const usuario = await resposta.json();
+    
+    console.log(usuario.name);  // Mostra o nome
+    console.log(usuario.bio);   // Mostra a bio
+}
+
+pegarUsuario();</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: É como pedir algo pela internet. Você espera (await) chegar pra poder usar!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia">
+            <h2>Tratando Erros</h2>
+            <div class="explanation">
+                <p>Use try/catch pra capturar erros:</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>async function buscarDados() {
+    try {
+        const resposta = await fetch('url-que-pode-falhar');
+        const dados = await resposta.json();
+        console.log(dados);
+    } catch (erro) {
+        console.log('Deu erro:', erro);
+    }
+}
+
+buscarDados();</pre>
+            </div>
+            <div class="explanation">
+                <p><em>Minha nota: try = "tenta fazer isso". catch = "se der erro, faz isso"!</em></p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie uma função async:</p>
+                <ul>
+                    <li>async function buscarDados()</li>
+                    <li>Use await fetch() pra pegar dados de uma API</li>
+                    <li>Imprima os dados no console</li>
+                </ul>
+                <p>💡 Dica: async/await é mais fácil que .then()!</p>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="../menu-javascript.html" class="btn-back">← Voltar</a>
+        </div>
+    </div>
+</body>
+</html>

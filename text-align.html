@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Guia Completo: Text-Align</title>
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>◄ Guia Completo: Text-Align (Alinhamento)</h1>
+        
+        <p class="guia-intro">
+            A propriedade <code>text-align</code> controla o alinhamento horizontal do texto 
+            e elementos inline dentro de um elemento block.
+        </p>
+
+        <h2>1. Text-Align: Left (Esquerda)</h2>
+        <div class="exemplo-guia">
+            <div class="textalign-guia-left">
+                text-align: left<br>
+                Este texto está alinhado à esquerda.<br>
+                Padrão para idiomas da esquerda para direita.
+            </div>
+            <p class="explanation">
+                <strong>Uso:</strong> Alinha o texto à margem esquerda.<br>
+                <strong>Padrão:</strong> Para idiomas LTR (Left-to-Right) como português.<br>
+                <strong>Quando usar:</strong> Texto corrido, parágrafos.
+            </p>
+        </div>
+
+        <h2>2. Text-Align: Center (Centro)</h2>
+        <div class="exemplo-guia">
+            <div class="textalign-guia-center">
+                text-align: center<br>
+                Este texto está centralizado.<br>
+                Comum em títulos e botões.
+            </div>
+            <p class="explanation">
+                <strong>Uso:</strong> Centraliza o texto horizontalmente.<br>
+                <strong>Quando usar:</strong> Títulos, citações, elementos destacados.<br>
+                <strong>Nota:</strong> Também centraliza imagens e elementos inline.
+            </p>
+        </div>
+
+        <h2>3. Text-Align: Right (Direita)</h2>
+        <div class="exemplo-guia">
+            <div class="textalign-guia-right">
+                text-align: right<br>
+                Este texto está alinhado à direita.<br>
+                Padrão para idiomas RTL.
+            </div>
+            <p class="explanation">
+                <strong>Uso:</strong> Alinha o texto à margem direita.<br>
+                <strong>Padrão:</strong> Para idiomas RTL (Right-to-Left) como árabe e hebraico.<br>
+                <strong>Quando usar:</strong> Valores monetários, datas em tabelas.
+            </p>
+        </div>
+
+        <h2>4. Text-Align: Justify (Justificado)</h2>
+        <div class="exemplo-guia">
+            <div class="textalign-guia-justify">
+                text-align: justify<br>
+                Este texto está justificado. Isso significa que o espaçamento entre as palavras é ajustado para que o texto preencha toda a largura disponível, criando margens alinhadas em ambos os lados.
+            </div>
+            <p class="explanation">
+                <strong>Uso:</strong> Alinha o texto em ambas as margens.<br>
+                <strong>Efeito:</strong> Espaça as palavras uniformemente.<br>
+                <strong>Quando usar:</strong> Textos longos, jornais, documentos formais.<br>
+                <strong>Cuidado:</strong> Pode criar espaçamentos estranhos em linhas curtas.
+            </p>
+        </div>
+
+        <h2>5. Text-Align: Start</h2>
+        <div class="exemplo-guia">
+            <div class="textalign-guia-start">
+                text-align: start<br>
+                Alinha no início baseado na direção do texto (dir).
+            </div>
+            <p class="explanation">
+                <strong>Uso:</strong> Alinha no início da direção do texto.<br>
+                <strong>LTR:</strong> Equivalente a left.<br>
+                <strong>RTL:</strong> Equivalente a right.<br>
+                <strong>Vantagem:</strong> Mais semântico para suporte multilíngue.
+            </p>
+        </div>
+
+        <h2>6. Text-Align: End</h2>
+        <div class="exemplo-guia">
+            <div class="textalign-guia-end">
+                text-align: end<br>
+                Alinha no fim baseado na direção do texto (dir).
+            </div>
+            <p class="explanation">
+                <strong>Uso:</strong> Alinha no fim da direção do texto.<br>
+                <strong>LTR:</strong> Equivalente a right.<br>
+                <strong>RTL:</strong> Equivalente a left.<br>
+                <strong>Vantagem:</strong> Adaptável a diferentes idiomas.
+            </p>
+        </div>
+
+        <h2>7. Text-Align em Elementos Inline</h2>
+        <div class="exemplo-guia">
+            <div class="textalign-guia-inline-center">
+                <span class="textalign-inline-block-demo">Elemento inline-block centralizado</span>
+            </div>
+            <p class="explanation">
+                <strong>Nota:</strong> Text-align afeta elementos inline e inline-block dentro do container.<br>
+                <strong>Uso:</strong> Centralizar botões, badges, imagens.<br>
+                <strong>Não funciona:</strong> Em elementos block (use margin: auto para isso).
+            </p>
+        </div>
+
+        <h2>8. Text-Align com Herança</h2>
+        <div class="exemplo-guia">
+            <div class="textalign-guia-inherit textalign-inherit">
+                <p class="textalign-demo-p">
+                    Este parágrafo herda text-align: center do pai
+                </p>
+            </div>
+            <p class="explanation">
+                <strong>Herança:</strong> Text-align é herdada pelos elementos filhos.<br>
+                <strong>Override:</strong> Elementos filhos podem sobrescrever com seu próprio text-align.<br>
+                <strong>inherit:</strong> Força a herança do valor do pai.
+            </p>
+        </div>
+
+        <h2>9. Text-Align: Inicial vs Unset</h2>
+        <div class="exemplo-guia">
+            <div class="textalign-guia-initial">text-align: initial (volta ao padrão)</div>
+            <div class="textalign-guia-unset">text-align: unset (remove ou herda)</div>
+            <p class="explanation">
+                <strong>initial:</strong> Volta ao valor inicial da propriedade (left para LTR).<br>
+                <strong>unset:</strong> Remove o valor ou herda se a propriedade for herdável.<br>
+                <strong>revert:</strong> Volta ao valor padrão do navegador.
+            </p>
+        </div>
+
+        <h2>10. Text-Align em Tabelas</h2>
+        <div class="exemplo-guia">
+            <table class="textalign-guia-table">
+                <tr>
+                    <th class="textalign-left">Esquerda</th>
+                    <th class="textalign-center">Centro</th>
+                    <th class="textalign-right">Direita</th>
+                </tr>
+                <tr>
+                    <td class="textalign-left">R$ 100</td>
+                    <td class="textalign-center">Produto</td>
+                    <td class="textalign-right">R$ 100</td>
+                </tr>
+            </table>
+            <p class="explanation">
+                <strong>Uso comum:</strong> Alinhar colunas de tabelas.<br>
+                <strong>Padrão:</strong> Cabeçalhos (th) centralizados, células (td) à esquerda.<br>
+                <strong>Valores monetários:</strong> Geralmente alinhados à direita.
+            </p>
+        </div>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie 3 parágrafos com:</p>
+                <ul>
+                    <li>text-align: left</li>
+                    <li>text-align: center</li>
+                    <li>text-align: right</li>
+                </ul>
+                <p>💡 Dica: Veja como o texto se move!</p>
+            </div>
+        </section>
+
+        <div class="guia-navegacao">
+            <a href="text.html"><button>← Anterior: Text & Font</button></a>
+            <a href="display.html"><button>Próximo: Display →</button></a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo: Tags Básicas HTML</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="guia">
+    <div class="guia-container">
+        <h1>≡ Guia Completo: Tags Básicas HTML</h1>
+        
+        <div class="guia-intro">
+            <p>As tags HTML são os blocos de construção fundamentais de qualquer página web. Elas definem a estrutura e o conteúdo da página. Cada tag tem uma função específica e pode conter atributos e conteúdo.</p>
+        </div>
+
+        <!-- Seção 1: Headings (Títulos) -->
+        <section class="exemplo-guia">
+            <h2>1. Headings - Títulos (&lt;h1&gt; até &lt;h6&gt;)</h2>
+            <div class="html-exemplo-box">
+                <h1>Título H1 - Mais importante</h1>
+                <h2>Título H2</h2>
+                <h3>Título H3</h3>
+                <h4>Título H4</h4>
+                <h5>Título H5</h5>
+                <h6>Título H6 - Menos importante</h6>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>&lt;h1&gt;Título H1 - Mais importante&lt;/h1&gt;
+&lt;h2&gt;Título H2&lt;/h2&gt;
+&lt;h3&gt;Título H3&lt;/h3&gt;
+&lt;h4&gt;Título H4&lt;/h4&gt;
+&lt;h5&gt;Título H5&lt;/h5&gt;
+&lt;h6&gt;Título H6 - Menos importante&lt;/h6&gt;</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>Headings:</strong> Definem hierarquia de títulos. H1 é o mais importante (use apenas 1 por página), H6 o menos. Importantes para SEO e acessibilidade.</p>
+            </div>
+        </section>
+
+        <!-- Seção 2: Parágrafos -->
+        <section class="exemplo-guia">
+            <h2>2. Parágrafos (&lt;p&gt;)</h2>
+            <div class="html-exemplo-box">
+                <p>Este é um parágrafo normal. O parágrafo é usado para agrupar texto em blocos lógicos.</p>
+                <p>Cada tag &lt;p&gt; cria um novo parágrafo com espaçamento automático antes e depois.</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>&lt;p&gt;Este é um parágrafo normal.&lt;/p&gt;
+&lt;p&gt;Cada tag &lt;p&gt; cria um novo parágrafo.&lt;/p&gt;</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>&lt;p&gt;:</strong> Tag de bloco para parágrafos de texto. Adiciona margem automática antes e depois.</p>
+            </div>
+        </section>
+
+        <!-- Seção 3: Div e Span -->
+        <section class="exemplo-guia">
+            <h2>3. Containers: &lt;div&gt; e &lt;span&gt;</h2>
+            <div class="html-exemplo-box">
+                <div class="exemplo-box-info">
+                    <strong>&lt;div&gt;</strong> é um container de BLOCO. Ocupa toda a largura disponível.
+                </div>
+                <div class="exemplo-box-alerta">
+                    <strong>&lt;div&gt;</strong> é usado para agrupar elementos e aplicar estilos CSS.
+                </div>
+                <p>O <span class="exemplo-destaque-amarelo">elemento &lt;span&gt;</span> é INLINE. Só ocupa o <span class="exemplo-destaque-vermelho">espaço necessário</span> dentro do texto.</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>&lt;div&gt;Container de bloco&lt;/div&gt;
+&lt;span&gt;Elemento inline&lt;/span&gt;</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>&lt;div&gt;:</strong> Container genérico de BLOCO. Usado para agrupar e estruturar conteúdo.</p>
+                <p><strong>&lt;span&gt;:</strong> Container genérico INLINE. Usado para estilizar partes de texto.</p>
+            </div>
+        </section>
+
+        <!-- Seção 4: Quebras de Linha -->
+        <section class="exemplo-guia">
+            <h2>4. Quebras de Linha: &lt;br&gt; e &lt;hr&gt;</h2>
+            <div class="html-exemplo-box">
+                <p>Linha 1<br>Linha 2<br>Linha 3</p>
+                <hr>
+                <p>O &lt;hr&gt; cria uma linha horizontal separadora</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>&lt;p&gt;Linha 1&lt;br&gt;Linha 2&lt;/p&gt;
+&lt;hr&gt;</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>&lt;br&gt;:</strong> Quebra de linha simples (self-closing tag).</p>
+                <p><strong>&lt;hr&gt;:</strong> Linha horizontal separadora (self-closing tag).</p>
+            </div>
+        </section>
+
+        <!-- Seção 5: Formatação de Texto -->
+        <section class="exemplo-guia">
+            <h2>5. Formatação de Texto</h2>
+            <div class="html-exemplo-box">
+                <p><strong>Texto em negrito com &lt;strong&gt;</strong></p>
+                <p><b>Texto em negrito com &lt;b&gt;</b></p>
+                <p><em>Texto em itálico com &lt;em&gt; (ênfase)</em></p>
+                <p><i>Texto em itálico com &lt;i&gt;</i></p>
+                <p><u>Texto sublinhado com &lt;u&gt;</u></p>
+                <p><mark>Texto destacado com &lt;mark&gt;</mark></p>
+                <p><small>Texto pequeno com &lt;small&gt;</small></p>
+                <p><del>Texto riscado com &lt;del&gt;</del></p>
+                <p><ins>Texto inserido com &lt;ins&gt;</ins></p>
+                <p>Texto normal com <sub>subscrito &lt;sub&gt;</sub> e <sup>sobrescrito &lt;sup&gt;</sup></p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>&lt;strong&gt;Negrito importante&lt;/strong&gt;
+&lt;b&gt;Negrito visual&lt;/b&gt;
+&lt;em&gt;Ênfase (itálico)&lt;/em&gt;
+&lt;mark&gt;Destacado&lt;/mark&gt;
+&lt;del&gt;Deletado&lt;/del&gt;
+&lt;sub&gt;Subscrito&lt;/sub&gt;
+&lt;sup&gt;Sobrescrito&lt;/sup&gt;</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>Semânticas:</strong> &lt;strong&gt; e &lt;em&gt; têm significado (importantes para SEO e acessibilidade).</p>
+                <p><strong>Visuais:</strong> &lt;b&gt; e &lt;i&gt; são apenas para aparência.</p>
+            </div>
+        </section>
+
+        <!-- Seção 6: Código e Pré-formatação -->
+        <section class="exemplo-guia">
+            <h2>6. Código: &lt;code&gt;, &lt;pre&gt;, &lt;kbd&gt;, &lt;samp&gt;</h2>
+            <div class="html-exemplo-box">
+                <p>Use a tag <code>&lt;code&gt;</code> para código inline.</p>
+                <pre>function exemplo() {
+    console.log("&lt;pre&gt; preserva formatação");
+    return true;
+}</pre>
+                <p>Pressione <kbd>Ctrl</kbd> + <kbd>C</kbd> para copiar.</p>
+                <p>Output do programa: <samp>Erro 404</samp></p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>&lt;code&gt;código inline&lt;/code&gt;
+&lt;pre&gt;código com formatação preservada&lt;/pre&gt;
+&lt;kbd&gt;teclas do teclado&lt;/kbd&gt;
+&lt;samp&gt;saída de programa&lt;/samp&gt;</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>&lt;code&gt;:</strong> Código de computador inline.</p>
+                <p><strong>&lt;pre&gt;:</strong> Texto pré-formatado (preserva espaços e quebras).</p>
+                <p><strong>&lt;kbd&gt;:</strong> Entrada de teclado.</p>
+                <p><strong>&lt;samp&gt;:</strong> Saída de programa.</p>
+            </div>
+        </section>
+
+        <!-- Seção 7: Citações -->
+        <section class="exemplo-guia">
+            <h2>7. Citações: &lt;blockquote&gt;, &lt;q&gt;, &lt;cite&gt;</h2>
+            <div class="html-exemplo-box">
+                <blockquote>
+                    "Esta é uma citação em bloco. Geralmente usada para citações longas."
+                    <footer>— Autor Desconhecido</footer>
+                </blockquote>
+                <p>Einstein disse: <q>A imaginação é mais importante que o conhecimento.</q></p>
+                <p>Livro: <cite>O Senhor dos Anéis</cite></p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>&lt;blockquote&gt;Citação longa em bloco&lt;/blockquote&gt;
+&lt;q&gt;Citação curta inline&lt;/q&gt;
+&lt;cite&gt;Título de obra&lt;/cite&gt;</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>&lt;blockquote&gt;:</strong> Citação em bloco (longa).</p>
+                <p><strong>&lt;q&gt;:</strong> Citação inline (curta), adiciona aspas automaticamente.</p>
+                <p><strong>&lt;cite&gt;:</strong> Título de obra criativa (livro, filme, música).</p>
+            </div>
+        </section>
+
+        <!-- Seção 8: Abreviações e Definições -->
+        <section class="exemplo-guia">
+            <h2>8. Abreviações: &lt;abbr&gt; e &lt;dfn&gt;</h2>
+            <div class="html-exemplo-box">
+                <p>A <abbr title="HyperText Markup Language">HTML</abbr> é a linguagem de marcação da web.</p>
+                <p>A <abbr title="World Wide Web">WWW</abbr> foi criada em 1989.</p>
+                <p><dfn>JavaScript</dfn> é uma linguagem de programação interpretada.</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;
+&lt;dfn&gt;Termo sendo definido&lt;/dfn&gt;</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>&lt;abbr&gt;:</strong> Abreviação ou acrônimo. Use atributo <code>title</code> para mostrar o significado completo ao passar o mouse.</p>
+                <p><strong>&lt;dfn&gt;:</strong> Termo sendo definido pela primeira vez.</p>
+            </div>
+        </section>
+
+        <!-- Seção 9: Comentários -->
+        <section class="exemplo-guia">
+            <h2>9. Comentários HTML</h2>
+            <div class="html-exemplo-box">
+                <p>Veja o código abaixo para ver o comentário (não aparece na página):</p>
+                <!-- Este é um comentário e não aparece na página -->
+                <p>Comentários são úteis para documentar o código.</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>&lt;!-- Este é um comentário HTML --&gt;
+&lt;!-- 
+    Comentário
+    de múltiplas
+    linhas
+--&gt;</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>Comentários:</strong> Não são exibidos no navegador. Úteis para documentação, notas e desabilitar código temporariamente.</p>
+            </div>
+        </section>
+
+        <!-- Seção 10: Entidades HTML -->
+        <section class="exemplo-guia">
+            <h2>10. Entidades HTML (Caracteres Especiais)</h2>
+            <div class="html-exemplo-box">
+                <p>&lt; &gt; &amp; &quot; &apos;</p>
+                <p>&copy; &reg; &trade;</p>
+                <p>&euro; &pound; &yen; &cent;</p>
+                <p>&times; &divide; &plusmn;</p>
+                <p>&hearts; &spades; &clubs; &diams;</p>
+                <p>&larr; &uarr; &rarr; &darr;</p>
+            </div>
+            <div class="codigo-exemplo">
+                <pre>&amp;lt; = &lt;
+&amp;gt; = &gt;
+&amp;amp; = &amp;
+&amp;quot; = "
+&amp;copy; = ©
+&amp;euro; = €
+&amp;hearts; = ♥</pre>
+            </div>
+            <div class="explanation">
+                <p><strong>Entidades HTML:</strong> Caracteres especiais que não podem ser digitados diretamente. Começam com <code>&amp;</code> e terminam com <code>;</code></p>
+                <p>Essenciais para exibir: &lt;, &gt;, &amp;, aspas e símbolos especiais.</p>
+            </div>
+        </section>
+
+        <section class="exemplo-guia" style="background-color: #fffbea; border-left: 4px solid #f39c12;">
+            <h2>✏️ Pratique agora!</h2>
+            <div class="explanation">
+                <p><strong>Exercício:</strong> Crie uma página HTML com:</p>
+                <ul>
+                    <li>Uma tag &lt;h1&gt; para título principal</li>
+                    <li>Dois parágrafos com &lt;p&gt;</li>
+                    <li>Um &lt;hr&gt; separador entre eles</li>
+                    <li>Texto com &lt;strong&gt;, &lt;em&gt; e &lt;mark&gt;</li>
+                </ul>
+                <p>💡 Dica: Use as tags semânticas corretamente!</p>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="html-atributos.html" class="prev-button">← Atributos HTML</a>
+            <a href="../pagina3.html" class="back-button">Voltar ao Índice</a>
+            <a href="html-links.html" class="next-button">Links →</a>
+        </div>
+    </div>
+</body>
+</html>
